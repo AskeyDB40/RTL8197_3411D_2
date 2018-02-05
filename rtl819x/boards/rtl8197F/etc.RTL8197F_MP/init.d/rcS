@@ -1,0 +1,26 @@
+#!/bin/sh
+
+ifconfig lo 127.0.0.1
+
+USE_SAMBA=0
+CINIT=1
+
+mount -t proc proc /proc
+mount -t ramfs ramfs /var
+
+if [ -d "/hw_setting" ];then
+	mount -t yaffs2 -o tags-ecc-off -o inband-tags /dev/mtdblock1 /hw_setting
+fi
+
+mkdir /var/tmp
+mkdir /var/log
+mkdir /var/run
+mkdir /var/lock
+mkdir /var/system
+mkdir /var/lib
+mkdir /var/lib/misc
+
+# Start system script
+/bin/sh /bin/mp.sh
+UDPserver &
+post_startup.sh

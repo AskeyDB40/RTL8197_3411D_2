@@ -1,0 +1,11 @@
+echo "run rcm voip script..."
+	
+if [ -x "/bin/voip_def_init" ]; then
+	voip_def_init
+fi
+
+echo "start watch dog"
+/bin/voip_gwdt /etc/app.gwdt &
+
+echo 16 > /proc/sys/net/netfilter/nf_conntrack_expect_max
+

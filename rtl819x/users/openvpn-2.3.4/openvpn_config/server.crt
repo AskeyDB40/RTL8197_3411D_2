@@ -1,0 +1,75 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1 (0x1)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=CN, ST=JS, L=SuZHou, O=Realsil, OU=AP-Team, CN=Realsil-AP/name=EasyRSA/emailAddress=me@realsil.com.cn
+        Validity
+            Not Before: Sep 21 19:47:57 2015 GMT
+            Not After : Sep 18 19:47:57 2025 GMT
+        Subject: C=CN, ST=JS, L=SuZHou, O=Realsil, OU=AP-Team, CN=server/name=EasyRSA/emailAddress=me@realsil.com.cn
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:cb:d6:b8:89:43:5e:bf:40:17:e0:33:81:90:df:
+                    82:2e:6e:99:4a:a9:3e:e8:9d:6d:c7:3f:0d:62:0a:
+                    0e:e8:4c:21:2c:ad:11:c6:f7:9d:e6:87:2b:ed:bc:
+                    4b:90:c3:fe:d2:45:77:ef:33:fa:cd:ce:83:c7:cf:
+                    ec:65:65:93:1b:6f:91:8f:41:ba:83:8b:4b:1a:93:
+                    a6:4f:d0:f2:2b:e9:e6:34:eb:d7:9d:14:f2:7f:57:
+                    9b:c4:3d:1f:b7:90:5c:48:74:9e:db:c7:52:0a:52:
+                    ba:64:4b:a1:4b:c4:23:1a:a2:e1:f0:58:74:f2:8c:
+                    39:4e:d0:d1:af:51:c5:b1:c1
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Cert Type: 
+                SSL Server
+            Netscape Comment: 
+                Easy-RSA Generated Server Certificate
+            X509v3 Subject Key Identifier: 
+                8F:1E:9C:10:79:BA:0E:8C:3F:94:95:44:68:1F:6C:02:E6:2B:84:D4
+            X509v3 Authority Key Identifier: 
+                keyid:33:A4:6C:3D:E6:6B:22:FF:64:9B:F8:64:77:20:4D:6E:BF:F4:DD:70
+                DirName:/C=CN/ST=JS/L=SuZHou/O=Realsil/OU=AP-Team/CN=Realsil-AP/name=EasyRSA/emailAddress=me@realsil.com.cn
+                serial:EC:DB:45:5F:C1:DC:03:D3
+
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication
+            X509v3 Key Usage: 
+                Digital Signature, Key Encipherment
+    Signature Algorithm: sha256WithRSAEncryption
+        04:ae:57:d5:a8:60:52:7d:62:08:ea:db:ca:ac:86:af:3e:da:
+        6b:8f:db:0e:09:f5:4f:06:d2:b4:9d:62:7d:14:af:b2:c4:4f:
+        8c:dc:44:14:ca:fc:33:6c:7f:29:53:11:be:d5:ba:de:2c:a7:
+        25:7c:1f:f0:e9:4b:c5:89:4b:38:90:c1:b3:a8:e0:ab:6d:38:
+        6c:26:27:44:03:a2:64:8b:fe:84:b4:f3:9f:85:f3:53:98:22:
+        1c:24:36:17:b9:3d:e9:97:2e:3c:ea:59:12:97:a1:49:50:50:
+        03:61:64:a3:66:f2:6e:eb:b4:6c:09:2b:d8:31:01:54:48:b1:
+        01:65
+-----BEGIN CERTIFICATE-----
+MIIEDzCCA3igAwIBAgIBATANBgkqhkiG9w0BAQsFADCBmDELMAkGA1UEBhMCQ04x
+CzAJBgNVBAgTAkpTMQ8wDQYDVQQHEwZTdVpIb3UxEDAOBgNVBAoTB1JlYWxzaWwx
+EDAOBgNVBAsTB0FQLVRlYW0xEzARBgNVBAMTClJlYWxzaWwtQVAxEDAOBgNVBCkT
+B0Vhc3lSU0ExIDAeBgkqhkiG9w0BCQEWEW1lQHJlYWxzaWwuY29tLmNuMB4XDTE1
+MDkyMTE5NDc1N1oXDTI1MDkxODE5NDc1N1owgZQxCzAJBgNVBAYTAkNOMQswCQYD
+VQQIEwJKUzEPMA0GA1UEBxMGU3VaSG91MRAwDgYDVQQKEwdSZWFsc2lsMRAwDgYD
+VQQLEwdBUC1UZWFtMQ8wDQYDVQQDEwZzZXJ2ZXIxEDAOBgNVBCkTB0Vhc3lSU0Ex
+IDAeBgkqhkiG9w0BCQEWEW1lQHJlYWxzaWwuY29tLmNuMIGfMA0GCSqGSIb3DQEB
+AQUAA4GNADCBiQKBgQDL1riJQ16/QBfgM4GQ34IubplKqT7onW3HPw1iCg7oTCEs
+rRHG953mhyvtvEuQw/7SRXfvM/rNzoPHz+xlZZMbb5GPQbqDi0sak6ZP0PIr6eY0
+69edFPJ/V5vEPR+3kFxIdJ7bx1IKUrpkS6FLxCMaouHwWHTyjDlO0NGvUcWxwQID
+AQABo4IBaTCCAWUwCQYDVR0TBAIwADARBglghkgBhvhCAQEEBAMCBkAwNAYJYIZI
+AYb4QgENBCcWJUVhc3ktUlNBIEdlbmVyYXRlZCBTZXJ2ZXIgQ2VydGlmaWNhdGUw
+HQYDVR0OBBYEFI8enBB5ug6MP5SVRGgfbALmK4TUMIHNBgNVHSMEgcUwgcKAFDOk
+bD3mayL/ZJv4ZHcgTW6/9N1woYGepIGbMIGYMQswCQYDVQQGEwJDTjELMAkGA1UE
+CBMCSlMxDzANBgNVBAcTBlN1WkhvdTEQMA4GA1UEChMHUmVhbHNpbDEQMA4GA1UE
+CxMHQVAtVGVhbTETMBEGA1UEAxMKUmVhbHNpbC1BUDEQMA4GA1UEKRMHRWFzeVJT
+QTEgMB4GCSqGSIb3DQEJARYRbWVAcmVhbHNpbC5jb20uY26CCQDs20VfwdwD0zAT
+BgNVHSUEDDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBaAwDQYJKoZIhvcNAQELBQAD
+gYEABK5X1ahgUn1iCOrbyqyGrz7aa4/bDgn1TwbStJ1ifRSvssRPjNxEFMr8M2x/
+KVMRvtW63iynJXwf8OlLxYlLOJDBs6jgq204bCYnRAOiZIv+hLTzn4XzU5giHCQ2
+F7k96ZcuPOpZEpehSVBQA2Fko2bybuu0bAkr2DEBVEixAWU=
+-----END CERTIFICATE-----

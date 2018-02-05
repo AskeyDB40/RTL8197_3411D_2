@@ -1,0 +1,55 @@
+#!/usr/bin/perl
+#
+# Realtek Semiconductor Corp.
+#
+# msdk-linux-mklink: create hard links
+#
+# Tony Wu (tonywu@realtek.com)
+# Mar. 19, 2016
+#
+
+$| = 1;
+use Cwd;
+
+my $srcdir;
+my $dstdir;
+my $curdir;
+
+if ($#ARGV != 1) {
+	&print_usage;
+	exit -1;
+}
+
+$srcdir = shift @ARGV;
+$dstdir = shift @ARGV;
+$curdir = getcwd;
+chomp $srcdir;
+chomp $dstdir;
+chomp $curdir;
+
+print "INFO: mklinking $srcdir $dstdir", "\n";
+
+&mklink($srcdir, $dstdir);
+
+exit 0;
+
+sub print_usage
+{
+	print "\n";
+	print "usage: $0 srcdir dstdir", "\n";
+	print "\n";
+}
+
+sub mklink
+{
+	local @FILE;
+	local $file;
+
+        chdir $dstdir or die "ERROR: chdir $dstdir failed";
+        @FILE = glob("$srcdir/*");
+        foreach $file (@FILE) {
+		system("cp -a $file .") if (-l $file);
+		system("ln -f $file .") if (not -l $file and -f $file);
+        }
+	chdir $curdir or die "ERROR: chdir $curdir failed";
+}

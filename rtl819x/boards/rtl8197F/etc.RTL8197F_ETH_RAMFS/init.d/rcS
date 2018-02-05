@@ -1,0 +1,34 @@
+#!/bin/sh
+
+#ifconfig lo 127.0.0.1
+
+USE_SAMBA=0
+CINIT=1
+
+hostname rlxlinux
+
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t devpts devpts /dev/pts
+#mount -t ramfs ramfs /var
+
+mkdir /var/tmp
+mkdir /var/log
+mkdir /var/run
+mkdir /var/lock
+cat /etc/motd
+post_startup.sh
+#echo "enabling network devices ..."
+#ifconfig lo 127.0.0.1
+#ifconfig eth0 10.0.2.15 netmask 255.255.255.0
+#route add default gw 10.0.2.2
+#httpd -c /etc/httpd.conf -h /home/web
+#if [ -e /bin/adbd ]; then
+#	adbd &
+#fi
+
+# Start system script
+#/bin/sh /bin/mp_98c.sh
+
+#UDPserver &
+

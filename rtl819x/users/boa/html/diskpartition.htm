@@ -1,0 +1,480 @@
+<html>
+<! Copyright (c) Realtek Semiconductor Corp., 2003. All Rights Reserved. ->
+<head>
+<meta http-equiv="Content-Type" content="text/html">
+<% getIndex("no-cache"); %>
+<title>Disk Setup </title>
+<script language="javascript" type="text/javascript" src="util_gw.js"> </script>
+<% getInfo("include_css"); %>
+<style>
+.on {display:on}
+.off {display:none}
+</style>
+
+<script>
+
+var token= new Array();
+var DataArray = new Array();
+var maxPartitionNum = 8;
+	
+	<% getDiskInfo(); %>
+
+function Close()
+{
+	window.close();
+}
+
+function checkNewPartitionSize()
+{
+	var i;
+	var number = token.length;
+	var device = document.formDiskPartition.devicename;
+
+	if (!isIntVal(document.formDiskPartition.newpartitionsize.value))
+	{
+		alert('Invalid new partition size, It should be digits!');
+		document.formDiskPartition.newpartitionsize.focus();
+		return false;
+	}
+	for (i = 0; i < number; i++)
+	{
+		DataArray = token[i].split("|"); 
+		if (device.value == DataArray[0])
+		{
+			value1 = parseFloat(document.formDiskPartition.newpartitionsize.value);
+			value2 = (1000*parseFloat(DataArray[3]));
+			if (value1 > value2)
+			{
+				alert('Invalid new partition size, It should be less than nonpartitioned size!');
+				document.formDiskPartition.newpartitionsize.focus();
+				return false;
+			}
+		}
+	}
+
+	return true;
+
+	
+}
+
+function validCheck()
+{
+	var num = document.formDiskPartition.partitionnum.value;
+	var dev = document.formDiskPartition.devicename.value;
+	var len = token.length;
+	var i, totalsize;
+	var prefix = "newpartitionsize"
+	var num1, num2;
+
+	
+	for (i = 1; i < num; i++)
+	{
+		if (get_by_id(prefix+i).value == "")
+		{
+			alert('Partition size should not be NULL!');
+			get_by_id(prefix+i).focus();
+			return false;
+		}
+		if (!isIntVal(get_by_id(prefix+i).value))
+		{
+			alert('Invalid partition size, It should be digits!');
+			get_by_id(prefix+i).focus();
+			return false;
+		}
+	}
+
+	for (i = 0; i < len; i++)
+	{
+		DataArray = token[i].split("|");
+		if (dev == DataArray[0])
+		{
+			totalsize = (1000*parseFloat(DataArray[1]));
+			totalsize = parseInt(totalsize);
+		}
+	}
+	num1 = 0;
+	for (i = 1; i <= num; i++)
+	{
+		if (get_by_id(prefix+i).value != "")
+		{
+			num1 = Number(num1)+ Number(get_by_id(prefix+i).value);
+		}
+	}
+	
+	if (Number(num1) != Number(totalsize))
+	{
+		alert("The sum of all partition size is not equal device total size!!");
+		return false;		
+	}
+	
+
+	return true;
+
+	
+}
+
+
+function addClick()
+{
+	var num = document.formDiskPartition.partitionnum.value;
+	
+ if (!validCheck())
+ 	return false;
+
+	if (Number(num)>=2)
+	{
+		alert("If the disk partition number is equal to or greater than two, The Windows system can only recognize the first partition! All partitions need to identify in the Linux system!");			
+	}
+ 	
+  if (confirm("Are you sure to partition? Disk partitioning operation can cause loss of disk information and system will restart!"))
+  	return true;
+  else 
+  	return false;
+
+}
+function deviceSelection(field)
+{
+	var i;
+	var number = token.length;
+	var div_suffix = "_div";
+	var div_id;
+
+	
+	for (i = 0; i < number; i++)
+	{
+		DataArray = token[i].split("|"); 
+		div_id = DataArray[0] + div_suffix;
+		if (field.value == DataArray[0])
+		{
+			show_div(1,div_id);
+		}
+		else
+		{
+			show_div(0,div_id);
+		}
+	   
+	}
+}
+
+function deviceList()
+{
+	var i;
+	var number = token.length;
+	document.write("<select size=\"1\" name=\"devicename\" onChange=\"deviceSelection(this)\">");
+	for (i = 0; i < number; i++)
+	{
+		DataArray = token[i].split("|"); 
+		if (i == 0)
+			document.write("	    <option value="+DataArray[0]+" selected>"+DataArray[0]+"</option>");
+		else
+			document.write("	    <option value="+DataArray[0]+" >"+DataArray[0]+"</option>");
+	   
+	}
+	document.write("</select>");
+
+}
+
+function showDiskInfo()
+{
+	var div_suffix = "_div";
+	var i;
+	var number = token.length;
+	for (i = 0; i < number; i++)
+	{
+		DataArray = token[i].split("|"); 
+		document.write("<span id = "+DataArray[0]+div_suffix+" class = \"off\" >");
+		document.write("<table border=\"0\" width=\"500\">");
+		
+		document.write("<tr>");
+        document.write("<td width=\"30%\"><font size=2><b>Total Size:</b></td>");
+		document.write("<td width=\"70%\"><font size=2>"+DataArray[1]+"(G)</td>");
+		document.write("</tr>");
+		/*
+		document.write("<tr>");
+        document.write("<td width=\"20%\"><font size=2><b>Partitioned Size:</b></td>");
+		document.write("<td width=\"50%\"><font size=2>"+DataArray[2]+"(G)</td>");
+		document.write("</tr>");
+		
+		document.write("<tr>");
+        document.write("<td width=\"20%\"><font size=2><b>Nonpartitioned Size:</b></td>");
+		document.write("<td width=\"50%\"><font size=2>"+DataArray[3]+"(G)</td>");
+		document.write("</tr>");
+		*/
+		
+		document.write(" </table>");
+		document.write("</span>");	
+	}
+
+}
+
+function fillLastOne()
+{
+	var num = document.formDiskPartition.partitionnum.value;
+	var dev = document.formDiskPartition.devicename.value;
+	var len = token.length;
+	var i, totalsize;
+	var prefix = "newpartitionsize"
+	var num1, num2;
+
+	for (i = 0; i < len; i++)
+	{
+		DataArray = token[i].split("|");
+		if (dev == DataArray[0])
+		{
+			totalsize = (1000*parseFloat(DataArray[1]));
+			totalsize = parseInt(totalsize);
+		}
+	}
+	num1 = 0;
+	for (i = 1; i < num; i++)
+	{
+		if (get_by_id(prefix+i).value != "")
+		{
+			num1 = Number(num1)+ Number(get_by_id(prefix+i).value);
+		}
+	}
+	get_by_id(prefix+num).value = Number(totalsize) - Number(num1);
+	get_by_id("hiddenpartitionsize").value = Number(totalsize) - Number(num1);
+	
+	if (Number(get_by_id(prefix+num).value) <= 0)
+		alert("The last partition's size is zero or negative!!");
+		
+}
+function showInputPartition(max)
+{
+	var i;
+	var div_suffix = "_div";
+	var div_prefix = "partition";
+	 
+	document.write("<table border=\"0\" width=\"500\">");
+	document.write("<tr class=\"tbl_head\">");
+ 	document.write("<td align=center width=\"30%\" ><font size=\"2\"><b>Number</b></font></td>");
+	document.write("<td align=center width=\"70%\" ><font size=\"2\"><b>Size(MB)</b></font></td>");
+	document.write("</tr>");
+	document.write("</table>");
+	for (i = 1; i <= max; i++)
+	{
+		document.write("<span id = "+div_prefix+i+div_suffix+" class = \"off\" >");
+	document.write("<table border=\"0\" width=\"500\">");
+		
+	 	document.write("<tr class=\"tbl_body\">");
+	 	document.write("<td align=center width=\"30%\" ><font size=\"2\">"+i+"</font></td>");
+		document.write("<td align=center width=\"70%\"><input type=\"text\" name=" + "\""+ "newpartitionsize"+i+"\"" + "id=" + "\""+ "newpartitionsize"+i+"\""+ " size=\"20\" onchange=\"fillLastOne();\"  maxlength=\"30\"></td>");
+		document.write("</tr>");
+		
+		document.write("</table>");
+		document.write("</span>");	
+
+	
+	}
+}
+
+function partitionSelection(field)
+{
+	var i;
+	var div_id;
+	var div_suffix = "_div";
+	var div_prefix = "partition";
+	var new_par_prefix = "newpartitionsize";
+	var number = field.value;
+	var len = token.length;
+	var j;
+	var value1;
+	
+	for (i = 1; i <= maxPartitionNum; i++)
+	{
+		div_id = div_prefix + i + div_suffix;
+		if (i <= number)
+		{
+			show_div(1,div_id);
+			if (i == number)
+			{
+				get_by_id(new_par_prefix+i).disabled = true;
+			}
+			else
+			{
+				get_by_id(new_par_prefix+i).disabled = false;
+			}
+			
+			if (number == 1)//only one, disabled and fill value = total size
+			{			
+				for (j = 0; j < len; j++)
+				{
+					DataArray = token[j].split("|"); 
+					if (document.formDiskPartition.devicename.value == DataArray[0])
+					{
+						value1 = (1000*parseFloat(DataArray[1]));
+						value1 = parseInt(value1);
+						get_by_id(new_par_prefix+number).value = value1;
+						get_by_id("hiddenpartitionsize").value = value1;
+					}
+				}
+			}
+			else
+				get_by_id(new_par_prefix+i).value = "";
+		}
+		else
+		{
+			show_div(0,div_id);
+		}
+	   
+	}
+}
+
+function checkboxClick(number)
+{
+	var i;
+	var prefix = "selall_sd";
+	var prefix2 = "totalnum_sd";
+	var name = prefix+number;
+	var partition_name = prefix2+number;
+	var partition_num = get_by_id(partition_name).value;
+	var checkname;
+	
+	if (get_by_id(name).checked == true)
+	{
+		for (i = 1; i <= partition_num; i++)
+		{
+			checkname = "sd" + number + "_select" + i;
+			get_by_id(checkname).checked = true;
+		}
+	}
+	else
+	{
+		for (i = 1; i <= partition_num; i++)
+		{
+			checkname = "sd" + number + "_select" + i;
+			get_by_id(checkname).checked = false;
+		}
+	}
+
+}
+
+function initcheckboxClick()
+{
+	var i;
+	var devicenum = document.formDiskPartitionDel.total_device_num.value;
+	for (i = 1; i <= devicenum; i++)
+	{
+		checkboxClick(i);
+	}
+}
+
+function init()
+{
+	deviceSelection(document.formDiskPartition.devicename);
+	initcheckboxClick();
+	partitionSelection(document.formDiskPartition.partitionnum);
+
+
+	
+}
+
+function PartitionDeleteClick()
+{
+	document.formDiskPartitionDel.submit_url.value = "/diskpartition.htm";
+	
+	if (confirm("Are you sure to delete the partition? Delete the partition can cause loss of disk information!"))
+		return true;
+	else 
+		return false;
+
+}
+
+</script>
+</head>
+
+<blockquote>
+<h2>Disk Partition</h2>
+
+<body onload="init();">
+
+<table border=0 width="500" cellspacing=4 cellpadding=0>
+<tr><td><font size=2>
+Disk partitioning is the act of dividing a hard disk drive (HDD) 
+into multiple logical storage units referred to as partitions, 
+to treat one physical disk drive as if it were multiple disks, 
+so that different file systems can be used on each partition.
+Disk partitioning operation will cause system restart!
+</font></td></tr>
+
+<tr><td><hr size=1 noshade align=top></td></tr>
+</table>
+
+<form action=/boafrm/formDiskPartition method=POST name="formDiskPartition">
+ <table border=0 width=500>
+ 
+	<tr>
+	 <td width="30%"><font size=2><b>Disk:</b></td>
+	 <td width="70%">
+	 <SCRIPT> deviceList(); </SCRIPT>
+	 </td>
+	</tr>
+	
+ </table>
+ 
+	<script> showDiskInfo(); </script>
+	
+ <table border=0 width=500>
+ 
+ 	<tr>
+	  <td width="30%"><font size=2><b>Partition Number:</b></td>
+	  <td width="70%">
+		 <select name="partitionnum" onChange=partitionSelection(this) >
+		    <option value="1" selected="selected">1</option>
+		    <option value="2">2</option>
+		    <option value="3">3</option>
+		    <option value="4">4</option>
+		    <option value="5">5</option>
+		    <option value="6">6</option>
+		    <option value="7">7</option>
+		    <option value="8">8</option>		  
+		  </select>
+	  </td>
+ 	</tr>
+  </table>
+
+		<script> showInputPartition(maxPartitionNum); </script>
+		<input type="hidden" value="" name="hiddenpartitionsize" id="hiddenpartitionsize">
+	
+  <!--<tr>
+ 	<td width="40%"><font size=2><b><input type="submit" value="Partition" name="Add_Partition"  onClick="return addClick()"></b></td>
+	<input type="hidden" value="/diskmanagement.htm" name="submit_url">
+  </tr>-->
+ 
+ 
+	<br> 
+ 	<input type="submit" value="Apply Changes" name="Add_Partition"  onClick="return addClick()">
+	<input type="hidden" value="/diskpartition.htm" name="submit_url">
+	
+</form>
+
+<br>
+<form action=/boafrm/formDiskPartition method=POST name="formDiskPartitionDel">
+ <!--
+ <table border=0 width=500>
+  <tr><td><font size=2><b>
+	Disk Partition</b><br>
+    </td>
+  </tr>
+  <tr><td><font size=2><b>
+	<input type="button" value="New Partition" name="NewPartition" onClick="CreateUserGroupClick('/diskpartition.htm')" >
+    </td>
+  </tr>
+  
+ </table>
+   <font size=2><b>Current Partition Table:</b></font>
+  -->
+  <% PartitionList(); %>
+  
+    <input type="hidden"  name="submit_url">
+    <input type="hidden"  name="partitionindex">
+	<br>
+	<input type="submit" value="Delete Selected" name="Delete_Selected" onClick="return PartitionDeleteClick()">&nbsp;&nbsp;
+	<input type="submit" value="Delete All" name="Delete_All" onClick="return PartitionDeleteClick()">&nbsp;&nbsp;&nbsp;
+	<input type="reset" value="Reset" name="reset">
+</form>
+
+</body>
+
+</html>

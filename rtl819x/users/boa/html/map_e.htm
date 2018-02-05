@@ -1,0 +1,206 @@
+<html>
+<! Copyright (c) Realtek Semiconductor Corp., 2003. All Rights Reserved. ->
+<head>
+<meta http-equiv="Content-Type" content="text/html">
+<% getIndex("no-cache"); %>
+<title>MAP-E Setup </title>
+<% getInfo("include_css"); %>
+<style>
+.on {display:on}
+.off {display:none}
+</style>
+<% language=javascript %>
+<script type="text/javascript" src="util_gw.js"> </script>
+<SCRIPT>
+
+function mape_save()
+{
+	with(document.mapeform)
+	{
+		if(psid_offset.value<0 || psid_offset.value>16)
+		{
+			alert('PSID offset must be between 0-16!');
+			return false;
+		}
+		if(psid_length.value<0 || psid_length.value>16)
+		{
+			alert('PSID length must be between 0-16!');
+			return false;
+		}
+	}
+	
+	return true;
+}
+
+function enable_all(enable)
+{
+	with(document.mapeform)
+	{
+		if(enable == 1)
+		{
+			ipv6_prefix.disabled = false;
+			ipv4_prefix.disabled = false;
+			br_address.disabled = false;
+			psid_offset.disabled = false;
+			psid_length.disabled = false;
+			psid.disabled = false
+		}
+		else
+		{
+			ipv6_prefix.disabled = true;
+			ipv4_prefix.disabled = true;
+			br_address.disabled = true;
+			psid_offset.disabled = true;
+			psid_length.disabled = true;
+			psid.disabled = true;
+		}
+	}
+}
+
+function onclick_func()
+{
+	with(document.mapeform)
+	{
+		if(enable_mape.checked == false)
+		{
+			elements["mape_mode"][0].disabled=true;
+			elements["mape_mode"][1].disabled=true;
+			enable_all(0);
+		}
+		else
+		{
+			elements["mape_mode"][0].disabled=false;
+			elements["mape_mode"][1].disabled=false;
+			if(elements["mape_mode"][1].checked==true)
+				enable_all(1);
+			else
+				enable_all(0);
+		}
+	}
+}
+
+function auto_mape_click()
+{
+	enable_all(0);
+}
+
+function manual_mape_click()
+{
+	enable_all(1);
+}
+
+function Load_Setting()
+{
+	var enable = <% getIPv6Info("enable_mape"); %> + 0;
+	var mode = <% getIPv6Info("mape_mode"); %> + 0;
+
+	with(document.mapeform)
+	{
+		if(mode == 0)
+			elements["mape_mode"][0].checked = true;
+		else
+			elements["mape_mode"][1].checked = true;
+		
+		if(enable == 1)
+		{
+			enable_mape.checked = true;
+			elements["mape_mode"][0].disabled=false;
+			elements["mape_mode"][1].disabled=false;
+			if(elements["mape_mode"][1].checked==true)
+				enable_all(1);
+			else
+				enable_all(0);
+		}
+		else
+		{
+			enable_mape.checked = false;
+			elements["mape_mode"][0].disabled=true;
+			elements["mape_mode"][1].disabled=true;
+			enable_all(0);
+		}
+	}
+}
+</SCRIPT>
+</head>
+
+<body onload="Load_Setting();">
+<blockquote>
+<h2>MAP-E Setup</h2>
+<form action=/boafrm/formMapE method=POST name="mapeform">
+
+<table border=0 width="550" cellspacing=0 cellpadding=0>
+  <tr><font size=2>
+    This page is used to configure the parameters for Mapping
+    of Address and Port with Encapsulation.
+  </tr>
+  <tr><hr size=1 noshade align=top></tr>
+  <tr>
+</table>
+
+<BR>  <BR>
+<td bgColor=#aaddff>Enable</td>
+<td bgColor=#ddeeff>
+	<input type=checkbox name=enable_mape value =1 onclick="onclick_func()">
+</td>
+<table border="0" width=480>
+	<tr>
+		<td width="100%" colspan="2"><font size=2>
+			<b><input type="radio" value="mapeAuto" name="mape_mode" onClick="auto_mape_click();">Automatically</b>
+		</td>
+	</tr>
+	<tr>
+		<td width="100%" colspan="2"><font size=2>
+			<b><input type="radio" value="mapeManual" name="mape_mode" onClick="manual_mape_click();">Manually</b>
+		</td>
+	</tr>
+	<tr>
+</table>
+<table cellSpacing=1 cellPadding=2 border=0>
+<tr>
+	<td bgColor=#aaddff>IPv6 Prefix</td>
+	<td bgColor=#ddeeff>
+		<input type=text name=ipv6_prefix size=56 maxlength=56 value="<% getIPv6Info("mape_ipv6_prefix"); %>">
+	</td>
+</tr>
+<tr>
+	<td bgColor=#aaddff>IPv4 Prefix</td>
+	<td bgColor=#ddeeff>
+		<input type=text name=ipv4_prefix size=56 maxlength=56 value="<% getIPv6Info("mape_ipv4_prefix"); %>">
+	</td>
+</tr>
+<tr>
+	<td bgColor=#aaddff>BR address</td>
+	<td bgColor=#ddeeff>
+		<input type=text name=br_address size=56 maxlength=56 value="<% getIPv6Info("mape_br_address"); %>">
+	</td>
+</tr>
+<tr>
+	<td bgColor=#aaddff>PSID offset</td>
+	<td bgColor=#ddeeff>
+		<input type=text name=psid_offset size=15 maxlength=15 value="<% getIPv6Info("mape_psid_offset"); %>">
+		(0-16)
+	</td>
+</tr>
+<tr>
+	<td bgColor=#aaddff>PSID length</td>
+	<td bgColor=#ddeeff>
+		<input type=text name=psid_length size=15 maxlength=15 value="<% getIPv6Info("mape_psid_length"); %>">
+		(0-16)
+	</td>
+</tr>
+<tr>
+	<td bgColor=#aaddff>PSID</td>
+	<td bgColor=#ddeeff>
+		<input type=text name=psid size=15 maxlength=15 value="<% getIPv6Info("mape_psid"); %>">
+		(eg. 0x34)
+	</td>
+</tr>
+</table>
+<BR>
+<input type="hidden" value="/map_e.htm" name="submit-url">
+<p>
+	<input type="submit" value="Apply Changes" name="save" onClick="return mape_save()">
+</p>
+</form>
+</body>
+</html>

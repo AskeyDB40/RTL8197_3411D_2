@@ -1,0 +1,19 @@
+if REALTEK
+
+choice
+	prompt "Realtek SoC selection"
+	default SOC_RTL8197F
+	help
+	  Select Realtek MIPS SoC type.
+
+	config SOC_RTL8197F
+		bool "RTL8197F"
+		select RTL_8197F
+		select SYS_SUPPORTS_LITTLE_ENDIAN
+
+endchoice
+
+source "../target/config.cpu"
+source "../target/config.in"
+
+endif

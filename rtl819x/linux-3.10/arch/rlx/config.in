@@ -1,0 +1,221 @@
+#
+# Realtek Semiconductor Corp.
+#
+# Tony Wu (tonywu@realtek.com)
+# Dec. 7, 2009
+#
+
+#
+# SoC feature
+#
+config RTL_8196C
+	select ARCH_CPU_RLX4181
+	select RTL_819X
+	def_bool n
+
+config RTL_8196E
+	select ARCH_CPU_RLX4181
+	select ARCH_CPU_SLEEP
+	select RTL_819X
+	select GENERIC_GPIO
+	select GPIOLIB
+	def_bool n
+
+config RTL_819XD
+	select ARCH_CPU_RLX5281
+	select RTL_819X
+	select GENERIC_GPIO
+	select GPIOLIB
+	def_bool n
+
+config RTL_8881A
+	select ARCH_CPU_RLX5281
+	select RTL_819X
+	select RTL_8196D	
+	select GENERIC_GPIO
+	select GPIOLIB
+
+config RTL_8196D
+	select RTL_819XD
+	def_bool n
+
+config RTL_8197D
+	select RTL_819XD
+	def_bool n
+	
+config RTL_819XD_GW
+	def_bool n
+
+config RTL_819X
+	def_bool n
+
+#
+# FPGA
+#
+config FPGA_PLATFORM
+	bool
+
+#
+# BSP
+#
+menu "BSP configuration"
+
+#
+# memory
+#
+# config RTL_SDRAM_GE_32M
+#	bool "sdram size greater than or equal 32M"
+#	default n
+
+#
+# flash
+#
+
+#
+# timer
+#
+choice
+	prompt "Timer Source"
+
+config ARCH_CEVT_RLX
+	bool "Use RLX internal timer"
+	depends on ARCH_CPU_TIMER
+
+config ARCH_CEVT_EXT
+	bool "Use EXT external timer"
+
+endchoice
+
+config RTL_WTDOG
+	bool "Enable watchdog timer support"
+
+config RTL_TIMER_ADJUSTMENT
+	bool "Enable timer adjustment support"
+
+#
+# uart
+#
+
+#
+# switch
+# 
+config RTL_8211DS_SUPPORT
+	bool "Support rtl8211ds for rtl8197D"
+	default n
+	depends on RTL_8197D
+
+#
+# wifi
+# 
+config RTL_PCIE_SIMPLE_INIT
+	bool
+	default y if RTL8192SE
+	default y if RTL8192CD
+
+config RTL_BRSC
+	bool "BRSC support"
+	default n
+
+config RTL_NETDEV_NO_PRIV
+	bool "Support reference priv through netdev_priv"
+	default n
+
+config AUTO_PCIE_PHY_SCAN
+	bool "819x PCIE Autoscan PCIE PHY 40Mhz"
+	default n
+
+#config PHY_EAT_40MHZ
+#	bool "819x clock source at 40Mhz"
+#	default y
+
+config RTL_EAP_RELAY
+	bool
+	
+config RTL_HOSTAPD_SUPPORT
+	bool
+
+config RTK_INBAND_HOST_HACK
+	bool
+
+#
+# pci
+#
+config BSP_ENABLE_PCI
+	bool "Enable PCI controller"
+	default n
+#
+# usb
+#
+config BSP_ENABLE_USB
+	bool "Enable USB controller"
+	default n
+
+config RTL_USB_IP_HOST_SPEEDUP
+	bool "Seedup usb samba performance"
+	default n
+
+if (RTK_VOIP_BOARD && (RTL_89xxD || RTL_8881A))
+#
+# IMEM
+#
+choice	
+	prompt "IMEM Size"	
+	depends on ARCH_CPU_RLX5281 || ARCH_CPU_RLX4281
+	default	IMEM_16K
+
+config	IMEM_4K
+	bool "4K"
+
+config	IMEM_16K
+	bool "16K"
+
+config	IMEM_32K
+	bool "32K"
+
+config	IMEM_64K
+	bool "64K"
+
+endchoice
+
+choice	
+	prompt "IMEM1 Size"
+	depends on ARCH_CPU_RLX5281 || ARCH_CPU_RLX4281
+	default	IMEM1_16K
+
+config	IMEM1_4K
+	bool "4K"
+
+config	IMEM1_16K
+	bool "16K"
+
+config	IMEM1_32K
+	bool "32K"
+
+config	IMEM1_64K
+	bool "64K"
+
+endchoice
+
+config IMEM_SIZE
+	hex
+	default "10000" if IMEM_64K
+	default "8000" if IMEM_32K
+	default "4000" if IMEM_16K
+	default "4000"
+	
+config IMEM1_SIZE
+	hex
+	default "10000" if IMEM1_64K
+	default "8000" if IMEM1_32K
+	default "4000" if IMEM1_16K
+	default "4000"
+
+endif
+
+#
+# misc
+#
+config RTL_NFBI_MDIO
+	bool
+
+endmenu

@@ -1,0 +1,6 @@
+menu "API Function"
+config MTD_API
+	bool "mtd api support"
+	default n
+ 
+endmenu

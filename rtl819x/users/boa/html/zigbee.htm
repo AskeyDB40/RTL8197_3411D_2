@@ -1,0 +1,91 @@
+<html>
+<! Copyright (c) Realtek Semiconductor Corp., 2003. All Rights Reserved. ->
+<head>
+<meta http-equiv="Content-Type" content="text/html">
+<% getIndex("no-cache"); %>
+<title>ZigBee Management</title>
+<script type="text/javascript" src="util_gw.js"> </script>
+<% getInfo("include_css"); %>
+
+<script>
+zigbeeFuncChange()
+{
+	var fm = document.zigbeeFuncForm;
+	if(fm.ZigBeeCmd.selectedIndex == 2)
+	{
+		fm.brightness.disabled = false;
+	}
+	else
+	{
+		fm.brightness.disabled = true;
+	}
+}
+function init()
+{
+	var fm = document.zigbeeFuncForm;
+	fm.ZigBeeCmd.selectedIndex = 0;
+	fm.brightness.disabled = false;
+}
+function saveChanges()
+{
+	var fm = document.zigbeeFuncForm;
+	if(fm.ZigBeeCmd.selectedIndex == 2 && fm.brightness.length == 0)
+	{
+		alert("Brightness is empty!");
+		return false;
+	}
+	var brightness = fm.brightness.value;
+}
+</script>
+
+</head>
+
+<body onload="init();">
+<blockquote>
+<h2>
+<script type="text/javascript">
+	document.write("ZigBee Management</p>");
+</script>
+</h2>
+
+
+<table border=0 width="800" cellspacing=0 cellpadding=0>
+  <tr><font size=2>
+ This table shows current matched ZigBee devices.
+  </tr>
+  <tr><hr size=1 noshade align=top></tr>
+</table>
+<form action=/boafrm/formZigBee method=POST name="zigbeeList">
+<table border='1' width="580">
+<tr class="tbl_head">
+<td width="60%"><font size=2><b>IEEE Address</b></td>
+<td width="20%"><font size=2><b>Status</b></td>
+<td width="20%"><font size=2><b>Brightness</b></td>
+<% zigbee_dev_list(); %>
+</table>
+
+<input type="hidden" value="/zigbee.htm" name="submit-url">
+  <p>
+  <input type="submit" value="Refresh" name="refresh">&nbsp;&nbsp;
+  </p>
+</form>
+
+<form action=/boafrm/formZigBee method=POST name="zigbeeFuncForm">
+  <p>
+  <input type="hidden" value="/zigbee.htm" name="submit-url">
+
+	<select size="1" name="ZigBeeCmd" onChange="zigbeeFuncChange()">
+	<option value="0">Light Off</option>
+	<option value="1">Light On</option>
+	<option value="2">Set Brightness</option>
+	<option value="3">Permit Join</option>
+	</select>
+   	<input type="text" name="brightness" size="12" maxlength="3" onClick="return saveChanges()">
+   <input type="submit" value="Apply" name="zigbee_request">&nbsp;&nbsp;
+  </p>
+</form>
+
+</blockquote>
+</body>
+
+</html>

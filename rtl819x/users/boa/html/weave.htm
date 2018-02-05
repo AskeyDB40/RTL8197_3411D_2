@@ -1,0 +1,131 @@
+<html>
+<!-- Copyright (c) Realtek Semiconductor Corp., 2003. All Rights Reserved. --->
+<head>
+<meta http-equiv="Content-Type" content="text/html">
+<% getIndex("no-cache"); %>
+<title>Weave Config</title>
+<% getInfo("include_css"); %>
+<style>
+.on {display:on}
+.off {display:none}
+</style>
+<script type="text/javascript" src="util_gw.js"> </script>
+<SCRIPT>
+function initWeaveHtm()
+{
+	var registered=<%getIndex("weave_registered");%>;
+	var FM=document.formWeave;
+	if(registered)
+	{
+		FM.weave_register_status[0].checked=true;
+		FM.weave_register_status[1].checked=false;
+		FM.weaveInfoText.disabled=true;
+		FM.command.value="unregister device";
+		document.getElementById("weaveInfoShow").innerText="Device Id";//for IE
+		document.getElementById("weaveInfoShow").textContent="Device Id";//for firefox
+		FM.weaveInfoText.value="<%getIndex("weave_device_id");%>";
+	}else
+	{
+		FM.weave_register_status[0].checked=false;
+		FM.weave_register_status[1].checked=true;
+		FM.weaveInfoText.disabled=false;
+		FM.command.value="register device";
+		document.getElementById("weaveInfoShow").innerText="Registration ticket";//for IE
+		document.getElementById("weaveInfoShow").textContent="Registration ticket";//for firefox
+	}
+	show_div(true, "Registered_div");
+	show_div(false, "wait_div");
+}
+function checkRegistration_ticket(field)
+{
+	var reg = /[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/;
+	if(!field) return false;
+	if(!reg.exec(field.value))
+	{
+		field.focus();
+		field.select();
+		alert("Invalid registration_ticket. It should be in hex number like f840e274-ce08-8c5f-2ef8-ebdab3bab1c3.");
+		return false;
+	}
+	return true;
+}
+function weave_reg_show_prompt(value)
+{
+	var inputVal=prompt(value,'');
+	if(inputVal==null)
+	{
+		return false;
+	}else if(inputVal=='')
+	{
+		alert("input cannot be null!\nTry again or cancel!");
+		return weave_reg_show_prompt(value);
+	}else if(inputVal=='realtek')
+	{
+		return true;
+	}
+	return false;
+}
+function checkStatus(value)
+{
+	var FM=document.formWeave;
+	var retVal;
+	if(value=="unregister device")
+	{
+		retVal=weave_reg_show_prompt("Clean saved device registered info? in that case you may need to register it again!\nPlease input password");
+	}
+	else if(value=="register device")
+	{
+		retVal=weave_reg_show_prompt("Please input password!")&&checkRegistration_ticket(FM.weaveInfoText);
+	}else
+	{
+		alert("Invalid commit value!not init!");
+		return false;
+	}
+	if(retVal)
+	{
+		show_div(false, "Registered_div");
+		show_div(true, "wait_div");
+	}
+	return retVal;
+}
+
+</SCRIPT>
+</head>
+
+<body onload="initWeaveHtm();">
+<blockquote>
+<h2>Weave Config</h2>
+<table border=0 width="800" cellspacing=0 cellpadding=0>
+  <tr><font size=2>
+ 	
+  </tr>
+  <tr><hr size=1 noshade align=top></tr>
+</table>
+<form action="/boafrm/formWeave" method=POST name="formWeave">
+<span id = "Registered_div" class = "off" >
+<table border=0 width="580" cellspacing=4 cellpadding=0>
+<tr>
+	<td width=40%><font size=2>Weave Registered</td>
+	<td width = 60%>
+			<INPUT type=radio name=weave_register_status disabled="">Registered&nbsp;&nbsp;
+			<INPUT type=radio name=weave_register_status disabled="">UnRegistered&nbsp;&nbsp;
+	</td>
+</tr>
+<tr>
+	<td width="40%" id="weaveInfoShow"><font size=2>Registration ticket</font></td>
+	<td width="60%"><font size="2">
+		<input type="text" name="weaveInfoText" size="45" maxlength="36" value="">
+	</td>
+</tr>
+</table>
+<input type=hidden name="submit-url" value="/weave.htm">
+<input type="submit" value="register" name="command" onClick="return checkStatus(this.value)">
+</span>
+<span id = "wait_div" class = "off" >
+Please wait...
+</span>
+</form>
+<tr><hr size=1 noshade align=top></tr>
+</body>
+</html>
+

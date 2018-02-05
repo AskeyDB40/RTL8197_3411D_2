@@ -1,0 +1,115 @@
+<html>
+<! Copyright (c) Realtek Semiconductor Corp., 2003. All Rights Reserved. ->
+<head>
+<meta http-equiv="Content-Type" content="text/html">
+<% getIndex("no-cache"); %>
+<title>Disk Setup </title>
+<script language="javascript" type="text/javascript" src="util_gw.js"> </script>
+<% getInfo("include_css"); %>
+<script>
+function init()
+{
+	if ( <% getIndex("StorageAnonAccessEnable"); %> )
+		document.formDiskManagementAnon.AnonEnabled.checked = true;
+	
+	/*if ( <% getIndex("StorageAnonAccessFtpEnable"); %> )
+		document.formDiskManagementAnon.anonymous_ftp_enable.checked = true;
+	else
+		document.formDiskManagementAnon.anonymous_ftp_disable.checked = true;
+	*/
+	/*	
+	if ( <% getIndex("StorageAnonAccessDiskEnable"); %> )
+		document.formDiskManagementAnon.anonymous_disk_enable.checked = true;
+	else
+		document.formDiskManagementAnon.anonymous_disk_disable.checked = true;
+	*/
+	//updateState();	
+}
+function Close()
+{
+	window.close();
+}
+
+function UserDeleteClick()
+{
+	document.formDiskManagementUser.submit_url.value = "/accountmng.htm";
+}
+
+</script>
+</head>
+
+<blockquote>
+<h2>Account Management</h2>
+
+<body onload="init();">
+
+<form action=/boafrm/formDiskManagementAnon method=POST name="formDiskManagementAnon">
+ <table border=0 width=500>
+	<tr><td><font size=2>
+	If enable anonymous access, can only access specific directory [public], 
+	the [public] directory located in the first partition of the first disk.
+	</font></td></tr>
+
+   <tr><td><font size=2><b>
+	<input type="checkbox" name="AnonEnabled" value="ON" >&nbsp;&nbsp;Enable Anonymous Access</b><br>
+    </td>
+  </tr>
+ </table>
+ 
+ 	<br>
+ 	<input type="submit" value="Apply Changes" name="Apply Changes">
+	<input type="hidden" value="/accountmng.htm" name="submit-url">
+
+ </form>
+<hr size=1 noshade align=top>
+
+<br>
+	<font size=2>
+	Add a new samba account here.
+	</font>
+
+<br>
+<form action=/boafrm/formDiskCreateUser method=POST name="formDiskCreateUser">
+ <table border=0 width=500>
+  <tr>
+    <td width="20%"><font size=2><b>User Name:</b></td>
+    <td width="50%"><font size=2><input type="text" name="username" size="20" maxlength="30"></td>
+  </tr>
+  <tr>
+    <td width="20%"><font size=2><b>Password:</b></td>
+    <td width="50%"><font size=2><input type="password" name="newpass" size="20" maxlength="30"></td>
+  </tr>
+  <tr>
+    <td width="20%"><font size=2><b>Confirmed Password:</b></td>
+    <td width="50%"><font size=2><input type="password" name="confpass" size="20" maxlength="30"></td>
+  </tr>
+
+</table>
+	<br>
+    <input type="submit" name="CreateUser" value="Apply Changes">
+    <input type="hidden" value="/accountmng.htm" name="submit-url">
+
+</form>
+
+
+ 
+<br>
+<form action=/boafrm/formDiskManagementUser method=POST name="formDiskManagementUser">
+ <table border=0 width=500>
+  <tr><font size=2><b>Current Account Table:</b></font></tr>
+
+    <% Storage_DispalyUser(); %>
+    <input type="hidden"  name="submit_url">
+    <input type="hidden"  name="userindex">
+ </table>
+ 
+ 	<br>
+   	<input type="submit" value="Delete Selected" name="Delete_Selected" onClick="UserDeleteClick()">&nbsp;&nbsp;
+ 	<input type="submit" value="Delete All" name="Delete_All" onClick="UserDeleteClick()">&nbsp;&nbsp;&nbsp;
+	<input type="reset" value="Reset" name="reset">
+
+</form>
+
+</body>
+
+</html>

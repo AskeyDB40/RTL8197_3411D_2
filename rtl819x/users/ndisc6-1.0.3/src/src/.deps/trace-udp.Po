@@ -1,0 +1,146 @@
+trace-udp.o: trace-udp.c ../config.h ../compat/fixups.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/sys/types.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/features.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/uClibc_config.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/uClibc_arch_features.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/sys/cdefs.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/types.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/wordsize.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/gcc/stddef.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/kernel_types.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/typesizes.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/pthreadtypes.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/sched.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/time.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/endian.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/endian.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/byteswap.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/byteswap.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/sys/select.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/select.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/sigset.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/time.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/sys/sysmacros.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/sys/socket.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/sys/uio.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/uio.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/socket.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/limits.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/gcc/limits.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/posix1_lim.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/local_lim.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/linux/limits.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/uClibc_local_lim.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/posix2_lim.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/xopen_lim.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/stdio_lim.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/sockaddr.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/asm/socket.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/asm/sockios.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/asm/ioctl.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/asm-generic/ioctl.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/netinet/in.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/stdint.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/wchar.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/in.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/string.h \
+ /home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/gcc/stdbool.h \
+ traceroute.h
+
+../config.h:
+
+../compat/fixups.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/sys/types.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/features.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/uClibc_config.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/uClibc_arch_features.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/sys/cdefs.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/types.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/wordsize.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/gcc/stddef.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/kernel_types.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/typesizes.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/pthreadtypes.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/sched.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/time.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/endian.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/endian.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/byteswap.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/byteswap.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/sys/select.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/select.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/sigset.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/time.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/sys/sysmacros.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/sys/socket.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/sys/uio.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/uio.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/socket.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/limits.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/gcc/limits.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/posix1_lim.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/local_lim.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/linux/limits.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/uClibc_local_lim.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/posix2_lim.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/xopen_lim.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/stdio_lim.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/sockaddr.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/asm/socket.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/asm/sockios.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/asm/ioctl.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/asm-generic/ioctl.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/netinet/in.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/stdint.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/wchar.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/bits/in.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/string.h:
+
+/home/xingpeng_tao/branch-rtl819x-sdk-v3.4.6.7/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/include/gcc/stdbool.h:
+
+traceroute.h:

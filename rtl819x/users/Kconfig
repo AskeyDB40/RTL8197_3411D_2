@@ -1,0 +1,1393 @@
+#
+# For a description of the syntax of this configuration file,
+# see scripts/kbuild/config-language.txt.
+#
+mainmenu "Users Configuration"
+
+# menu "Applications Settings"
+
+comment "Applications Settings"
+############ isp features ###################
+menu "isp features"
+
+config APP_UBUS
+        bool "ubus"
+	select LIB_JSON
+	select LIB_LIBUBOX
+	select LIB_UBUS
+        default n
+        help
+                ubus support
+
+config APP_REINIT
+        depends on APP_UBUS
+        bool "system reinit support"
+        help
+                system reinit support	
+
+config ISP_IGMPPROXY_MULTIWAN
+	depends on APP_IGMPPROXY
+	depends on MULTIPLE_WAN_SUPPORT
+	depends on !IGMPPROXY_MULTIWAN
+	bool "support igmp proxy for ISP multiwan"
+
+config  MULTIPLE_WAN_SUPPORT
+        bool "MULTIPLE_WAN_SUPPORT"
+        help
+           The multiple wan support
+
+
+config  SINGLE_WAN_SUPPORT
+		depends on MULTIPLE_WAN_SUPPORT
+        bool "SINGLE WAN SUPPORT"
+        help
+           The single wan support
+
+config APP_ETH_CTRL
+	bool "eth_ctl"
+	help
+		ethctl
+endmenu
+############ BT ###################
+menu "BT Configuration"
+config APP_DCTS
+	bool "dcts"
+	help
+	  dcts is a controller server for Enhanced Ctorrent
+	  
+config APP_CTORRENT
+	bool "Enhanced Ctorrent"
+	help
+	  Enhanced Ctorrent is a light-weight BT Client on UNIX like OS.
+	  
+config APP_TRANSMISSION
+	bool "Transmission BT"
+	select LIB_LIBEVENT_2021
+	help
+		An Transmission BT Daemon
+		
+endmenu
+
+########### File_system #######
+menu "File_system Configuration"
+config APP_DOSFSTOOLS
+	bool "dosfstools"
+	help
+	 dosfstools consists of the programs mkfs.fat, fsck.fat and fatlabel to create,check and label file systems of the FAT family.
+
+config APP_E2FSPROGS
+	bool "e2fsprogs"
+	default n
+	help
+	  e2fsprogs is a set of utilities for maintaining the ext2, ext3 and ext4 file systems
+	  
+config APP_EXFAT_FUSE
+	bool "exfat-fuse"
+	help
+	  A tool for exfat file system
+
+config APP_NFS_UTILITY
+	bool "NFS utility"
+	help
+	  NFS server and portmap support
+	
+config APP_NTFS3G
+	bool "ntfs3g"
+	default n
+	help
+	  NT file system support
+
+config APP_PARTED
+        bool "parted"
+        default n
+        help
+         A tool for creating and destroying partitions. 
+	  
+#source "rtl_fs/Kconfig"	
+
+endmenu  
+
+########### IPv6 #############
+menu "IPv6 Configuration"
+config SIXRD_SUPPORT
+	bool "6rd"
+	help
+	  6rd tunnel support	  
+
+config APP_DHCPV6
+	bool "dhcpv6"
+	help
+	  Dhcp daemon for Ipv6.
+
+config APP_DNSMASQ
+	bool "dnsmasq"
+	default n
+	help
+	  dns proxy for IPv4 and IPv6
+config DSLITE_SUPPORT
+	bool "ds-lite"
+	help
+	  ds-lite tunnel support
+config APP_ECMH
+	bool "ecmh"
+	help
+	  A mld proxy for IPv6
+config APP_NDP_PROXY
+	bool "ndp proxy"
+	help
+	    ipv6 neighbor discover protocol proxy
+config APP_RADVD
+	bool "radvd"
+	help
+	  radvd daemon for Ipv6.
+config APP_RADVD_WAN
+	depends on APP_RADVD
+        bool "wan radvd"
+        help
+          wan radvd daemon for Ipv6.
+
+config APP_NDISC6
+        bool "ndisc6"
+        help
+          ndisc6 tools for Ipv6
+endmenu
+
+########### PPP ##############
+menu "PPP Configuration"
+config APP_L2TPD
+	bool "l2tpd"
+	help
+	  A l2tpd daemon.
+	  
+config APP_MULTIPPPOE
+	bool "Multi PPPoE Support"
+	help
+	  Multi PPPoE Support
+	  
+config  PPP_REJECT_ERROR_SESSION_PATCH
+	bool "ppp reject error session patch"
+	help
+	  A  ppp reject error session patch.
+	  
+config APP_PPPD
+	bool "pppd"
+	help
+	  A ppp daemon.
+
+config APP_PPPD_IPV6CP
+    depends on APP_PPPD
+        bool "IPv6 over PPP support"
+    help
+           Make ppp support ipv6.
+		   
+config  PPPOE_DISCONNECT_FLOW_PATCH
+        bool "pppoe_disc_flow_patch"
+        help
+           A pppoe disconect flow patch.
+
+config APP_PPTP
+	bool "pptp"
+	help
+	  A pptp client.
+endmenu
+############RTK_inband########
+menu "RTK_inband Configuration"
+config APP_RTK_INBAND_CTL
+        bool "rtk_inband_ctl"
+        help
+          This daemon support realtek proprietary inband control
+
+config APP_RTK_INBAND_HOST
+        bool "rtk inband Host utility sample"
+        help
+          rtk inband Host utility sample
+
+endmenu
+########### USB3G ############
+menu "USB3G Configuration"
+config APP_CHAT
+	bool "chat"
+	help
+	  PPP chat.
+config APP_COMGT
+	bool "comgt"
+	help
+	  GSM dialup script.
+config APP_HUBCTRL
+	bool "hub-ctrl"
+	help
+	  hub-ctrl.
+config APP_LIBUSB
+ 	bool "libusb"
+ 	help
+ 	  libusb.
+config APP_MBPK_EJECT
+	bool "mbpk_eject"
+	help
+	  mbpk_eject.
+	  
+config APP_MNET
+	bool "mnet"
+	help
+	  mnet.
+
+config LEADCORE_4G_SUPPORT
+	bool "support lc5721"
+	depends on APP_MNET
+	help
+		add lc5721 in mnet
+
+config APP_USBMODESWITCH
+	bool "usb-modeswitch"
+	help
+	  usb-modeswitch.
+config APP_USBMODESWITCH_DATA
+	bool "usb-modeswitch-data"
+	help
+	  usb-modeswitch-data.
+config APP_USBUTILS
+	bool "usbutils"
+	select LIB_LIBUSB
+	select LIB_LIBICONV
+	select LIB_USBUTILS
+	help
+	  usbutils.
+endmenu
+########### else ###################
+config APP_APPLE_MFI_WAC
+	bool "Apple WAC Support"
+	select APP_AVAHI
+	select LIB_LIBDAEMON
+	help
+	    Apple Support Package, including WAC wifi audio
+
+config APP_APPLE_HOMEKIT
+	bool "Apple Homekit Support"
+    	depends on APP_APPLE_MFI_WAC
+	select LIB_POLARSSL
+	help
+	    Apple Support Package, including Homekit accessory protocol
+	choice 
+            prompt "Choose Homekit Services"
+		depends on APP_APPLE_HOMEKIT
+		
+            config APP_HAP_SWITCH_SERVICE
+            bool "Homekit Switch Service"
+            depends on APP_APPLE_HOMEKIT
+
+           config APP_HAP_TUNNEL_BLE
+            bool "Homekit tunnel to Ble(base on bluez 5.24 API)"
+            depends on APP_APPLE_HOMEKIT
+	    select APP_BLUEZ
+	    select APP_BLUEZ_524
+
+            config APP_HAP_BRIDGE_ZIGBEE_SAMPLE
+            bool "Homekit Bridge sample(NXP Zigbee only)"
+            depends on APP_APPLE_HOMEKIT
+
+            config APP_HAP_IP_CAM_SERVICE
+            bool "Homekit IP Camera Services"
+            depends on APP_APPLE_HOMEKIT
+
+	endchoice
+
+config APP_HAP_CAM_SERVICE
+        bool "Homekit Camera Services"
+        depends on APP_HAP_IP_CAM_SERVICE
+
+config APP_HAP_MICROPHONE_SERVICE
+	bool "Homekit Microphone Services"
+        depends on APP_HAP_IP_CAM_SERVICE
+
+config APP_HAP_SPEAKER_SERVICE
+	bool "Homekit Speaker Services"
+        depends on APP_HAP_IP_CAM_SERVICE
+
+config APP_ALSA_AUDIO
+	bool "alsa related"
+	help
+	  ALSA Audio
+	  
+config APP_AUTH
+	bool "auth"
+	help
+	  A daemon used for Wireless EAP.
+
+config APP_AUTH_2NDSRV
+	bool "	2nd auth srv"
+	depends on APP_AUTH
+	help
+	  Config auth daemon to support dual radius server
+
+config APP_AUTH_HOLD_FAIL_SUPP_A_WHILE
+	bool "hold auth fail supp a while"
+	default n
+	depends on APP_AUTH
+	help
+	  When a supplication authentication fail, authenticator will hold it a while, such as 1 minute. 
+
+config APP_AVAHI
+	bool "avahi-0.6.31"
+	select LIB_LIBDAEMON
+	help
+	  A daemon used for Zeroconf under linux.
+
+source "adapter-api/Kconfig"	  
+config APP_BLUEZ
+	bool "bluez"
+	select LIB_EXPAT
+	select LIB_DBUS
+	select LIB_LIBUSB
+	select LIB_LIBFFI
+	select LIB_GETTEXT
+	select LIB_LIBICONV
+	select LIB_ZLIB_128
+	select LIB_GLIB
+	select LIB_ALSA
+	select LIB_READLINE 
+	select LIB_TERMCAP 
+	select APP_RTK_HCIATTACH
+	help
+	   bluez is bluetooth utility
+choice
+        prompt "Bluez Version"
+        default APP_BLUEZ_496
+	depends on APP_BLUEZ        
+        config APP_BLUEZ_496
+                bool "Bluez 4.96"
+		config APP_BLUEZ_522
+                bool "Bluez 5.22"
+	config APP_BLUEZ_524
+	bool "Bluez 5.24"
+endchoice
+source "rtk_bluetooth_firmware/Kconfig"
+
+config APP_BT_REPEATER_CONFIG
+	bool "Realtek Bluetooth Repeater Config"
+	depends on APP_BLUEZ
+	select LIB_BTCONFIG
+	select APP_MTD_UTILS
+	default n
+	help
+		Realtek bluetooth repeater config daemon
+
+config APP_RTK_HCIATTACH
+	bool "Realtek hciattach tool"
+	depends on APP_BLUEZ
+	default n
+	help
+		Realtek hciattach tool
+
+config APP_BT_MP
+	bool "Realtek Bluetooth MP tool"
+	select APP_RTK_BLUETOOTH_FM
+	default n
+	help
+		Realtek Bluetooth MP tool
+
+config APP_PHP
+       bool "php-5.6.19"
+       help
+         Support php-5.6.19.
+
+config APP_BOA
+	bool "boa"
+	help
+	  A simple HTTPD Daemon. It provides web interface of the Wireless Gateway
+	  
+config APP_BOA_CGI
+	depends on APP_BOA
+	bool "boa CGI Support"
+	help
+	  Make boa web server to support CGI.
+	  
+config APP_BOA_IPV6_SUPPORT
+	depends on APP_BOA
+	bool "boa IPv6 Support"
+	help
+	  Make boa web server to support ipv6.
+
+config APP_BOA_NEW_UI
+	depends on APP_BOA
+	bool "boa new UI Support"
+	help
+	  boa use new web UI.
+
+config APP_MULTI_USERS
+	depends on APP_BOA
+	bool "boa multi-users Support"
+	help
+	 Make boa support multi-users management
+	 
+config SYS_DIAGNOSTIC
+	depends on APP_BOA
+        bool "system diagnostic"
+        help
+           generate system diagnostic files:/tmp/dumpDiagnosticLog.txt.
+
+config DIGEST_AUTHENTICATION
+	depends on APP_BOA
+	bool "digest authentication"
+	help
+	    change base authentication mode to digest authentication mode
+
+config APP_BOA_WITH_SSL
+	depends on APP_BOA
+    default n
+	bool "boa SSL Support"
+	help
+	  boa with openssl support, which will enable HTTPS visit.
+	  
+choice
+    prompt "select boa SSL Type"
+    default APP_BOA_WITH_MBEDTLS
+    depends on APP_BOA_WITH_SSL
+
+config APP_BOA_WITH_OPENSSL
+	depends on APP_BOA_WITH_SSL
+	bool "BOA with openssl"
+    select APP_OPENSSL
+    select APP_OPENSSL-0.9.8I
+
+config APP_BOA_WITH_MBEDTLS
+	depends on APP_BOA_WITH_SSL
+	bool "BOA with mbedtls"
+    select APP_MBEDTLS
+endchoice
+	  
+config APP_GOAHEAD
+	bool "goahead"
+	depends on !APP_BOA
+	help
+	  A simple HTTPD Daemon. It provides web interface of the Wireless Gateway
+	  
+config APP_BRCTL
+	bool "brctl"
+	help
+	  Brctl is used to set up, maintain, and inspect the ethernet bridge 
+	  configuration in the linux kernel.
+
+config APP_BUSYBOX
+	bool "busybox"
+	help
+	  BusyBox combines tiny versions of many common UNIX utilities into
+	  a single small executable.  It provides minimalist replacements
+	  for most of the utilities you usually find in fileutils, shellutils,
+	  findutils, textutils, grep, gzip, tar, etc.  Simply select those
+	  utilities and options you want.
+
+
+config APP_CPU_UTILIZATION
+	bool "CPU utilization"
+	help
+	  Display CPU utilization on WEB page.
+	choice
+	prompt "Histroy data file size"
+	default APP_CPU_UTILIZATION_36K
+	depends on APP_CPU_UTILIZATION
+		config APP_CPU_UTILIZATION_36K
+		bool "36K"
+		config APP_CPU_UTILIZATION_72K
+		bool "72K"
+	endchoice
+	
+config APP_CURL
+	bool "curl"
+	help
+	  curl
+	  
+config APP_DBUS
+    bool "dbus"
+    help
+        Dbus 1.8.0 support
+	
+config LIB_CURL
+    bool "curl-7.34.0"
+        help
+	  curl-7.34.0 required by transmission
+	  
+config APP_DISCOVER
+	bool  "discover"
+	help
+	  Auto Discovery Server
+config APP_DNRD
+	bool "dnrd"
+	help 
+	  dns relay for ipv4	  
+
+config APP_FWD
+	bool "firmware write daemon"
+	default y 
+	help
+	  A firmware write daemon.	 
+
+config FT_DAEMON
+        bool "FT Daemon support"
+
+config DOT11K_DEAMON
+        bool "11k Deamon support"
+		
+config RTK_SMART_ROAMING
+	bool "smart roaming support"
+		
+config APP_EXPAT210
+       bool "expat210"
+       select LIB_EXPAT
+       help
+           expat210 lib for weave
+	  
+config APP_GDBSERVER
+        bool "gdbserver"
+        help
+          The gdbserver-6.8 for debug application
+	  
+config APP_GPROXY
+	bool "gproxy"
+	help
+	  The gproxy daemon
+
+config APP_HOSTAPD
+	bool "hostapd-2.0"
+	select APP_OPENSSL
+	help
+	  The hostap daemon in vserion 2.0
+	  
+config LIB_NL
+    depends on APP_HOSTAPD
+    bool "libnl-1.1"
+	help
+	  library requried by hostapd
+	  
+config APP_IAPP
+	bool "iapp"
+	help
+	  The IAPP application
+
+config APP_IGMPPROXY
+	bool "igmp proxy"
+	help
+	  The igmp proxy daemon
+	
+config IGMPPROXY_MULTIWAN
+	depends on APP_IGMPPROXY
+        bool "support igmp proxy multiwan"
+		
+config IGMPV3_SUPPORT
+	depends on APP_IGMPPROXY
+	bool "support igmpv3 proxy"
+	
+config APP_IOH
+	bool "ioh"
+	help
+	  IOH client & daemon
+	
+config APP_IPROUTE
+	bool "iproute2"
+	help
+	  The iproute2 daemon
+
+config APP_IPROUTE_IPV6
+	depends on APP_IPROUTE
+	bool "iproute2 full support"
+	help
+	  Make iproute2 daemon support ip command
+
+config APP_IPTABLES
+	bool "iptables"
+	help
+	  The iptables daemon
+
+config APP_IP6TABLES
+        depends on APP_IPTABLES
+	bool "ip6tables"
+	help
+	  The ip6tables daemon
+
+config APP_L7FILTER_PAT
+	bool "l7filter_pat"
+	depends on APP_IPTABLES
+	help
+	  The l7filter pattern
+
+config APP_IWCONTROL
+	bool "iwcontrol"
+	help
+	  The iwcontrol utility.
+
+config LIB_LIBDAEMON
+    bool "libdaemon-0.14"
+    help
+        A lightweight C library that eases the writing of UNIX daemons.
+
+config LIB_POLARSSL
+	bool "polarssl"
+	help
+	  A lightweight C library that support ssl function.
+
+config APP_LLTDD
+	bool "lltdd"
+	help
+	  The Link Layer Topology Discovery (LLTD) daemon.
+	  
+config APP_LOGIN_CONSOLE
+	bool "login on console"
+	help
+	  user must login on console if the feature enabled.
+	  
+config MAP_E_SUPPORT
+	bool "MAP-E"
+	help
+	  Mapping of Address and Port with Encapsulation support.
+
+config APP_MBEDTLS
+    bool "mbedtls-2.2.1"
+    default n
+    help
+        mbedtls-2.2.1
+
+config APP_MDADM
+	bool "mdadm-3.2.5"
+	default n
+	help
+	  mdadm-3.2.5
+	  
+config APP_MINIDLNA
+	bool "minidlna"
+	default n
+	help
+		minidlna deamon	  
+		
+config APP_DLNA_DMS
+	bool "dlna_dms"
+	depends on !APP_MINIDLNA
+	help
+	 ushare daemon
+
+config APP_LIBICONV
+	bool "libiconv"
+	depends on APP_DLNA_DMS
+	help
+	 libiconv-1.14
+	default y	
+	
+config APP_MINIIGD
+	bool "miniigd"
+	help
+	  A miniigd daemon.
+config APP_MINIIGD_CERTIFICATION
+    depends on APP_MINIIGD
+        bool "miniigd certification support"
+    help
+           Make miniigd support certification.
+config APP_MINIIGD_IPV6
+    depends on APP_MINIIGD
+        bool "miniigd ipv6 support"
+    help
+           Make miniigd support ipv6.
+
+config RANDOM_URL
+        depends on APP_MINIIGD
+        bool " miniigd randomize URLs"
+        help
+          Randomize URLs to avoid http://www.filet-o-firewall.com/.
+
+config APP_MINI_UPNP
+	bool "mini_upnp"
+	help
+	  A Mini-UPNP Daemon and library for miniigd and wsc.
+
+config APP_MLDPROXY
+        bool "mld proxy"
+        help
+          The mld proxy daemon
+		  
+config MLDPROXY_MULTIWAN
+        depends on APP_MLDPROXY
+        bool "support mld proxy multiwan"
+
+#config MLDV2_SUPPORT
+#        depends on APP_MLDPROXY
+#        bool "support mldv2 proxy"
+
+config APP_MP
+        bool "mp daemon"
+        help
+          A mp daemon.
+		  
+config APP_MT_DAAPD
+	bool "mt-daapd"
+	select LIB_ZLIB_123
+	select LIB_LIBID3TAG
+	help
+	 mt-daapd is a program which acts as an iTunes(DAAP) server for Linux and other Posix unixes. It may eventually support Win32 as well.
+		  
+config APP_MTD_UTILS
+	bool "mtd utils"
+	default n
+	help 
+	 mtd utils support
+
+config APP_NETATALK
+        bool "netatalk"
+	help
+	  Apple File Protocol Support	  
+	  
+config APP_NFBI
+	bool "nfbi"
+	help
+	  User space program for NFBI.
+	  
+config APP_NFBI_HOST
+	bool "nfbi host"
+	help
+	  NFBI user space program for Host.
+
+config APP_NMBS
+	bool "nmbs"
+	help
+	  Nmb server.
+	  
+config APP_NTPCLIENT
+	bool "ntpclient"
+	help
+	  The ntpclient daemon
+	  
+config APP_OPENSSL
+	bool "openssl"
+	help
+	  The openssl tool.
+	default n
+
+	choice 
+		prompt "openssl"
+		depends on APP_OPENSSL
+			config APP_OPENSSL-0.9.8I
+				bool "openssl-0.9.8i"
+				select LIB_OPENSSL_098I
+				help 
+					This version used for toolchain-1.5.5.
+			config APP_OPENSSL-0.9.8Y
+                bool "openssl-0.9.8y"
+				select LIB_OPENSSL_098Y
+                help
+                    This version used for toolchain-1.5.5.
+            config APP_OPENSSL-1.0.2A
+                bool "openssl-1.0.2a"
+			config APP_OPENSSL-1.0.2D
+                bool "openssl-1.0.2d"
+                select LIB_OPENSSL_102D
+                help
+                    support tls1.1/tls1.2, this version used for opencapwap and tr069 with openssl.
+	endchoice
+
+config APP_OPROFILE
+	bool "Oprofile"
+	help
+		Linux kernel profiling tool
+	default n
+	select LIB_POPT
+	select APP_BINUTILS
+ 
+#config APP_HOSTAPD_HCM
+#	bool "hostapd in host controlled mode"
+#	depends on APP_OPENSSL
+#	help
+#	  The hostap daemon is patched based on 0.6.10
+config APP_OPENVPN
+	bool "openvpn"
+	select LZO 
+#depends on APP_OPENSSL
+	help
+		The OpenVPN daemon.
+	default n
+
+config LZO
+	bool "lzo"
+	depends on APP_OPENVPN
+	select LIB_LZO
+	help
+		lib lzo used by openvpn.	
+
+config APP_WAPI
+	bool "wapi_utils"
+	depends on APP_OPENSSL
+	help
+	  The wapi certs related applications.
+	default n
+config APP_ORAYDDNS
+	bool "oray ddns"
+	help
+	  The oray ddns daemon	
+config APP_PATHSEL
+	bool "pathsel"
+	help
+	  The mesh path selection paemon
+	  
+config APP_PMC_UTILS
+	bool "pmc utils"
+	select LIB_Z
+	help
+	  The pmc utils
+
+#config APP_HOSTAPD_SLAVE
+#        bool "hostapd_slave"
+#        help
+#          The hostap_slave daemon in support vserion 0.6.10
+
+config APP_PYTHON_SUPPORT
+	bool "python support"
+	default n
+	help
+	  Python 2 or 3 support.
+#comment "Choose python version:"
+choice 
+	prompt "python version"
+	default APP_PYTHON3_SUPPORT
+	depends on APP_PYTHON_SUPPORT
+		config APP_PYTHON2_SUPPORT
+			bool "2.7.8"
+			help 
+				Python-2.7.8.
+		config APP_PYTHON3_SUPPORT
+			bool "3.4.1"
+			help 
+				Python-3.4.1.
+endchoice
+
+config APP_RELOAD
+	bool "reload"
+	help
+	   A periodly checking utility and reload configuration at the end of init.
+	  
+config APP_ROUTED
+	bool "routed"
+	help
+	   RIP daemon for dynamic routing
+
+config APP_BIRD
+	bool "bird-1.4.0"
+	depends on APP_ROUTED
+	help
+	   RIPng daemon for dynamic routing	  
+	   
+config APP_RTK_CMD
+	bool "rtk_cmd daemon"
+	default y 
+	help
+	  A rtk_cmd daemon.	
+	  
+config APP_TCP2DEV
+	bool "RTK tcp2dev utility"
+	#depends on APP_RTK_VOIP
+	help
+	  RTK tcp2dev utility Support	
+
+config APP_RTK_EVENTD_SUPPORT
+	bool "rtk_event daemon"
+	default n 
+	help
+	  A rtk_event daemon.
+	  
+config APP_RTK_VOIP
+	bool "rtk_voip"
+	help
+	  The rtk voip
+
+#config APP_RTK_VOIP_E8C
+#	bool "E8C"
+#	depends on APP_RTK_VOIP
+#	help
+#	  The rtk voip-e8c	
+	  
+config APP_RTL8686_IPC_UTIL
+	bool "RTL8686 IPC User Utility"
+	#depends on APP_RTK_VOIP
+	help
+	  RTL8686 IPC User Utility Support		  
+	  
+source "samba/Kconfig"
+
+config APP_SCRIPT
+	bool "scripts"
+	help
+	  The scripts used to init the gw and start the daemons
+
+config APP_SIMPLE_CONFIG
+	bool "simple config support"
+	help
+	  Tool for client mode device connect to AP.
+	  
+config APP_SNMP
+	bool "snmp"
+	help
+	  An SNMP Daemon for network management
+	  
+config APP_SQUASHFS40
+	bool "squashfs 4.0"
+	help
+	  squashfs tools to build image 
+
+config APP_SQUASHFS42
+	bool "squashfs 4.2"
+	select LIB_XZ
+	help
+	  squashfs tools to build image 
+	  
+config APP_TRACEROUTE
+    bool "traceroute"
+    help
+        traceroute support
+
+config APP_TR069
+	bool "tr069"
+	select APP_ROUTED
+	help
+        CWMP client daemon for remote network management, it's recommanded to enable CONFIG_MTD_NAME_MAPPING, 
+        If CONFIG_MTD_NAME_MAPPING is enable, please manually set kernel configuration :
+        CONFIG_RTL_CWMP_TRANSFER_PARTITION_SIZE and CONFIG_RTL_CWMP_NOTIFICATION_PARTITION_SIZE.(0x20000 is recommanded for each)
+
+config APP_FLATFSD
+	bool
+	  
+config USER_CWMP_WITH_SSL
+	bool
+	depends on APP_TR069	
+
+choice
+prompt "TR069 Root Data Model"
+default USER_CWMP_WITH_TR098
+depends on APP_TR069
+
+config USER_CWMP_WITH_TR098
+    depends on APP_TR069
+    bool "TR-098"
+
+config USER_CWMP_WITH_TR181
+	depends on APP_TR069	
+	bool "TR-181"
+endchoice
+	  
+menu "TR069 Optional Data Model"
+depends on APP_TR069
+
+config USER_CWMP_WHTH_TR098_QOS
+    depends on USER_CWMP_WITH_TR098
+    bool "enable TR-098 qos support"
+
+config USER_CWMP_WITH_TR181_V6
+	depends on USER_CWMP_WITH_TR181	
+	bool "enable TR-181 V6 part support"	
+
+config USER_CWMP_WITH_TR069_ANNEX_G
+	depends on APP_TR069
+	bool "enable TR-111 support"
+	help
+	  TR-069 Annex G(TR-111) - Connection Request via NAT Gateway
+	  
+config APP_TR104
+	bool "enable TR104 support"
+	depends on APP_TR069
+	depends on APP_RTK_VOIP
+	help
+		TR-104 Parameters incorporated with TR-069
+		
+config USER_CWMP_WITH_TR143
+	depends on APP_TR069	
+	bool "enable TR-143 support"
+	help
+		TR-143 Parameters incorporated with TR-069
+
+config USER_CWMP_WITH_TRACEROUTE
+	depends on USER_CWMP_WITH_TR098
+	bool "enable .TraceRoute. data model support"
+    select APP_TRACEROUTE
+	help
+		TraceRoute Parameters with TR-069
+
+endmenu
+		
+choice
+prompt "TR069 SSL Type"
+default USER_CWMP_SSL_NO_SUPPORT
+depends on APP_TR069
+
+config USER_CWMP_SSL_NO_SUPPORT
+	depends on APP_TR069
+	bool "no support any SSL"
+	
+config USER_CWMP_WITH_MATRIXSSL
+	depends on APP_TR069
+	bool "support MATRIXSSL"
+	select USER_CWMP_WITH_SSL
+	
+config USER_CWMP_WITH_OPENSSL
+	depends on APP_TR069
+	bool "support OPENSSL"
+	select USER_CWMP_WITH_SSL
+	select APP_OPENSSL
+endchoice
+
+config USER_CWMP_DYNAMIC_SERV_AUTH
+	bool "support dynamic ACS certificate authentication"
+    depends on USER_CWMP_WITH_MATRIXSSL || USER_CWMP_WITH_OPENSSL
+	default n
+    help
+        If select, CPE will authenticate ACS certification dynamically. That is, 
+        client or CA cerficate won't be store in CPE at very first time. 
+        When first connecting to ACS, SSL will only be used for encryption and ACS will assign CA and client to CPE. 
+        Then each time CPE communicates with ACS, ACS certificate authentication will ON when SSL-handshake.
+
+config APP_UDHCPD
+	bool "udhcp" 
+	help
+	  An embedded DHCP client and server	
+
+config APP_AUTORUNIMG
+	bool "ulinker autorun image tool"
+	help
+	  Tool for generate ulinker auto install image.
+	  
+config APP_UPDATEDD
+	bool "updatedd DDNS"
+	help
+	  An DDNS daemon for serverl DDNS ISP
+
+config APP_UPIMAGE
+	bool "upImage"
+	select LIB_LRZSZ
+	help
+	  update Image through ttyS tool
+	  
+config APP_USBMOUNT
+	bool "usbmount"
+	help
+	  The usbmount daemon.
+
+config USBDISK_UPDATE_IMAGE
+        depends on APP_USBMOUNT
+        bool "usbdisk update image"
+        help
+          Update image from specific file in usb disk.  
+
+config APP_UWIFI
+	bool "uWiFi"
+	help
+	  A uWiFi package for customer
+
+config APP_VSFTPD
+	bool "vsftpd"
+	help
+	  The ftp daemon.
+
+config APP_WEAVE
+	bool "weave"
+    select APP_AVAHI
+    select APP_EXPAT210
+    select APP_DBUS
+    select LIB_CURL
+	help
+	  Google Weave IOT communication library
+
+config APP_WIRELESSTOOLS
+	bool "wireless tools"
+	help
+	  The wireless tools
+
+config APP_WSC
+	bool "wsc daemon"
+	select APP_MINI_UPNP
+	help
+	  The wireless WPS daemon
+# endmenu
+
+
+
+#################################################################################################
+menu "Libraries Settings"
+config LIB_BTCONFIG
+	bool "BT Config library"
+	help
+		BT Config library
+
+config APP_FLEX
+	bool "flex library"
+	help
+	  flex library.
+
+config LIB_FUSE
+	bool "fuse library"
+	help
+		library required by exfat-fuse
+	  
+config LIB_LIBPCAP
+	bool "Libpcap library"
+	help
+		libpcap-1.4.0
+		
+config APP_PCAP
+	bool "pcap"
+	depends on LIB_LIBPCAP
+	help
+	  pacekt capture.
+
+config LIB_PNG
+    bool "libpng"
+    select LIB_Z
+	help
+	  A small example library, only for demostration.
+	  
+config LIB_Z
+    bool "zlib"
+	select LIB_ZLIB_125
+	help
+	  zlib 1.2.5 required by pmc utils
+
+config LIB_EXPAT
+	bool "lib expat"
+	depends on APP_BLUEZ || APP_EXPAT210
+	help 
+	  expat is a library for XML parse
+
+config LIB_DBUS
+	bool "lib dbus"
+	depends on APP_BLUEZ
+	help
+	  D-Bus is a message bus system, a simple way for applications to talk to one another
+	
+config LIB_READLINE
+	bool "lib readline"
+	depends on APP_BLUEZ
+	help
+	 he Readline library provides a set of functions for use by applications that allow users to edit command lines as they
+	 are typed in 
+
+config LIB_TERMCAP
+	bool "lib termcap"
+	depends on APP_BLUEZ
+	help
+	 libtermcap
+
+config LIB_XZ
+	bool "lib xz"
+	depends on APP_SQUASHFS42
+	
+config LIB_LIBUSB
+	bool "lib libusb"
+	depends on APP_USBUTILS || APP_BLUEZ
+	help 
+	  libusb is a library for USB device access from Linux, Mac OS X,
+	  OpenBSD, NetBSD, and Windows userspace
+	  
+config LIB_LIBICONV
+	bool "lib libiconv"
+	depends on APP_USBUTILS || APP_BLUEZ
+	help
+	  This library provides an iconv() implementation
+	  
+config LIB_USBUTILS
+	bool "lib usbutils"
+	depends on APP_USBUTILS
+	
+config LIB_LIBFFI
+	bool "libffi"
+	depends on APP_BLUEZ
+	help
+	  FFI stands for Foreign Function Interface.
+
+config LIB_GETTEXT
+	bool "lib gettext"
+	depends on APP_BLUEZ
+	help 
+	  This is the GNU gettext package.  It is interesting for authors or
+	  maintainers of other packages or programs which they want to see
+	  internationalized.  As one step the handling of messages in different
+	  languages should be implemented.  For this task GNU gettext provides
+	  the needed tools and library functions.
+
+config LIB_ZLIB_128
+	bool "lib zlib-1.2.8"
+	depends on APP_BLUEZ
+	help
+	  zlib 1.2.8 is a general purpose data compression library.
+
+config LIB_GLIB
+	bool "glib"
+	depends on APP_BLUEZ
+	help 
+	  GLib is the low-level core library that forms the basis for projects such as GTK+ and GNOME
+
+config LIB_ALSA
+	bool "alsa-lib"
+	depends on APP_BLUEZ
+	help
+	  alsi-lib is used for audio development
+
+config LIB_JSON
+	bool "lib json-c-0.12"
+	depends on APP_UBUS
+
+config LIB_LIBUBOX
+	bool "lib libubox"
+	depends on APP_UBUS
+
+config LIB_UBUS
+	bool "lib ubus"
+	depends on APP_UBUS
+
+config LIB_OPENSSL_098I
+	bool "lib openssl-0.9.8i"
+	depends on APP_OPENSSL-0.9.8I
+	
+config LIB_OPENSSL_098Y
+	bool "lib openssl-0.9.8y"
+	depends on APP_OPENSSL-0.9.8Y
+ 
+config LIB_OPENSSL_102D
+	bool "lib openssl-1.0.2d"
+	depends on APP_OPENSSL-1.0.2D
+
+config LIB_LZO
+	bool "lib lzo-2.08"
+	depends on LZO
+
+config LIB_ZLIB_125
+	bool "lib zlib-1.2.5"
+	depends on LIB_Z
+
+config LIB_ZLIB_123
+	bool "lib zlib-1.2.3"
+	depends on APP_MT_DAAPD
+
+config LIB_LIBID3TAG
+	bool "lib libid3tag"
+	depends on APP_MT_DAAPD
+
+config LIB_LRZSZ
+	bool "lib lrzsz"
+	depends on APP_UPIMAGE
+
+config LIB_LIBEVENT_2021
+	bool "lib libevent-2.0.21-stable"
+	depends on APP_TRANSMISSION
+
+config LIB_LIBSNDFILE
+	bool "libsndfile"
+	help
+	  libsndfile is a library of C routines for reading and writing
+	  files containing sampled audio data.
+
+config APP_BINUTILS
+	bool "binutils"
+	help
+		Libraries required by Oprofile
+config LIB_POPT
+	bool "popt"
+	help
+		Libraries required by Oprofile
+
+endmenu
+
+
+#############################################################################################
+menu "Debug & test Settings"
+
+config APP_TEST11K
+	bool "802.11k"
+	help
+	  An application for testing wifi 802.11k feature  
+	
+config APP_TEST11V
+	bool "802.11v"
+	help
+	  An application for testing wifi 802.11v feature  
+	  
+config APP_CLE_SHELL
+	bool "cle_shell"
+	help
+	  for debug and IC test.
+	  
+config DEBUG1
+	bool "Debug tool1"
+	default y
+	
+config APP_DHRYSTONE
+	bool "dhrystone"
+	help
+	  A small example, only for demostration.
+
+config APP_EXAMPLE
+	bool "example"
+	help
+	  A small example, only for demostration.
+	  
+config APP_IOZONE
+	bool "iozone"
+	help 
+	  A filesystem benchmark tool
+	  
+config APP_IPERF
+	bool "iperf"
+	help
+	  A modern tool for network performance measurement.
+
+config APP_LTP
+	bool "ltp"
+	help 
+	  Linux Test Project
+	  
+config APP_SIGMA_UTILS
+	bool  "sigma utils"
+	help
+	  for support sigma test
+choice
+	prompt "Sigma Program"
+	depends on APP_SIGMA_UTILS
+	default SIGMA_VHT
+        
+config SIGMA_HS2
+        bool "HS2R2"
+
+config SIGMA_PMF
+        bool "PMF"
+		
+config SIGMA_VHT
+        bool "VHT5G"
+endchoice
+	  
+config APP_UTILS
+	bool "utils"
+	help
+	  A set of useful utilities for debug and IC test.
+
+endmenu
+config APP_ZIGBEE
+    bool "ZigBee Support"
+    help
+		Zigbee daemon
+    select LIB_LIBDAEMON
+
+comment "Choose zigbee."
+
+	choice 
+		prompt "zigbee:"
+        depends on APP_ZIGBEE
+        config ZIGBEE_USE_USB
+            bool "Use USB Zigbee"
+            help
+                USB-Zigbee dongle
+        config ZIGBEE_USE_UART
+            bool "Use UART Zigbee"
+            help
+                UART-Zigbee
+    endchoice
+
+menu " other features"
+config MTD_NAME_MAPPING
+	bool "mtd name mapping support"
+	select MTD_API
+	default y
+	help 
+	 mtd name mapping support
+endmenu
+
+source  "common/Kconfig"

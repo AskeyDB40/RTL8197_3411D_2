@@ -1,0 +1,25 @@
+# Makefile for uClibc
+#
+# Copyright (C) 2000-2008 Erik Andersen <andersen <at> uclibc.org>
+#
+# Licensed under the LGPL v2.1, see the file COPYING.LIB in this tarball.
+#
+
+subdirs += libc/spawn
+
+CSRC-y :=
+CSRC-$(UCLIBC_HAS_ADVANCED_REALTIME) := spawn.c spawn_faction_addclose.c \
+	spawn_faction_adddup2.c spawn_faction_addopen.c spawn_faction_init.c
+
+SPAWN_DIR := $(top_srcdir)libc/spawn
+SPAWN_OUT := $(top_builddir)libc/spawn
+
+SPAWN_SRC := $(patsubst %.c,$(SPAWN_DIR)/%.c,$(CSRC-y))
+SPAWN_OBJ := $(patsubst %.c,$(SPAWN_OUT)/%.o,$(CSRC-y))
+
+libc-y += $(SPAWN_OBJ)
+
+objclean-y += CLEAN_libc/spawn
+
+CLEAN_libc/spawn:
+	$(do_rm) $(addprefix $(SPAWN_OUT)/*., o os)

@@ -1,0 +1,6 @@
+config	RTL_HIGH_PERFORMANCE_FILESYSTEM
+	boolean "rtl_fs"
+	default n
+	---help---
+	Realtek High Performance NTFS/exFAT/HFS+ Filesystem
+

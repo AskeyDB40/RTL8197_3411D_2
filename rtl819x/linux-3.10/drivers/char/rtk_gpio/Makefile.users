@@ -1,0 +1,71 @@
+ifeq ($(wildcard $(DIR_LINUX)/.config),)
+include ../../../linux-2.6.30/.config
+else
+include $(DIR_LINUX)/.config
+endif
+
+ifeq ($(CONFIG_RTL_NEW_GPIO_API_TEST),y)
+CFLAGS += -DCONFIG_RTL_NEW_GPIO_API_TEST
+endif
+ifeq ($(CONFIG_SERIAL_RTL_UART0),y)
+CFLAGS += -DCONFIG_SERIAL_RTL_UART0
+endif
+ifeq ($(CONFIG_SERIAL_RTL_UART1),y)
+CFLAGS += -DCONFIG_SERIAL_RTL_UART1
+endif
+ifeq ($(CONFIG_SERIAL_RTL_UART2),y)
+CFLAGS += -DCONFIG_SERIAL_RTL_UART2
+endif
+ifeq ($(CONFIG_SATA_AHCI_PLATFORM),y)
+CFLAGS += -DCONFIG_SATA_AHCI_PLATFORM
+endif
+ifeq ($(CONFIG_RTL8198C_I2C),y)
+CFLAGS += -DCONFIG_RTL8198C_I2C
+endif
+ifeq ($(CONFIG_USING_JTAG),y)
+CFLAGS += -DCONFIG_USING_JTAG
+endif
+ifeq ($(CONFIG_MTD_NAND),y)
+CFLAGS += -DCONFIG_MTD_NAND
+endif
+ifeq ($(CONFIG_RTL819X_SPI_FLASH),y)
+CFLAGS += -DCONFIG_RTL819X_SPI_FLASH
+endif
+ifeq ($(CONFIG_RTL_8198C),y)
+TARGET=target/98C
+endif
+ifeq ($(CONFIG_RTL_8197D),y)
+TARGET=target/97dn
+endif
+ifeq ($(CONFIG_RTL_8881A),y)
+TARGET=target/8881ab
+endif
+
+
+RTK_GPIOLIB = lib_rtk_gpio.so
+SOURCES = rtl_gpioOpsApi.o rtl_pinMuxOps.o  rtl_gpioInterrupt.o $(TARGET)/rtl_gpioMuxTable.c
+OBJS = $(SOURCES:.c=.o)
+
+all:$(RTK_GPIOLIB) gpioTest
+
+$(RTK_GPIOLIB): $(OBJS)
+	$(CC) $(CFLAGS) -s -shared -o $@ $(OBJS)
+
+gpioTest:
+ifeq ($(CONFIG_RTL_NEW_GPIO_API_TEST),y)
+	$(CC) $(CFLAGS) -o gpioTest lib_rtk_gpio.so test.c
+else
+	@echo "do nothing"
+endif
+
+romfs:
+	$(ROMFSINST) lib_rtk_gpio.so /lib/lib_rtk_gpio.so
+ifeq ($(CONFIG_RTL_NEW_GPIO_API_TEST),y)
+	$(ROMFSINST)  gpioTest /bin/gpioTest
+endif
+
+.c.o:
+	$(CC) -c -o $@ -fpic $(DEBUG) $(CFLAGS) $(IFLAGS) $<
+
+clean:
+	-rm -f  *.elf *.o $(TARGET)/*.o gpioTest lib_rtk_gpio.so

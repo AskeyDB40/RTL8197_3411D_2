@@ -1,0 +1,4082 @@
+commit f7bd3662d2292e248173721d4760c03df39df666
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Dec 15 19:29:12 2014 +0200
+
+    po: sync PO files
+
+commit 1cb2eafa672937d0286dbd36d52ac8da34caef23
+Author: Chris Leick <c.leick@vollbio.de>
+Date:   Mon Dec 15 19:28:22 2014 +0200
+
+    po: update German translation
+    
+    Signed-off-by: Rémi Denis-Courmont <remi@remlab.net>
+
+commit 4de786f32991a54bfc5d751d223c9bb4aab5d825
+Author: Petr Pisar <petr.pisar@atlas.cz>
+Date:   Sun Dec 14 22:28:21 2014 +0200
+
+    po: update Czech translation
+    
+    Signed-off-by: Rémi Denis-Courmont <remi@remlab.net>
+
+commit ea87ddc5aa6c86c22950f975940131962c57e0eb
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 14 12:26:11 2014 +0200
+
+    po: add British localization
+
+commit db155231ebb2162a2bc70b19ef65b054a508dcba
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 14 12:42:15 2014 +0200
+
+    po: update French localization
+
+commit 9a9304bbc6ee43849883e2cfb031a7425c6329a5
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 14 12:31:54 2014 +0200
+
+    po: fix msgId contact
+
+commit 418993b075fd40c6108a58ba9bf5a5b9b81ff482
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 14 12:29:12 2014 +0200
+
+    ndisc: use American spelling for ASCII output
+
+commit 138de871bee755fd84ee9a7d25f209b1563b2c4e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 14 12:35:31 2014 +0200
+
+    rdnssd: also dso not spam if domain name is too long
+    
+    I am not sure if this qualifies as an invalid packet, but we do not
+    want to spam logs for bogus packets anyway.
+
+commit c1a16452ae1fefd7ca4e0d7926babe75a4d487b2
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 14 12:17:14 2014 +0200
+
+    rdnssd: do not spam log on invalid ICMPv6 payload
+    
+    So far, we always ignored malformatted packets. It would be too easy
+    for anybody on the network segment to fill the logs with garbage.
+
+commit 5c103cfc228638fbba036837ea88a3dcfb692499
+Author: Eugene Alekseev <ealekseev@clodo.ru>
+Date:   Sun Dec 14 12:14:46 2014 +0200
+
+    rdnssd: filter out duplicate lines in resolv.conf
+    
+    Signed-off-by: Rémi Denis-Courmont <remi@remlab.net>
+
+commit 6c4afd55c68ffccc32957f830d801ce3152b82eb
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 14 12:13:22 2014 +0200
+
+    News
+
+commit 58275e343b643b40b9255557c2181c79cf13e071
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 14 12:10:31 2014 +0200
+
+    Update gettext to 0.19.3
+
+commit f00e4ae949b384eafffbd059f88aa385d0b8f289
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 14 12:08:37 2014 +0200
+
+    m4: missing distributed file
+
+commit 40001ffb8e9c2d4bc54cce1179c2b30d450dc9cd
+Author: Rémi Denis-Courmont <remid@nvidia.com>
+Date:   Sun Sep 7 21:07:48 2014 +0300
+
+    traceroute: fix sizeof() parameter
+    
+    Reported by David Binderman.
+
+commit ad59229fed724307734be90b42e99dc716fd56eb
+Author: Kristofor Varhus <varhus@seas.upenn.edu>
+Date:   Fri Oct 25 16:44:13 2013 +0300
+
+    doc: document --source
+    
+    Signed-off-by: Rémi Denis-Courmont <remi@remlab.net>
+
+commit 9081e95f00ca6d7df845c9d2c5b2c16a0b578ca5
+Author: Kristofor Varhus <varhus@seas.upenn.edu>
+Date:   Fri Oct 25 16:51:56 2013 +0300
+
+    ndisc6: add --source option to select source address
+    
+    Signed-off-by: Rémi Denis-Courmont <remi@remlab.net>
+
+commit 3f1f0af339364d77d11f68a0ee975b4db2a846b3
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Oct 2 23:28:36 2013 +0300
+
+    Fix resetting time-out when receiving a packet from the wrong interface
+
+commit 4b26984a8e690155576871377c0b6cdc745d8239
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Oct 2 23:21:53 2013 +0300
+
+    Bump version
+
+commit d65759b613b31a2d0a6b3beed956327942b22fb6
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Oct 2 23:21:03 2013 +0300
+
+    configure: update gettext
+
+commit 070be098b1ec5d294246ad8e94df9adde1767a50
+Author: Andreas Steinmetz <ast@domdv.de>
+Date:   Wed Oct 3 19:09:44 2012 +0300
+
+    rdisc6: add support for DNSSL (RFC6106)
+    
+    Signed-off-by: Rémi Denis-Courmont <remi@remlab.net>
+
+commit e02ff322404e452769244756cced5cf1ca08dcd7
+Author: Mikhail Efremov <sem@altlinux.org>
+Date:   Tue Jul 17 21:15:21 2012 +0400
+
+    rdnssd: Fix dnssl_update().
+    
+    Really use domains list, not servers list.
+    
+    Signed-off-by: Rémi Denis-Courmont <remi@remlab.net>
+
+commit c89a92beb6e45b4669e482e4cc7a842f11055f30
+Author: Alexey I. Froloff <raorn@raorn.name>
+Date:   Tue May 22 16:26:51 2012 +0400
+
+    rdnssd: output single "search" line
+    
+    In resolv.conf there can be only one "search" line, that may contain
+    several domain suffixes separated by tabs or spaces.
+    
+    Signed-off-by: Alexey I. Froloff <raorn@raorn.name>
+    Signed-off-by: Rémi Denis-Courmont <remi@remlab.net>
+
+commit fe4720d1c4b1487040d94eb9b18dcf097cdaf36d
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu May 3 21:07:17 2012 +0300
+
+    Allow autogen to run from any directory
+
+commit d6f66139cd8407cc033dbc48e389a1ae4b15b4d7
+Author: Martin Kletzander <martin.kletzander@gmail.com>
+Date:   Sun Oct 16 16:53:40 2011 +0200
+
+    Added support for RFC6106
+    
+    Signed-off-by: Rémi Denis-Courmont <remi@remlab.net>
+
+commit 4ac88858a822a4ce92cd9dd9384f11c12bc3545b
+Author: Arien Vijn <arien@vijn.net>
+Date:   Fri Oct 7 23:34:28 2011 +0300
+
+    Add support for source LL address on *BSD systems
+    
+    Signed-off-by: Rémi Denis-Courmont <remi@remlab.net>
+
+commit 8e8ac3e091c4729ab1d3ed38a02f1e6b68b712d2
+Author: Martin Kletzander <xkletz00@stud.fit.vutbr.cz>
+Date:   Wed Sep 21 09:53:41 2011 +0200
+
+    Minor typo
+    
+    Signed-off-by: Rémi Denis-Courmont <remi@remlab.net>
+
+commit 2a8c468d263c6fdd1b6a6669f8d1e4a378ce9528
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Sep 22 19:11:11 2011 +0300
+
+    Update ChangeLog generation to git
+
+commit 6ddd59b4f947d818fb47df2b3a9cd22018b859a6
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Sep 22 19:11:43 2011 +0300
+
+    Remove SVN-related dist check
+
+commit 0ab50b16ee0b481d5f5b7a23e653e4e58c033481
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Sep 22 19:00:59 2011 +0300
+
+    Remove $Id$
+
+commit 997b412af4b990be33f54776020868da1625ee02
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Sep 22 18:57:27 2011 +0300
+
+    autogen: not using Subversion anymore
+
+commit 845f2ae8169209f28eeda627fcf989fbb0b73ec7
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Sep 22 18:55:46 2011 +0300
+
+    .gitignore
+
+commit 306ae1de8ce27ce4b0c8df1243f4dd290f01fe7a
+Author: Arien Vijn <arien@vijn.net>
+Date:   Thu Sep 22 18:47:28 2011 +0300
+
+    Replace ND_RA_FLAG_HOME_AGENT with ND_RA_FLAG_HA on BSD
+    
+    Signed-off-by: Rémi Denis-Courmont <remi@remlab.net>
+
+commit 9692444b1266af53c79e640a488ab873101b7c6d
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Sep 22 18:46:31 2011 +0300
+
+    Create include/ directory
+
+commit 781500c4119ec4e1278b012079b44c3d46bcd441
+Author: Martin Kletzander <xkletz00@stud.fit.vutbr.cz>
+Date:   Mon Sep 19 10:16:14 2011 +0200
+
+    Moved parsing options into separate function
+
+commit fde9cbfb16ef97a8469885324148b212adc1093c
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Jul 31 08:53:07 2011 +0000
+
+    Sync PO files
+
+commit 073d468ca20037486d40ce66c498548260c5080c
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Jul 31 08:46:22 2011 +0000
+
+    Some news
+
+commit fbd02e9857d3d42cd937d155a00f4c03cc0afa4a
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Jul 20 15:23:27 2011 +0000
+
+    Check for errors when dropping privileges
+
+commit dabf66709d3da8c0ea59dffa656b31fc9c0f2169
+Author: Andrew O. Shadoura <bugzilla@tut.by>
+Date:   Sat May 28 14:01:38 2011 +0000
+
+    Document rdisc6 and ndisc6 return values
+    
+    Signed-off-by: Rémi Denis-Courmont <remi@remlab.net>
+
+commit 0ebf842b9e64aeb24f9f6ae0e2e54981e49bd91a
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Sat Apr 16 19:09:20 2011 +0000
+
+    ppoll(): fix typo
+
+commit d262519e5ba86ad071ae4a9551de99239ba68ffc
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Mar 19 09:48:38 2011 +0000
+
+    ppoll(): handle NULL timeout parameter
+
+commit 5fe841acb4d2090a7151d4d6bc60f1dcc6f8fd83
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Mon Feb 21 17:03:29 2011 +0000
+
+    Fix integer overflow of RDNSS lifetime (Debian #605808)
+
+commit c34cd3c4b6b8581258ea8eb11181e9e00396a923
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Feb 21 16:37:16 2011 +0000
+
+    Update Czech and German translations
+
+commit 5a688798ca779a621c31d6109a352606ab53a37f
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Feb 20 14:00:35 2011 +0000
+
+    Sync PO files
+
+commit a7e1b2055e9dd418bab6f5555ff95ba1735ffb75
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Feb 20 14:00:04 2011 +0000
+
+    Update french translation
+
+commit e83f59473410d1936fdde91aa546e3a830cc6e89
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Feb 20 13:50:33 2011 +0000
+
+    News
+
+commit ad74cdefc78ee0a52599f45ca4ab707dcfa08cec
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Feb 20 13:48:34 2011 +0000
+
+    Print prefix informations flags (Debian #605808)
+
+commit 2be32a5fc4b5214f6c9074c464e57a556fcf9e2e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Feb 20 13:38:25 2011 +0000
+
+    Add RA proxy bit (RFC4389)
+
+commit b96dce3e1980abe5eabbed9d185bc93d030fcd7a
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Feb 20 13:23:21 2011 +0000
+
+    Bump version
+
+commit 62b726da4b7c615afb9cc7ca7b807e8bdcdb51c7
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Feb 20 13:21:16 2011 +0000
+
+    Print the RA home agent flag
+
+commit 85510210cdbe6fe49cb6ac367f78224f0fd12b39
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Nov 16 19:15:41 2010 +0000
+
+    News
+
+commit e264c8c24c5a8239f1f93fd5f76f1da36325ac43
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Nov 16 19:15:36 2010 +0000
+
+    Remove the isatap daemon
+
+commit a15ae47593c23b575a2172fad197d806083e326b
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Nov 16 19:14:34 2010 +0000
+
+    Bump version
+
+commit 08212c82d3948c77d95f1c6209049643fd599122
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Oct 31 20:59:03 2010 +0000
+
+    Update PO files
+
+commit 8341b2c46a355607a0890c05f9967c22b34df487
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Oct 31 20:58:51 2010 +0000
+
+    New version
+
+commit 137238798c44f47a7f0865049951f5d55de435cd
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Oct 31 20:57:48 2010 +0000
+
+    News
+
+commit 92c643bf767c21210b17c2ab986a13056308f298
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Oct 31 20:56:30 2010 +0000
+
+    Update my mail address
+
+commit 36019a1a229027cc69c6f787a2ee16c5ea155140
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Oct 31 20:51:32 2010 +0000
+
+    rdisc: fix alignments problems on ARM and SPARC
+
+commit 55970c0e472d6e32859b624effb277b713e11dc4
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed May 5 19:31:09 2010 +0000
+
+    german update
+
+commit ede520e5f7715c2bc729460649f47561703c2fa7
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed May 5 19:27:36 2010 +0000
+
+    Czech update
+
+commit 87e89fe320329d3643cf59594872d9b04052cfa4
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat May 1 08:12:56 2010 +0000
+
+    Update American translation again
+
+commit a94373d0f75c59a915fe47863077db9356dc9ca3
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat May 1 08:12:10 2010 +0000
+
+    Update French translation (for good this time)
+
+commit 08786f5346135c981246376e128425afe88adac3
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat May 1 08:11:57 2010 +0000
+
+    Sync PO master (again...)
+
+commit 03eae7763cfdcf281ab2126802d20eaa29e243fd
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat May 1 08:08:53 2010 +0000
+
+    Fix plural handling
+
+commit 8c58d1e145cf6bcb3a0e1f7b33b989ee8d43a23c
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat May 1 08:08:34 2010 +0000
+
+    Use C99 format modifiers instead of casts
+
+commit 54ce92cfcb8629a8b933fb43f80db2635b821d66
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat May 1 07:52:43 2010 +0000
+
+    Udpate American English locale
+
+commit ced90b7e060c6f504096a963885021e92a526a0d
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat May 1 07:50:58 2010 +0000
+
+    Sync PO again...
+
+commit 4daf135ad7f29f232c8a28f856d1387b8aed4559
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat May 1 07:50:45 2010 +0000
+
+    Update French locale
+
+commit 63646484fa1145501d664df0b8580af0bbbcf001
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat May 1 07:49:06 2010 +0000
+
+    Typo
+
+commit e5a3fc883a32fda9650d71cd8053a4451a682bda
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat May 1 07:45:34 2010 +0000
+
+    Resync PO files
+
+commit 696f46c7ac18781cc72ad76372b3b306e3b18243
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat May 1 07:40:37 2010 +0000
+
+    News
+
+commit 992fc67d88e2554a349e6da6206daae13b49b9f0
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat May 1 07:38:31 2010 +0000
+
+    Initial german translation
+    
+    Credits to Chris Leick, via Debian BTS
+
+commit 6d4368b9e9bb1a1a78a2cafa03e657a42ea8dcc6
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Apr 8 16:05:18 2010 +0000
+
+    Czech translation fix
+    
+    Credits to Petr Pisar <petr.pisar@atlas.cz>
+
+commit ac9f55379dfe384a6c789eb548bfcff527bd6c4a
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Jan 24 08:35:43 2010 +0000
+
+    Silent rules for src/
+
+commit 03c3af6470897cbdc7a42a0d455e6bee84fa0a87
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Jan 24 08:32:21 2010 +0000
+
+    silent rules for sed
+
+commit f0074c158ef68df5aff24158a9cef4ebe9ef9311
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Jan 24 08:27:53 2010 +0000
+
+    Enable silent rules and automake -Wall
+
+commit 7012c93dd9e5f011882c2d74c6a09b35b9960854
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Jan 24 08:25:00 2010 +0000
+
+    Move automake options to Makefile.am
+
+commit 549a966fac3d62a60a7f12f72a3ab309b809530a
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Jan 24 08:20:39 2010 +0000
+
+    Bump version
+
+commit 0f7d8df53749b5d055d6ecdc5390b99cf4fbe991
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Jan 24 08:18:41 2010 +0000
+
+    Document --config
+
+commit bdd2353204c7a07fb3c32c4a3192c6cad3bf5470
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Jan 24 08:16:52 2010 +0000
+
+    Add --config option to addr2name
+
+commit 4af9ebaf1a47396694be16b378bb13a1c638eeaf
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Wed Nov 25 21:31:20 2009 +0000
+
+    Replace the Perl merge hook by one written in POSIX shell, free of
+    utilities stored in /usr
+
+commit b3a5ae575be16b612eeaca7b64163a0955c1b83a
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Aug 4 18:42:37 2009 +0000
+
+    News for 0.9.9
+
+commit 7cc26cb6b750825f6cf7cddb1dcca9b56e445f90
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Aug 4 18:39:39 2009 +0000
+
+    Sync PO files
+
+commit efdef2f2d82e624d792752613795848f27d7e366
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Aug 4 18:38:40 2009 +0000
+
+    Update authors (we have no thanks file)
+
+commit 1a31a2693097b53801b34273ae064bdad6a647d6
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Aug 4 18:37:49 2009 +0000
+
+    Update my email address
+
+commit 107a4dc6243111381daee0443d196e1b64025bab
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Aug 4 18:37:13 2009 +0000
+
+    Distribute missing isatapd files
+
+commit 7253c59e4d570a067fdc98aa44620ea9e595226c
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Aug 4 18:34:27 2009 +0000
+
+    isatapd for Linux
+    
+    Patch by Yin Kwong-Sang and Fred Templin, the Boeing Company
+
+commit 9c44ff7349b6c1d974fc2ced353a3b04e43fb545
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Dec 19 16:40:04 2008 +0000
+
+    Czech translation by Petr Pisar
+
+commit fb839377adf5f95b21ebced59fbb94f08f4d8fbe
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Jul 11 17:10:23 2008 +0000
+
+    Use PRIu8 as appropriate
+    
+    Surprisingly enough, gettext does handle this correctly (since 2002!)
+
+commit aaea47e7efd3b59d12ace778d1d755457b6a4612
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu May 1 14:26:09 2008 +0000
+
+    Fix stdint.h includes
+
+commit c5d21b2585e78bb61f819e2aab38986c6a719778
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu May 1 14:08:21 2008 +0000
+
+    Bump version
+
+commit 3f542d4fd582f48310dcb9970ca9755236204b7b
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu May 1 12:50:28 2008 +0000
+
+    Update PO files
+
+commit 18e5fbed316ec25d90a0a43f062f764df843b7d7
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Apr 24 20:33:56 2008 +0000
+
+    rdisc6: set unicast hop limit to 255 as well for ISATAP support
+    Issue pointed out by Fred L. Templin.
+
+commit f2918af0d236a1da95b0602d664756bff625f0cc
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Apr 24 17:15:22 2008 +0000
+
+    Don't set checksum coverage on ICMPv6 socket.
+    This violates RFC3542, and is not needed anyway.
+
+commit ef5c13041fc0edcc66fa64aa5af4f564d23efb99
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Apr 24 17:13:07 2008 +0000
+
+    Don't set checksum coverage on ICMPv6 socket.
+    This violates RFC3542, and is not needed anyway.
+
+commit 191025b0edb30b0f80b07b084b32f250393e529a
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Apr 24 17:12:58 2008 +0000
+
+    Don't set checksum coverage on ICMPv6 socket.
+    This violates RFC3542, and is not needed anyway.
+
+commit 4812fc45a859295f0ab4562940a730bd2f0237f9
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Apr 24 17:12:17 2008 +0000
+
+    Fix incorrent double negation
+
+commit 37ecb517de84ed572dd6095c0bbaee87274fb016
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Mar 23 09:56:38 2008 +0000
+
+    Some news
+
+commit 71a2a33ad2d2f4719ebccac82a806d45c45a7b2a
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Mar 23 09:54:25 2008 +0000
+
+    ndisc6 already has a replacement for monotonic time - use it
+
+commit a926f86b362baea9722db93676a0d1a2820872f4
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Mar 23 09:50:17 2008 +0000
+
+    Fix for braindead OSX inet6 support
+
+commit 3e43e2b973b8ed4d10e3ecbb1cda8cd89d51e0bb
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Mar 23 09:39:45 2008 +0000
+
+    Add ppoll() replacement - this is a GNU extension
+    (and it might be a mess if POSIX ever standardizes a different prototype)
+
+commit 2137932b23245036ece8a9b429eb6c47140b86ed
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Mar 23 09:17:49 2008 +0000
+
+    Add missing #includes pointed out by Sébastien Vincent
+
+commit 1705956e22f59d6a031acf33b600d111bb996f6e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Mar 23 09:15:00 2008 +0000
+
+    BSD does not define SOL_*, copy work-around from src/traceroute.c
+
+commit 18c3513f58ebba5c09a0f683731e205f6262f4c8
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Mar 23 09:12:19 2008 +0000
+
+    More inet6_rth_* replacements to libcompat
+
+commit 74051e96aadbc94e5e2410aeb799e6db60deaef3
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Mar 22 21:57:51 2008 +0000
+
+    Replace fdatasync
+    (copied straight from Miredo)
+
+commit 81eca963b63cb56955f8bb550182e459b792f436
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Mar 22 21:55:24 2008 +0000
+
+    Use libcompat (even though it's currently empty)
+
+commit 81a3db149834a51c0070e9f06f499a26f259103d
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Mar 22 21:50:33 2008 +0000
+
+    Infrastructure to use AC_REPLACE_FUNC
+    (shamelessly stolen from Miredo)
+
+commit b9ff504d9571acf08f34ae437da64e506238d48a
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Mar 16 17:34:47 2008 +0000
+
+    Bump version number
+
+commit 01877cdb8f1cc15b5d17f4a4a3319c3213236d0b
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Mar 16 17:34:07 2008 +0000
+
+    Fix undefined behavior if the interface of a link-local server vanishes early
+
+commit 5bd3db38939c45b02ac4899f025578c3fcf7903f
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Mar 5 20:38:10 2008 +0000
+
+    Fix news
+
+commit fc2e729dacf55b94f9cf1acfa6aec68eb94dbf5f
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Mar 5 20:37:54 2008 +0000
+
+    Sync PO files
+
+commit 3de451a5798f76d74b3c47b2251a957b150a0213
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Feb 13 21:11:14 2008 +0000
+
+    Hack to avoid resetting resolv.conf when rdnssd is restarted.
+    It would be more appropriate to query the routers manually at startup...
+
+commit ad1f05238125fb38291e358b0b1bee07caf3307e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Feb 13 21:04:47 2008 +0000
+
+    Handle the corner case whereby the current time is already beyond the deadline.
+    (fix integer overflow).
+
+commit 37cf70c63dea449162d14513b428d1cbf864a98b
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Feb 13 20:58:27 2008 +0000
+
+    Be consistent: no merge hook at exit => no updating resolv.conf either
+
+commit 37d8f95da5932bc958d37e4aff38ae9e41afdf70
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Feb 13 20:57:00 2008 +0000
+
+    Handle ppoll() errors:
+    EINTR is ok. ENOMEM is a fatal error. EINVAL, EFAULT, EBADF are bugs.
+
+commit 857c8f9e43c10e7cfe53c62242c2f3eda620a87d
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Feb 13 20:49:26 2008 +0000
+
+    Cleanup: manager() does not need to know the worker PID, nor that it's its children
+
+commit af9c751fc62c2564d2d138e4c30a922db5a5dbd7
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Feb 11 17:57:39 2008 +0000
+
+    Do not rerun the merge hook upon exit.
+    Experience shows that does more harm than good.
+    If the system is going down, that is useless.
+    If rdnssd is restarted, or the system is going down for maintenance, that may screw up the network connectivity.
+    
+    Simplify waiting on the pipe from the manager.
+    Also fixes a very minor and extremely unlikely race condition whereby the worker unexpectdtedly dies while writing to the pipe (then revents should be POLLIN|POLLHUP and we still want to run the merge hook one last time)
+
+commit a793bf3a17d9e0ba3e536388af75a445ce515bd1
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Feb 11 17:43:36 2008 +0000
+
+    Fix missing waitpid() return value check
+
+commit 0301da0389e7d3aa21002ada2c95215372d4f9e6
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Feb 11 17:37:57 2008 +0000
+
+    unlink before close is confusing. Comment it.
+
+commit dd28bf0641830b3c4332a0dcb015e411126c45fb
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Feb 9 13:28:13 2008 +0000
+
+    doc: Install relative rather than absolute symlinks
+    (as pointed out by Jason Tibbitts on Fedora Bugzilla)
+
+commit 43f2303a2600d65947f26db5324710d51f75254a
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Feb 9 13:21:31 2008 +0000
+
+    Bump version
+
+commit e60d00f755491a2d8f7d9004ec3a6e35821fc1c7
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Feb 9 13:00:32 2008 +0000
+
+    Warn about disable-suid-install. I thought I did that already.
+
+commit 2c13aab836485c64f266ec898f12220b0e4aa895
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Feb 9 12:06:50 2008 +0000
+
+    More news and sync PO files
+
+commit 99655c94814900140536ef852b0eba7331fdf78c
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Feb 8 15:50:20 2008 +0000
+
+    News for 0.9.6
+
+commit 8b8c51df962a22d245fb002b52d9a56ba7e2ee19
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Feb 8 15:50:04 2008 +0000
+
+    Fix distcheck
+
+commit fb835a291d6ff77943b2d0809087308940af808d
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Feb 8 15:45:22 2008 +0000
+
+    Typo
+
+commit 31e8079fb2fdf5b9bc8ec181c6cda268d7bf4263
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Jan 30 16:54:05 2008 +0000
+
+    Fix compilation against 2.6.24 kernel headers
+
+commit fb8c1faa7eda6adc2673b2663c1415997670d470
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Jan 10 18:04:55 2008 +0000
+
+    Filter out ICMP errors for packets toward other destinations,
+    using the socket filter
+
+commit b021d1efc86ef6d14cdd0df6fa5f170e2b359e8f
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 30 16:54:31 2007 +0000
+
+    Really make merge-hook executable.
+
+commit f720765641213476f500732bb81954f3cf3a5a12
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 30 16:53:08 2007 +0000
+
+    Bump dev version
+
+commit 4d36f3d8e715901f964a9892155ce0bf7263e49f
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 30 11:03:06 2007 +0000
+
+    Improve the English locale, complete the French one
+
+commit 833ea894e325eae5fc6d315db140e77408e3f283
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 30 10:37:51 2007 +0000
+
+    Add some translation, and rationalize
+
+commit aac96c26e337dd6bdd20bcd60b1bad9d734ab787
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Sun Dec 30 00:12:30 2007 +0000
+
+    Update translation file
+
+commit adce79ed2a18eb00b695e83bdb5e563a755d438c
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 29 22:00:44 2007 +0000
+
+    Some news already
+
+commit d833c88101f6ebbbcad18eb9d354d751a752ae1e
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Sat Dec 29 21:55:43 2007 +0000
+
+    Fix typo in manpage formatting
+
+commit 847df9b3ba751dc6e92602c6297397e6f982e1db
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 29 21:41:43 2007 +0000
+
+    Ship rdnssd.8-in instead of rdnssd.8 in the tarball
+
+commit 881dbf5a3e6ef648e1e61c366ae03a9c22963502
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 29 21:38:32 2007 +0000
+
+    Try to remove /var/run/rdnssd/ while uninstalling
+
+commit c1485c9b010a0d8853b13bfbbaf13276f3187cee
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Dec 27 20:31:31 2007 +0000
+
+    Missing #include
+
+commit 2dfc857a4eb03eb51d820ebc7e91fa89cc4fa7c5
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Dec 27 20:23:37 2007 +0000
+
+    Initialize groups properly - not to UID!!!
+
+commit 16361a900fad4859dcd8910cbdbaabef24cdb896
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Dec 27 20:04:16 2007 +0000
+
+    Make merge-hook executable
+
+commit 0aba80e7cc3da2d34b0b9aad34c34d4512fabb52
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Dec 27 17:23:25 2007 +0000
+
+    Bump version number
+
+commit efa523d4d77236b482fed7319af9c0d61d683ef0
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Dec 27 17:17:53 2007 +0000
+
+    News for 0.9.4
+
+commit 4b70395c362aa2951a9c072568a0cb6a471c9df1
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Dec 27 17:16:06 2007 +0000
+
+    Gettext insists on updating the PO dates
+
+commit 9e49332c69967df8231218f2735798abc15aebeb
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Dec 27 17:12:35 2007 +0000
+
+    Fix ASCII manpage hook
+
+commit 7545b3f5fc1606358f67cef3c66960c86478edd3
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Dec 27 17:10:56 2007 +0000
+
+    Update gettext
+
+commit 8b5206c172a6d6d533e747485c3eb5b9457bf939
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Dec 26 22:03:00 2007 +0000
+
+    Sync and update translation files
+
+commit 8332692049aab3b5c2d88f8206e33431c3bbfe4e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Dec 26 21:56:25 2007 +0000
+
+    String rationalization:
+     - don't use \n with syslog
+     - getpwnam does not usually set errno to anything meaningful (if user does not exists)
+
+commit 675944054e9dd5d4bb96889ce804b6707d56428e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Dec 26 21:43:18 2007 +0000
+
+    Pedantic use of --
+
+commit 3624479bad553493ee459cd394c6f07448503562
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Dec 26 21:39:47 2007 +0000
+
+    Create /var/run/rdnssd from $(make install)
+
+commit 4299e092291a9f545e3ab17ee90207649960d6c6
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Dec 26 21:31:13 2007 +0000
+
+    Use SIG_SETMASK rather than SIG_BLOCK
+    We don't want to inherit whatever signal mask our parent had.
+
+commit 8083d60476d5cafb0b8f621e3ef666bdff9d5625
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Dec 14 16:57:29 2007 +0000
+
+    Install rdnssd to /etc/rdnssd rather than /etc/ndisc6
+
+commit 153ee5951cbff0097eb4b54c33d3b20b70c00556
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Dec 14 16:47:55 2007 +0000
+
+    merge-hook cosmetic fixes
+
+commit a641affb82f4abb3cd1d98c7ee1d920781ac2400
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Dec 14 16:42:32 2007 +0000
+
+     - Add missing brackets
+     - Handle socket error gracefully (skip error from recv())
+
+commit 965cfc92ed4ca030aa73dc13d5b2c2cada9dee5d
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Dec 14 16:30:25 2007 +0000
+
+    Fix for prehistoric libc
+
+commit 61b8dde9b1c88bf3d6e68fdeb6f2940d515f8944
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Dec 14 16:30:11 2007 +0000
+
+    ignore
+
+commit eca4fd7c4e803a767e672f209a7cb27f681a29bc
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Fri Dec 14 16:29:38 2007 +0000
+
+    Enable writing of scoped link-local addresses to resolv.conf
+
+commit 9882214f9c5e8a049614b1a1fb4333c2ce6f27ba
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Dec 14 15:31:18 2007 +0000
+
+    Substitution, installation and cleaning for rdnssd.8
+
+commit c49c888630c188bc3a020f891c4bf5ca635f9b9e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Dec 14 15:26:26 2007 +0000
+
+    Fix manpage symlinks
+
+commit d37b6e52fc6dae51903f8a4c2d49c307a2f0e773
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Dec 14 15:24:29 2007 +0000
+
+    "Build" doc as a separate directory
+
+commit 37d39774eb28bc3b58efc66d4c3827dab252ce3e
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Fri Dec 14 15:18:11 2007 +0000
+
+    Install rdnssd manpage
+
+commit 18c397945bc0e8649a53f1ae7198891947f41e4e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Dec 14 15:16:30 2007 +0000
+
+    props
+
+commit 779e65ddf6841ac0d151d3093b00d37886bb3f3d
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Fri Dec 14 14:59:17 2007 +0000
+
+    Add a manpage for rdnssd
+
+commit e6d4c0880f38da14f914ac2e1348fe3f0680cb85
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Fri Dec 14 14:46:05 2007 +0000
+
+    Update informational output.
+
+commit dffae2ebab1e54d66680f4346cda68566ebec180
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Sun Dec 9 07:18:06 2007 +0000
+
+    - Update to new netlink interface
+    - Add logic to handle link-local addresses
+
+commit 66e659e9bacaadfe1c879203938dc2f91b932d94
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Fri Nov 9 01:43:12 2007 +0000
+
+    Complete help
+
+commit b11ac9e1c421364680c046cefdaf8052c202a038
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Thu Nov 8 23:58:48 2007 +0000
+
+    Fix parenthesis error in the parsing of multiple options
+
+commit 1e55283019e10af2861ed6510be1f52797122fa8
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Nov 8 16:10:47 2007 +0000
+
+    Only try netlink if running recent enough Linux kernel
+
+commit 02ea5615606fcf93d83d3b895b91f127c86407b5
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Nov 8 16:03:38 2007 +0000
+
+     - Use the new files.
+     - Set nobody as default UID rather than undefined.
+
+commit fcbd322b0394a90573082942cc2e9ae9a051ab14
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Nov 8 15:46:00 2007 +0000
+
+    Prepare to split into multiple files
+
+commit 4b079d5be0a186b4f32ea408da920e1c84d8eeda
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Thu Nov 8 01:42:22 2007 +0000
+
+    Add support to setuid
+
+commit f80999688d9a51398baa3884eafbced823f31523
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Thu Nov 8 01:17:45 2007 +0000
+
+    - Actually handle poll errors
+    - Handle child process failures
+
+commit 05ebe11208edd709bf6cdfa705da458e6a380a72
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Wed Nov 7 22:13:34 2007 +0000
+
+    - Switch IPC from signal to pipe to work with setuid
+    - Move signal handling again
+
+commit 54936945fcfe0d032d118257e38cd9e4786414fb
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Nov 7 19:49:29 2007 +0000
+
+    Missing comma
+
+commit 2d6575a951af365c7426f5abedbf59ba8f48bbba
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Nov 7 18:40:39 2007 +0000
+
+    Fix locking, simplify signal handling
+
+commit a1ae391f7400f3ccfe54b971cf9532db322a2fbc
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Nov 7 17:56:33 2007 +0000
+
+    Remove unused statements
+
+commit 067b62c98c29629485f97d54d752d9b958ad7c3e
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Wed Nov 7 03:40:17 2007 +0000
+
+    Totally remove resolv.conf files management with inotify
+
+commit a23a19242cb3c4d03fa1f1f13e744f5725993d42
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Tue Nov 6 02:32:49 2007 +0000
+
+    Fix start-up with a non-existent /var/run/rdnssd/resolv.conf.
+    Inotify logic is still further flawed.
+
+commit fb837fd4a5447895bd6c022dc0b86cec4a0adea4
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Nov 3 12:45:28 2007 +0000
+
+    Add _() where applicable
+
+commit 02723f11fc3a24387ca33d14a39b623e2d409e1a
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Nov 3 12:42:24 2007 +0000
+
+    Make distcheck happy
+
+commit 1902643ef3594f253c723157b391cb602d635b5b
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Nov 3 12:38:32 2007 +0000
+
+    Partial strings update
+
+commit 254851c2c47aa510c8ff3aecdb8058c038152f8d
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Nov 3 12:26:47 2007 +0000
+
+    License string rationalization
+
+commit 57f54f77af55b3b90dce2094e68892a9916b86ca
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Nov 3 12:26:28 2007 +0000
+
+    Add --help and --version
+
+commit 9046100b9bb7a6ec2f568dc622d1f94aa1909c44
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Nov 3 11:20:57 2007 +0000
+
+    - Add foreground option for easier debugging
+    - Add bunch of static qualifiers
+    - Functions with no parameters take void
+    - Use advisory locking for PID file
+    - Ignore SIGPIPE
+    - Dequeue errors (POLLERR but not POLLIN) on socket
+    - Use ppoll and sigprocmask for signal handling
+    - Handle SIGINT as SIGTERM
+    - And add lots of new bugs
+
+commit 063f2a3ca62da24590f32bf32baca2078bfdf4e7
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Nov 2 17:00:36 2007 +0000
+
+    Use const and fix unused parameters warnings
+
+commit 8e0bd592dafa7679f1fa10506d95f3844ea5b7ca
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Fri Nov 2 02:14:05 2007 +0000
+
+    Parse options from command line, to control file paths and switch to
+    managed mode
+
+commit 9aa225b04f66ecad3c0bd04f2e46bbb47ee0e964
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Thu Nov 1 23:23:20 2007 +0000
+
+    Fix and clean up startup and shutdown processes
+
+commit 0f295e8dbad8362ab547fb39840e13e37367abb7
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Thu Nov 1 02:30:46 2007 +0000
+
+    Ignore our own changes to /etc/resolv.conf to avoid merging twice
+
+commit 9663316e56207024b49c8bfaac7637f05b3e7d57
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Thu Nov 1 02:14:13 2007 +0000
+
+    Make changes to /var/run/rdnssd/resolv.conf atomic
+
+commit b8376eac3009a2bdeecb981067f5f57d2ede29d1
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Thu Nov 1 01:54:08 2007 +0000
+
+    - Split netlink listening and resolv.conf management into two processes
+    - Prepare support for unmanaged mode
+
+commit 6bb37fb1cc412835fbd541a2b6da6fc17737a0ec
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Wed Oct 31 18:41:21 2007 +0000
+
+    Add daemon capabilities
+
+commit b4b57221548af92bac65c1ae9f7f419cab06d7d3
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Oct 30 19:03:23 2007 +0000
+
+    svn properties
+
+commit 48f6d00c292f6aa919a50cd3a98e02799573a598
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Tue Oct 30 18:54:21 2007 +0000
+
+    Add merge hook for rdnssd
+
+commit 1d72d847d0321fe0a6b7876d10b6b4d03d24c81e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Oct 30 18:02:40 2007 +0000
+
+    Remove unneeded defines
+
+commit 7d9fad9de30f9b3df87456146eb375457470bed5
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Oct 29 19:53:33 2007 +0000
+
+    svn:ignore
+
+commit 0abe6edef3eaa867acf5a68aa12ccac1f2711e33
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Oct 29 19:52:53 2007 +0000
+
+    Woops restore recent commits
+
+commit 9518c1e2efd601b97d436cbe9e6b6a53f11ff38e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Oct 29 19:52:20 2007 +0000
+
+    Move rdnssd to its own directory
+
+commit f077429fc975486a85e01318b8fd2b1a1e799135
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Mon Oct 29 00:38:37 2007 +0000
+
+    Improve inotify handling
+
+commit 2bb576b39aeb8d4d0a1923c322699eb157bf90f3
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Oct 28 11:50:00 2007 +0000
+
+    name2addr and addr2name got messed up. Fix them.
+
+commit 766680bd669ecdb2e3e46bede3097f127da09ded
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Oct 27 19:38:20 2007 +0000
+
+    Use autoconf localstatedir instead of /var
+
+commit 49a045458934c0c0d7e3158fb8eab2f2f61f8038
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Oct 27 19:36:15 2007 +0000
+
+    Fix merge_hook:
+     - handle errors and whine about them,
+     - get directory from autoconf settings,
+     - pass valid arg0 to exec*().
+
+commit 75435622b39a12dc03d549442bb8407c6e835262
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Oct 27 19:32:28 2007 +0000
+
+    Set SYSCONFDIR to system config dir from autoconf
+
+commit eaf7f78eacbc40a85feaf74a2d72201269fc0d14
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Oct 27 19:21:04 2007 +0000
+
+    Fix more sign warnings
+
+commit 4cb25639fde4bb55aa657a56f74ccf94c6275026
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Oct 27 19:19:30 2007 +0000
+
+    Use const, fix a sign warning
+
+commit bcbbd1b7cce2eb64204984902bf0989b17412546
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Oct 27 19:15:36 2007 +0000
+
+     - Comment out dead ICMP code for the time being,
+     - Factorize fcntl code
+     - Cleanup event loop
+
+commit 691ebbd77f29b59d58b2b3f41bbc5da42d309b9f
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Sat Oct 27 18:09:26 2007 +0000
+
+    - Remove resolv.conf merging from main rdnssd
+    - Add inotify support for resolv.conf
+
+commit 6d1993a5ed4d17448a93ca8919e22d8a0d9e09d4
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Wed Oct 24 17:42:54 2007 +0000
+
+    Fix my email address and add my copyright
+
+commit a8228a9ebf6e24adf6802d30fcf36d01f4a22bdf
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Oct 24 17:42:14 2007 +0000
+
+    Add some news and test post commit hook
+
+commit d4badc18e194f62eaeaacd0c8256974ee7667494
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Oct 24 17:35:39 2007 +0000
+
+    Add Pierre to AUTHORS (email needs checking)
+
+commit 132def866c6114b28a2dc0d1f3ef8cf58042c410
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Oct 24 17:31:01 2007 +0000
+
+    svn:ignore
+
+commit 807ac3845dfdb1b188ad6ba1f197138c1d791eee
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Oct 24 17:29:48 2007 +0000
+
+    Simplify through autoreconf
+
+commit 0c57e9de4bfa84de94be445bfc74fb5fca8d37a5
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Oct 24 17:24:06 2007 +0000
+
+    Fix GPL version
+
+commit 6bd014a1decbbdfd52afcd3e5e9e94dc8918ad92
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Oct 24 17:22:23 2007 +0000
+
+    GPL version TWO
+
+commit 38876a8589c2669d81f7f6f145942add1d362af9
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Tue Oct 23 02:38:29 2007 +0000
+
+    Fix typo when opening syslog
+
+commit 57a290168213e00a80809dcd0de6386f58593c6c
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Tue Oct 23 02:05:15 2007 +0000
+
+    Fix expiration detection
+
+commit 9f46c14275c1c2f2ef4140cba75f777f2dd0879e
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Tue Oct 23 01:40:33 2007 +0000
+
+    Actually sort entries in the right order
+
+commit c12c2af1095441606883bcff266d5705e8dd5ee0
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Tue Oct 23 01:36:06 2007 +0000
+
+    Add logic to further limit the number of RDNSS entries written to
+    resolv.conf: we may want to leave some room for IPv4 entries as backup
+    for when IPv6 fails.
+
+commit 7a6a3314d705aafefc1fb8e8de2258d22671e4b5
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Mon Oct 22 23:31:54 2007 +0000
+
+    rdnssd:
+     - Merge new netlink interface support
+     - Add support to update resolv.conf file
+
+commit 0dedb13767f5ca6d7d394a6801e77fc65eebd367
+Author: Pierre Ynard <linkfanel@yahoo.fr>
+Date:   Mon Oct 22 23:28:19 2007 +0000
+
+    Fix a copy-paste typo
+
+commit 2792d50d1c5ac137f226fe9bef49ffdbfca45225
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Sep 25 18:07:05 2007 +0000
+
+    RFC5006 is out
+
+commit 1e1fbb16ac4fb48f29de9f407c467cd1757accf4
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Aug 8 18:34:08 2007 +0000
+
+    Fix meta infos
+
+commit 4d71bcb4b2dc409145257c835745422e08746d29
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Aug 8 18:32:52 2007 +0000
+
+    Bump version
+
+commit 9b319a567256b760d4e10cd8f13aeed53b4818c1
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Aug 8 18:02:19 2007 +0000
+
+    Add partial RDNSSd
+
+commit 1c8a3fe68db435efadad7ff91fbf20881636ffb3
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Aug 8 15:13:07 2007 +0000
+
+    Resync PO files
+
+commit 25874f011925f8d95c95a7ac4a551fa94321587e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Aug 8 15:11:29 2007 +0000
+
+    License fixups
+
+commit 83fcf7190f382dcd472d74dded4b1da37156aa76
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Aug 8 15:09:36 2007 +0000
+
+    Still allow GPLv2
+
+commit bd3b31dd296c62fddeac74c8748826b149cc9953
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Aug 5 19:59:53 2007 +0000
+
+    Use linker rather than precompiler for most of the ndisc/rdisc specifics
+
+commit 0e733aef2bd9b340b85460cd0ebf1d0a40279b4c
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Aug 5 19:38:09 2007 +0000
+
+    Ignore unused attributes instead of (ab)using macros
+
+commit c035765dd9bb47ca6cbd7e5b137fe1bfbdb3480b
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Jul 11 17:03:57 2007 +0000
+
+    Support for RDNSS in router advertisements
+
+commit 64af68a55a7976e8284d5c68da0512d00a8bf03d
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Jul 11 16:48:32 2007 +0000
+
+    Minor code factorization
+
+commit 8ee7858693d1267e14d54feacf31067b40fbc2b1
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Jul 9 20:08:04 2007 +0000
+
+    Fix gettext usage
+
+commit 462c8f174201aa0e21065d1f2b123c0cc99de19b
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Jul 9 20:02:55 2007 +0000
+
+    Fix warning
+
+commit 1032babdd6867e5b71f988a78774c01cf75c5f3b
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Jul 9 20:02:36 2007 +0000
+
+    Switch to GLPv3
+
+commit 25b0d247c47d9de14ae4ce9adff09c9e31279e07
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Jun 3 11:18:25 2007 +0000
+
+    Remove useless empty directories
+
+commit 786ac23c45f2acfe4290a2412e81b1faa705d9a8
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Apr 13 16:20:20 2007 +0000
+
+    Add distcheck hook to make sure manpages are plain ASCII
+
+commit 3f39b3a68a9ffe0f8e62f88bf03e99022b2ba6ee
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Apr 13 16:01:15 2007 +0000
+
+    Sync for release 0.9.2
+
+commit e101bf5e0e65ec3ae8e12c1e3114374145ff4dee
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Mar 29 16:55:43 2007 +0000
+
+    Partial CMake support.
+    It sucks (CMake does not seem to care much about Linux/BSD).
+    DO NOT USE IT.
+
+commit c889e13dc515026559b39b1e957db16cd8fc4954
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Mar 29 15:31:21 2007 +0000
+
+    Fix build with automake 1.10
+
+commit 082b3f4e6447e2ea79f9f35c3d159aba1ef7b458
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Mar 4 12:11:18 2007 +0000
+
+    glibc 2.3 compile fix
+
+commit 39e8d0a9eafb0616319fce421982dbdc839e4863
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Mar 4 10:03:26 2007 +0000
+
+    Improve French translation and resync PO files
+
+commit 9c4bd6cf60b517573f18f89564b81095a78b01c2
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Mar 4 10:03:05 2007 +0000
+
+    Missing translation
+
+commit 05e28c67d386c43ad01cc7ef508f52b86294b777
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Mar 4 09:58:00 2007 +0000
+
+    Some string rationalization
+
+commit 324184ccc5dfb6e61850fd2fdbe01bfaf16e4b9e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Mar 4 09:35:07 2007 +0000
+
+    Do not use tempfile as it Debian-specific
+
+commit 78daaa0feb179a4adc6fe682d084c66720d69605
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Feb 5 21:00:01 2007 +0000
+
+    Document UDP-Lite support
+
+commit 85da03c1c24bd8417cbde1111c5c82fd1f262bce
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Feb 5 20:57:35 2007 +0000
+
+    traceroute support for UDP-Lite (no extra code! only extra data!)
+
+commit 34364ef2bc730259e55c8dfccc36548a117358ec
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Feb 4 19:48:36 2007 +0000
+
+    Check-in (broken unusable) development preversion of ezirad
+
+commit d5defa1ebb98e7fe206f7fdcf497f235b79488de
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Feb 4 14:51:00 2007 +0000
+
+    Preliminary (incomplete, ifdef'd out) code for Extended ICMP
+
+commit 893b368a20a8c47f472492f7029fcc4b400ffe1b
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Feb 4 12:31:12 2007 +0000
+
+    Document traceroute error symbols
+
+commit f62c69a426b6e61e87c781f4e44b196a4831f6f3
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Feb 4 12:08:27 2007 +0000
+
+    - Add support for RFC4443 unreachable error codes (2, 5, 6)
+    - Remove bogus gettext translation requests
+
+commit b90c07af4b21fb0192d57d1aef97224bca49423b
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Feb 3 20:46:31 2007 +0000
+
+    Use getaddrinfo() AI_CANNONAME instead of getnameinfo()
+
+commit 72fc34403df3dec938f3956e27acfc9ae0595bf7
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Feb 2 20:14:07 2007 +0000
+
+    Partial French localization and some string fixes
+
+commit 212319f63f5391ab1620465941e9719765fb9043
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Feb 2 19:55:04 2007 +0000
+
+    Fix svn:ignore
+
+commit 56ed880417e695e4d475d105abdaffccf1d2ad25
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Feb 2 19:54:32 2007 +0000
+
+    String rationalization
+
+commit db30975e986a9a0e6d39bbe761072b48d86bdea1
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Feb 2 19:49:52 2007 +0000
+
+    Actually use gettext within all programs
+
+commit 5183e95787150ff3c65dc017f9784eedb7da779b
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Feb 2 19:40:22 2007 +0000
+
+    Fixes
+
+commit 55cd7d24d7781888c1f52d29f3db72dc815d08f2
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Feb 2 19:36:40 2007 +0000
+
+    - Rationalizes/fixes translated string
+    - Add english localization
+
+commit b5a286029b2e4f799048aa71d4dd49255b46d557
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Feb 2 19:13:43 2007 +0000
+
+    Fix svn:ignore
+
+commit 780c7913f58a6e835f0582fa172e653daf39e3db
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Feb 2 19:06:40 2007 +0000
+
+    Add gettext
+
+commit a5c5e50b75ada785accc1a5a98e8d26096fd822a
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Feb 2 18:49:12 2007 +0000
+
+    setlocale() fixes
+
+commit 0a5df7a530c58603bc571b12e5f6a4ff950dbc20
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Jan 27 17:07:45 2007 +0000
+
+    Some news
+
+commit c0fce27719cac7df6f76efdeb345de9f7c902a05
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Jan 27 16:56:14 2007 +0000
+
+    Forgot this file in previous commit
+
+commit a4ce31deae50231d114a9ab012b2b55420eebb09
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Jan 27 16:55:49 2007 +0000
+
+    Rename addrinfo resp nameinfo to name2addr resp addr2name
+
+commit b41a8e8d395cc11d8b458c5d473b9a1921a5c718
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Jan 27 16:54:58 2007 +0000
+
+    Fix typo
+
+commit 69a96cb9267ef6f6149def41ea96a09d07915041
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Jan 14 14:15:52 2007 +0000
+
+    Update official ndisc6 URL
+
+commit 96a605d36e23e100caf26ddbe9a18b696a412ed3
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Jan 7 14:20:39 2007 +0000
+
+    No longer define MYEXECDIR when compiling tcptraceroute6
+
+commit ceda9294d0ef183d1154e3540abfca675a4045b7
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Jan 7 14:19:58 2007 +0000
+
+    - No longer hardcode rltraceroute6 path into tcptraceroute6
+    - tcptraceroute6 uses exit() to limit would-be buffer overflow exploitability
+      (however since this binary is not meant to be setuid, a buffer overflow
+       should be harmless anyway; besidesn it has no known buffer overlow...)
+
+commit 99fa1e18f8a48724ac11b02a9bf45e49f1c487b5
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Jan 6 14:00:48 2007 +0000
+
+    Remove superfluous ampersand
+
+commit 0372fa78e9dfb9a0f2fe73d6f39558930322c88a
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 30 17:01:10 2006 +0000
+
+    Increase progress report properly in case of  timeout
+
+commit 76f7fdc212cedd25f54c2a3bcbcec2099c6d040f
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 30 16:45:10 2006 +0000
+
+    This is development trunk for 0.9.1
+
+commit 445d176f83c3843f8b54edf11136dd545b4d489e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 30 13:32:35 2006 +0000
+
+    News for release 0.9.0
+
+commit 5f35202c4f4bf70362b68e28af57afd591c4faa5
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 30 10:20:52 2006 +0000
+
+    Apply RFC2461 interval between router solicitations and document it.
+    RFC2461-mandated random delays are still not implemented.
+
+commit 5e7de95c5af18e2cad713d9d8f0d36e58e2bf5a9
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Dec 29 10:22:27 2006 +0000
+
+    Fix "low" preference text
+
+commit f153f08995352206e046fbc7d02347b0bc110248
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Dec 29 10:13:37 2006 +0000
+
+    rdisc6 implements RFC4191
+
+commit f3a6522d48a70de02e0b379fc11110cdbe1fb275
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Dec 28 17:59:55 2006 +0000
+
+    Print value of Router Advertisement flags from RFC2461
+
+commit 8b5351d9e3605c0482a4a76ac4c9bc8a7b0bdcf4
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Dec 28 15:39:08 2006 +0000
+
+    Router lifetime is expressed in seconds, not in milliseconds!
+
+commit 9e48b4acdcf9942bae6179efd4e1f845194ebdb4
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Dec 21 20:07:26 2006 +0000
+
+    suppress useless likely counter-intuitive tcpspray4 alias
+
+commit ee993b43615abd47fbbb8096e9e4b55ac1d548bc
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Dec 21 18:28:04 2006 +0000
+
+    Take program-transform-name into account when setting SetUID bit
+
+commit 0064d11fdc0086e53738fb037339641348a2b294
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Dec 21 18:03:25 2006 +0000
+
+    Escape antislash properly in configure invocation macro definition
+
+commit daffc954b894cf8333f287e81d63b9800104ddaa
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Dec 21 17:29:34 2006 +0000
+
+    Also apply program name transformation to tcptraceroute6 manually.
+
+commit 14892aabf5d733475fd22eb4de305572c351942f
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Dec 21 17:21:04 2006 +0000
+
+    Apply transform_program_name to alias scripts as well
+
+commit 6dcba542b937f2615e7965f4a13a605c9ac30ab0
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Dec 21 17:06:28 2006 +0000
+
+    Take program-name-transform into account for manual pages symlinks
+
+commit d455892c53c157d1c3d7d9c90a6ca45e8562328c
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Dec 21 17:05:06 2006 +0000
+
+    Document tcpspray fix
+
+commit b3001bfaa761b87dc653cf4d53615bc1650a84ed
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Dec 21 17:04:21 2006 +0000
+
+    Fix svn:ignore
+
+commit 01499a880bae31809bd1595c6c295295ba7755b3
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Dec 21 07:47:09 2006 +0000
+
+    Add missing new line
+
+commit 85f25cea04108b4d5d219441630f9bf3c5bb7376
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Dec 21 07:40:36 2006 +0000
+
+    Remove obsolete "-1" command line option from addrinfo usage line
+
+commit 96282f6302e3d697607fb6741c6b5b452cd4d324
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Dec 21 07:35:26 2006 +0000
+
+    Kill child (receiver) process in case of fatal error.
+    This solves a deadlock at exit if write() failed for some reason.
+
+commit 34b530be37b2cce49654ee591b391522bd629f33
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Dec 20 17:55:24 2006 +0000
+
+    Update tcpspray documentation
+
+commit f6c362f95534d9b0a3c4fdb654ef41573ce876f3
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Dec 20 17:53:45 2006 +0000
+
+    Rename tcpspray6 to tcpspray as it really is not IPv6 specific.
+    Add tcpspray{4,6} as IPv{4,6}-specific aliases to tcpspray.
+
+commit 1d25ab84213f219c57bd2fe61318421fd10d1bd8
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Dec 20 17:48:27 2006 +0000
+
+    Generate aliasing/shortcut scripts with an helper script.
+
+commit 289974d10520848853b1f938b8c91a5a033ca2eb
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Dec 18 12:21:37 2006 +0000
+
+    - Take routing header overhead into account within the payload length.
+    - Fix likely integer underflow if payload length was too small.
+
+commit 7fa953062011feb11b11a4a2fe623c03ee76b1ec
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 17 21:54:45 2006 +0000
+
+    As iputils traceroute6, do not print numerical address in parenthesis
+    when reverse DNS lookups are disabled
+
+commit 27193a45e3dbaff4c0b7a6be3d6adc2dddf88a0e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 17 20:41:14 2006 +0000
+
+    Erase progress report entirely (missed the last dot)
+
+commit 767645f4597b1bb35ec61e65a990992b478f0d1b
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 17 20:33:36 2006 +0000
+
+    Add some news for 0.9.0
+
+commit 3a9964307eb97f66e9294b6853872b192c37e0af
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 17 18:12:05 2006 +0000
+
+    Fix svn:ignore
+
+commit d5dfd67a89b3d1135e97108455272c02dd3ce067
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 17 17:07:05 2006 +0000
+
+    Cleanup ICMPv6 types and codes handling
+
+commit 7b11b7b7405b4d7dd64510655d1513b55d6a259a
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 17 16:57:53 2006 +0000
+
+    Print !P in case of next header error
+
+commit 437ff737a473451fc6dac4df950f94a1d0274501
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 17 16:26:24 2006 +0000
+
+    Handle EPROTO properly
+
+commit 336809cbf6f0d42dd0bff8e4e9b04f174b638d36
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 17 16:08:38 2006 +0000
+
+    Restore de TTY-only progress report and suppress debug informations
+
+commit ea0b1c098860e484ceecae0f6ea383061751e7f3
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 17 16:00:58 2006 +0000
+
+    Print each hop data as soon as it is collected,
+    rather than all at a time in the end
+
+commit cf9ae9e8420bc1196880b26ec33ec05c087feb9f
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 17 15:56:51 2006 +0000
+
+    Do not apply inter-probe delay after last probe
+
+commit c6b724a3d8ecdf5179560ac9ec5931563c950a84
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 17 14:54:48 2006 +0000
+
+    Allow disabling assertions
+
+commit 2d66c5e1ef6240fd67f286a4c332cc587ad87e0f
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 17 14:54:33 2006 +0000
+
+    Send probes simultaneous in a diagonal pattern rather than vertical.
+    Vertical (constant attempt number, increasing hop limit) is much faster,
+    but it has severe problems with the "last" hop (= the final destination).
+    As for the traditional horizontal order (constant hop limit), it has severe
+    issues with ICMPv6 rate limiting.
+
+commit 7d358aab92f53d25a89f95fbd61646d87508bdb1
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 17 10:40:45 2006 +0000
+
+    Improve progress report
+
+commit 1dcbad8cbc591d92fe0370fa7585ca5210ef71a7
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 17 10:38:28 2006 +0000
+
+    Remove debug messages
+
+commit 8b271c04594f246d052d044da7bca747e5a5a6ee
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Dec 17 10:37:40 2006 +0000
+
+    Parallel traceroute implementation.
+    Unfortunately, finding the last hop does not work well
+
+commit bcf53d07d69b5a111ba681db40afbbc9e24eb471
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 16 22:12:47 2006 +0000
+
+    Pass a deadline to receive probe rather than a timeout
+
+commit d01050ab8033ce739153ab5a08d2dee44885e3c2
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 16 22:06:16 2006 +0000
+
+    Revert [395]
+
+commit 6ee84bd681f1b32bbe54a914aad6f41c3c28fca8
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 16 22:01:22 2006 +0000
+
+    Support for receiving more than one probe per probe() call
+
+commit facbce849b6d8fa1805a6f97a5ca46e0973d790b
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 16 21:52:29 2006 +0000
+
+    Cosmetic changes
+
+commit d2d75a5bb8c82f45801fb98fe8831520c9996aa2
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 16 21:49:56 2006 +0000
+
+    - Disable currently broken EPROTO handling
+    - Move RTT computation
+
+commit f285c68a74a12f5ddd854bf457d925b16d063d9b
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 16 21:43:59 2006 +0000
+
+    Separate functions to parse ICMPv6 and protocol packets
+
+commit 4129512690b8f138550b02bfbddede24337ae933
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 16 20:43:51 2006 +0000
+
+    Don't handle impossible condition
+
+commit 064a50f745f8abdb6d7b6f9d413b657f863d03ca
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 16 20:40:45 2006 +0000
+
+    Always use (signed) integers to receive hop limits
+    for consistency with POSIX and IETF specs
+
+commit aedf1eeded1011de3dd766a9319e332b7851fc7f
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 16 20:36:12 2006 +0000
+
+    Hide hop limit from receiver
+
+commit 06fc23791d56fa30d5576c0988993ab0b74543fb
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 16 20:28:20 2006 +0000
+
+    Work around DNS resolution temporary failures:
+    print the numerical hostname
+
+commit 4455765981151fc196daf05ef506c4a412af6352
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 16 20:25:43 2006 +0000
+
+    Fix progress report
+
+commit 69158d28af0c47910dd219c6691589b058bc4ca1
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 16 20:17:31 2006 +0000
+
+    Add a rudimentary progress report
+
+commit 06226820bfc49a2a327c5d5374102b702493610c
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 16 20:10:30 2006 +0000
+
+    Step 3: separate sending of probes from receiving
+
+commit 68c4a1f47eff873975a4568a5d42f74a62b05cd6
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 16 20:01:03 2006 +0000
+
+    Document tsdiff
+
+commit 922b19cadff46839907b35540688617489405be7
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 16 19:22:13 2006 +0000
+
+    - Wait for delay only between columns, rather than between every probes
+    - Fix previous commit
+
+commit 2544ccd565be4aad5af0b8ffccc44dd60f12e6e5
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 16 19:00:58 2006 +0000
+
+    Send probes in column rather than in line
+
+commit 2e13aa1e7f7b4e38db44090285377726d676b547
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 16 18:45:23 2006 +0000
+
+    No longer assume probes with identical hop limit are sent consequently
+
+commit e2bf71d7d1559b6840973bc82f35c7be1a4641b7
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 16 18:30:10 2006 +0000
+
+    Pass hop limit via ancilliary data instead of setsockopt,
+    so that probes can be sent in arbitrary order
+
+commit 295ac178790d215a2adc2b4ae3cf51fe45205cca
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 16 18:17:55 2006 +0000
+
+    Minor clean up
+
+commit c48e7c90b3c39db4a50b8b1551324b79b43e2b71
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 16 18:15:13 2006 +0000
+
+    Small source code inlining
+
+commit 73086a3d78041061cd6e65734e1fcf7240068dd7
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 16 18:11:19 2006 +0000
+
+    Store full socket address instead of IPv6 address
+
+commit b26bee71842c4b7f57c54f8d816e691e503c181f
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 16 17:49:08 2006 +0000
+
+    Parallel traceroute, step 2: store result in table and use display function
+    Now the problem, of course, is that traceroute is as slow as before,
+    and does not print anything until the full traceroute is complete.
+
+commit f9edc8873930a28fa30f98dafa384b9f038ecc09
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 16 16:53:34 2006 +0000
+
+    Parallel traceroute, step 1: rudimentary result printer
+
+commit 95eec1eb78d3275808222b42a4ce01f4a705919e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Oct 12 15:50:12 2006 +0000
+
+    Update documentation
+
+commit e1a4dc1fd19034f63903a967ce8c0d682eba3bfa
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Oct 12 15:46:50 2006 +0000
+
+    (Almost) follows LBL traceroute semantics for packet length paramater.
+
+commit a68d48ccc38669c8065539d8a0b10b27b15a0282
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Oct 12 15:25:31 2006 +0000
+
+    Support for modifying traceroute TCP probes size
+
+commit 9d0102cf110d000eb429409d06c63857adba6f61
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Oct 11 19:03:32 2006 +0000
+
+    Update documentation
+
+commit 3ec2bf6013918b68015925c2f78a86603559fe22
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Oct 11 18:56:40 2006 +0000
+
+    Re-include support for source TCP specification via undocumented
+    (read: subject to change, not to used externally) traceroute6 option.
+
+commit 932c3f5710bbfbc8a994105fb19fd085cd9e9eb2
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Oct 11 18:51:17 2006 +0000
+
+    traceroute6 always use iputils-style traceroute command line syntax.
+    tcptraceroute6 consequently works properly.
+
+commit a1b85cbe79653ac578c186de245171493a0b63cc
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Oct 11 18:49:07 2006 +0000
+
+    Various fixes to previous commit
+
+commit 3625c5ca652d09433a889d2497f27f5317b09945
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Oct 10 20:24:18 2006 +0000
+
+    Make tcptraceroute6 a wrapper with tcptraceroute semantics
+    that are partly incompatible with iputils traceroute ones.
+
+commit ef68b1d5155865f1e2f12bf020254d3a26820681
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Oct 10 19:00:06 2006 +0000
+
+    traceroute6 accepts -F as documented
+
+commit 1397c25bbec855287a681731ca61765925eb2bb4
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Oct 8 18:13:09 2006 +0000
+
+    This is development trunk 0.7.4
+
+commit df90ab837d483167daca2f3dedbdc3a1725cb608
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Oct 8 18:12:40 2006 +0000
+
+    Fix very unfortunate typo
+
+commit 5e469f6677beacaba2739c86ee2dbf7b6657c4d8
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Oct 8 17:19:23 2006 +0000
+
+    Fix traceroute6 stopping at first non-responsive hop
+
+commit 5037e6995dee526ec6bb301bdb10bc0c7607b749
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Oct 8 17:06:22 2006 +0000
+
+    C99 cleanup
+
+commit e6b70c8035e16e1f96f8e173e69c9c7db0a4f06c
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Oct 8 17:03:52 2006 +0000
+
+    Some cleanup
+
+commit c87af31c6c200eabc5aac3597c91d6bbd99e24b8
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Oct 8 16:48:42 2006 +0000
+
+    Work-around for OS missing IPV6_PKTINFO
+
+commit 12517c37a77a60614d28ee97de5edbb151abd409
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Oct 7 15:55:34 2006 +0000
+
+    Document previous changeset
+
+commit 6bc1e9252bca85facd9c72bf62d1cf4dc756ce20
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Oct 7 15:02:56 2006 +0000
+
+    Support for IDN within getaddrinfo()
+
+commit 11f52fe3275fa7c3a6c71718d9f12ee32700c689
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Oct 7 11:48:01 2006 +0000
+
+    Link each binary with librt manually as needed
+
+commit f34e633978e52a8d5c3bc183a81f9305c93acef8
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Oct 7 11:38:51 2006 +0000
+
+    Document previous changeset
+
+commit b0779d2cb2328fbb563369791993700db661cc3c
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Oct 7 11:36:18 2006 +0000
+
+    traceroute6 -l prints hop limit of received packets
+
+commit 11d7e63a1ed2ee1af242e4f0d12ef03ab0fb20fe
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Oct 7 08:31:42 2006 +0000
+
+    Smae as previous commit
+
+commit e1aa903988517568e3e573cd5dbb2c9e4408227e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Oct 7 08:29:34 2006 +0000
+
+    Use SO_DONTROUTE instead of MSG_DONTROUTE
+    (anyway, neither are implemented by the kernel)
+
+commit 0e61b8e2497fa0931b9209cd366647e589b77ae9
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Oct 6 17:52:54 2006 +0000
+
+    Work-around for FreeBSD 4
+
+commit 1d06c36661c905bc342cc24022e833e671351c33
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Oct 6 17:50:06 2006 +0000
+
+    Same syntax error
+
+commit 92a12c5c43b864170bcdbe45a9db258c68448c17
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Oct 6 17:49:36 2006 +0000
+
+    Syntax error
+
+commit f90870b891cf6aba4494352e871d31dae437a04c
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Oct 6 17:49:23 2006 +0000
+
+    Uninstall nameinfo.1 symlink
+
+commit 2a65c96edff6f817803b8f612b7e488e2240ec42
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Oct 6 17:48:41 2006 +0000
+
+    This is development version 0.7.3
+
+commit 4bebebb301dd0630d31a9fc4a1c0686330176e30
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Sep 30 19:52:27 2006 +0000
+
+    Fix BSD/make fix
+
+commit a9c7fc63f74b960b06b4e74c57490d09d03cfcea
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Sep 30 19:50:39 2006 +0000
+
+    News for 0.7.2
+
+commit 05d6b9f9526af5f7da7b9e8a408c46c875fc5359
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Sep 30 19:32:50 2006 +0000
+
+    Fix obvious typo.
+
+commit 9a6a91d6023748a9ab062e06d3884bab31cf81b2
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Sep 30 19:28:01 2006 +0000
+
+    BSD/make build fix
+
+commit 84f60fcf370b3e7154a668f8f7e2214ab3fe8c75
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Sep 30 19:21:21 2006 +0000
+
+    FreeBSD compile fix
+
+commit 7605ce5ad2cb9dffe823fac1a8e89970c00f80b4
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Sep 30 18:13:32 2006 +0000
+
+    Create raw sockets then drop root at the very beginning of the program.
+
+commit a127a257efe7be181dbc0d4d8ead5f60594babb5
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Sep 30 16:24:11 2006 +0000
+
+    This is development for release 0.7.2
+
+commit c85dbfd0759722db3c36745dee7b34e5d7cb6497
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Sep 30 16:23:47 2006 +0000
+
+    rt_segv does not really need to be initialized.
+    Might save 1 or 2k in the binary depending on the format.
+
+commit 4bb66d31c9c2e952ede10d76873d5d80a1826ee4
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Sep 30 16:18:58 2006 +0000
+
+    When setuid, create the raw socket and drop root really as early as possible,
+    so that we won't have a local root in case of command line parsing bug.
+
+commit a404e579ffcffaf2d751a7c3408e73db65d67dc8
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Sep 30 16:03:26 2006 +0000
+
+    Open a local non privileged socket for SIOCGIFHWADDR, instead of using an
+    ugly global variable.
+
+commit 45071de372f80866c63b0655052895cc28ba384c
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Sep 29 19:35:55 2006 +0000
+
+    Some news
+
+commit 9be2c5a74e3fa1be21a9d25c77251b45e55da853
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Sep 29 19:29:13 2006 +0000
+
+    Add FreeBSD/NetBSD defines for IPV6_TCLASS and IPV6_RTHDR.
+    OpenBSD and DragonFly do not have the RFC3542 defines yet according
+    to their CVSweb, so not added :(
+
+commit a39417394cb57e008c1290940818863477e86c2f
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Sep 29 19:16:43 2006 +0000
+
+    Really use the inet6_rth_* and IPV6_RTHDR work-around
+
+commit b24791914b03f250dc728178e69f9393e2537ed3
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Sep 29 19:04:37 2006 +0000
+
+    Prepare to use inet6_rth_* replacement in the source tarball
+    instead of just Debian
+
+commit 0ffd6310b98fcf82b2f3c18f6e2d50829c16c263
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Sep 29 18:59:41 2006 +0000
+
+    Add warnings for IPV6_TCLASS and IPV6_RTHDR
+
+commit 1194bcbca79256ae7d8c0f1d432e0edd7fd7cbef
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Sep 29 18:56:33 2006 +0000
+
+    This is development trunk for release 0.7.1
+
+commit c6994d4d28c1f6f11b687e4a83bbcc6f48341f9e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Sep 29 18:56:01 2006 +0000
+
+    Fix clock_nanosleep check...
+    It was be as if it was never present!
+
+commit 94fed06be9ba6ebe73901d030919749d928b6a91
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Sep 29 17:59:40 2006 +0000
+
+    Cosmetic fix
+
+commit c2a01fe3975fb046e503bdd0d2e7b546f4eacf73
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Sep 28 16:14:50 2006 +0000
+
+    Oops, forgot to document addrinfo and nameinfo in NEWS - too late.
+
+commit 6909cacefcda20db6fb96c43404936cdc81cfd80
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Sep 28 16:10:20 2006 +0000
+
+    Fix Debian IPV6_RTHDR work-around
+
+commit c21b802d468650f3238d3816011dabd362f4458a
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Sep 28 15:50:00 2006 +0000
+
+    Forward port [311]
+
+commit 4e9a84dbd657157cd22b8c4c25856ac0e07f034b
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Sep 28 15:47:06 2006 +0000
+
+    Debian package for upcoming 0.7.0
+
+commit 989b5a435582137e481e473fa24f7d9cafb23082
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Sep 28 15:43:53 2006 +0000
+
+    News for release 0.7.0
+
+commit 18f5633cd3db654c3f5b93f5b1d0871d3dd7381e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Sep 28 14:30:45 2006 +0000
+
+    Document -g option (source routing)
+
+commit 2aee422fc8199a8e1862a302e65baf37f97e9c16
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Sep 27 20:05:01 2006 +0000
+
+    traceroute6 support for Type 0 Routing Header, i.e. IPv6 source routing
+
+commit 02dbbcf772117d04ac8b8a745494b3df7a4bf014
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Sep 27 19:04:21 2006 +0000
+
+    Cosmetic reordering
+
+commit 575535108a6a38863f35bd032633885d68ffc7b0
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Sep 27 17:44:50 2006 +0000
+
+    Use ssize_t instead of int when needed
+
+commit b46fbda3e8d10c5c9382ce4b7bae70128575ed35
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Sep 27 17:29:31 2006 +0000
+
+    Add a comment for readability (hopefully)
+
+commit fadca3302757640de31ca210c7667755165679c2
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Sep 27 17:28:53 2006 +0000
+
+    traceroute6 now skips IPv6 extension headers within ICMPv6 errors payloads
+
+commit a9edde3acbaa6b76e034037314d26680e83bcaba
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Sep 25 17:18:13 2006 +0000
+
+    Remove dummy comment
+
+commit b63e12f022b27861772fa5702056e1edd2f95060
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Sep 25 16:58:02 2006 +0000
+
+    Linux kernel 2.6.18 has fixed support for -t
+
+commit b6fa5618aa0de1e26163c9e69e73f12a26a7d741
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Sep 25 16:55:51 2006 +0000
+
+    Use standard API for outgoing interface setting
+    This is not Linux-specific anymore, but that does not mean it
+    is going to work any better (actually neither standard and non-standard
+    methods work on Linux 2.6.18)
+
+commit 38a054179ef68d12cd7b35ea9e7fa642157b6e5d
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Sep 13 18:17:36 2006 +0000
+
+    Add documentation for addrinfo
+
+commit 8dd76820238e2ececd0a4ae0d3c908777ac9da24
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Sep 13 18:04:19 2006 +0000
+
+    Add addrinfo and nameinfo scripting tools
+
+commit d06b423134dbae1b61f80fbd826c77ab5c834666
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Sep 13 18:03:54 2006 +0000
+
+    Add missing const qualifier
+
+commit bba2fbcfdf4bc070084686148f2a65c67c302e7b
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Sep 13 14:45:39 2006 +0000
+
+    Use getopt from Perl - big simplification
+
+commit 060b3b35bdd20995e6845ee4f60a587e46db1977
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Sep 12 20:24:41 2006 +0000
+
+    Manual page for dnssort
+
+commit 16b3d9e34392ed4d39a8953d79fa58328cb76b55
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Sep 12 20:23:57 2006 +0000
+
+    dnssport supports file names from the command line
+    (yeah almost complete rewrite!)
+
+commit 563eddcea87cd75c71982d76c329acb639e8b90c
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Sep 12 20:06:06 2006 +0000
+
+    Implement dnssort --reverse
+
+commit d549e6755bbb1ec8e328f74635a8c18779422475
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Sep 12 19:43:10 2006 +0000
+
+    Look for Perl interpreter (don't assume it is in /usr/bin)
+
+commit 08a1e9636c778c1b6017caf6e93b775a8a382bb5
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Sep 12 19:36:25 2006 +0000
+
+    Add dnssort
+
+commit c4ce5dd3bce2bc6a3c3d426954ffd882cc0ca58b
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Sep 6 16:46:20 2006 +0000
+
+    Bump version number
+
+commit 259aadaa8e71a4357418a60ca0b5f2c8c77bc215
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Sep 6 15:36:57 2006 +0000
+
+    News for release 0.6.8
+
+commit 1947742c9d404b181dd3c81950b39d1c961d3db3
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Sep 6 15:34:43 2006 +0000
+
+    Fix duration and bandwidth values from tcpspray6:
+    the start time was not withdrawn from the end time.
+
+commit cc9d3c68cdf2b72b2ff44fe92692f0818096a4ec
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Sep 3 19:19:48 2006 +0000
+
+    - s/gettime/mono_gettime/g
+    - add mono_nanosleep wrapper for monotonic clock nanosleep
+
+commit 4b2d676e8b2c3636fb6935bdda9f4cb2b7213b11
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Sep 3 19:11:17 2006 +0000
+
+    Revert previous commit. I need more sleep.
+
+commit 2e47740a6f7ca8722dc451a6ad5c6d3132983860
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Sep 3 19:09:17 2006 +0000
+
+    Remaining unwrapped clock_gettime (CLOCK_MONOTONIC) call
+
+commit 31fa8f3c23bb4f71db676919725e0ed723f3ca98
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Sep 3 19:05:19 2006 +0000
+
+    Packet parsing code factorization
+
+commit e31517ce7b18ea998c7abba0a35387383b0c23ea
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Sep 3 18:57:40 2006 +0000
+
+    Create typedefs for callbacks
+
+commit a6368743dafdbddbc9bb046e27bebc3ddfb87e92
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Sep 3 18:53:07 2006 +0000
+
+    Kill useless variable
+
+commit 192f8a3c2309d2fb831faad1500f471fc389a62c
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Sep 3 18:52:53 2006 +0000
+
+    Some cleanup - should ease source routing support later
+
+commit f505273444f048c290b24bd08dc09412b1dafac8
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Sep 3 16:04:21 2006 +0000
+
+    Fix amd64 compiler warning
+
+commit ac1be9883dbbf557ae653318321d9b6f5d5cdd9e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Sep 1 19:56:48 2006 +0000
+
+    And ICMPv6-specific is now separated too
+
+commit 04a44c2a332ead80349639c0b43fdd596a70dcf3
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Sep 1 19:53:46 2006 +0000
+
+    Remove useless #include
+
+commit 5a0268e7ff5409d460a4ba2e47980ee18737a931
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Sep 1 19:53:28 2006 +0000
+
+    No need BSD semantics in traceroute core
+
+commit a6505f75088754f5d78d6f29260d69db5c0c2768
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Sep 1 19:52:50 2006 +0000
+
+    Separate UDP code
+
+commit 27e82f5b040fd2b31d30c8dced576c8f285f6132
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Sep 1 19:48:30 2006 +0000
+
+    Cosmetic
+
+commit c4989be36a75ef87effde2619e8779a7cfbd41e8
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Sep 1 19:44:28 2006 +0000
+
+    Remove many useless headers
+
+commit 77654ddc2c92e8d3e9a39024239b7aaf9e0014a2
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Sep 1 19:42:30 2006 +0000
+
+    Separate TCP code from main
+
+commit febaf991048a07517d28bd895624d8f782e2a8e9
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Sep 1 19:36:29 2006 +0000
+
+    Create traceroute.h, first step toward splitted traceroute source
+
+commit dcace329170315652cd33152f58762adda946d6f
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Sep 1 17:27:53 2006 +0000
+
+    Document option -t and ignore it if not supported
+
+commit 2544ab55ef3d3ebc11978a1be6666a66aff518aa
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Sep 1 15:54:13 2006 +0000
+
+    Add -t traceroute6 option to set Traffic Class
+
+commit c5762063803b0cf577861de62a6e505307056983
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Aug 31 18:03:51 2006 +0000
+
+    Fix configure invocation in version infos
+
+commit 6c7bfa47da1ea392cfb1b4959d5735e17823bdb5
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Aug 31 17:31:27 2006 +0000
+
+    Cleanup
+
+commit d1fb06625175ffbfdce00d6ddd2980a622c5e2d6
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Aug 31 17:20:09 2006 +0000
+
+    - Make sure errno is not overriden before perror()
+    - Make errno always contain an error code before calling perror()
+
+commit 0aef9764cec58de8fd6db61b725b02078f00c240
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Aug 31 17:08:19 2006 +0000
+
+    Really cosmetic fix
+
+commit 43d415fd02b83f6600c51c42a75811a21cb89beb
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Aug 31 17:07:57 2006 +0000
+
+    Minor cosmetic changes
+
+commit 9d57d2a014329e09bbffeb90843f5c7faa5e1884
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Aug 27 08:23:25 2006 +0000
+
+    (Unlikely to ever be triggered) fixes for -Wundef
+
+commit 22ab5853df57b01522ac031adfc38d1654122349
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Aug 21 19:01:34 2006 +0000
+
+    use inttypes.h instead of stdint.h
+
+commit 7ddbbd1a1e10b85780130fba1dc41afc504d608e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Aug 17 15:14:47 2006 +0000
+
+    BSD compile fix
+
+commit d8cf05acc9fbbc7428beef68aac168d4f5976655
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Aug 17 15:14:35 2006 +0000
+
+    Development trunk for version 0.6.8
+
+commit 67804edc31e729d65c69de40a901ff6bc01e937b
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Aug 12 19:50:55 2006 +0000
+
+    Fix for old FreeBSD adapted from its ports tree
+    (original author: Shaun Amott)
+
+commit f43a6c2b6a834eb40e08ad00fb126d17818e5872
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Aug 3 16:36:58 2006 +0000
+
+    Check hop limit of neighbor advertisement:
+    they must be 255, which proves they weren't routed.
+    In a way, this is a security fix to {n,r}disc6
+    (though the bug has been known for a long time)
+
+commit ba731a7fba9b9316f5eef3acc38a3e1d001033d7
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Aug 3 15:41:26 2006 +0000
+
+    More C99 cosmetics
+
+commit 8c56ae0c80f721510c40f85b53b7d208e89618db
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Aug 3 15:10:42 2006 +0000
+
+    C99 cosmetics
+
+commit 8564a76ee412a668c266efea221e5fdb9a4c08c3
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Aug 3 15:06:21 2006 +0000
+
+    Development trunk 0.6.7
+
+commit 8099d05626e44b4ed314c39e23e92690dc1cc06f
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Jul 12 18:06:26 2006 +0000
+
+    News for release 0.6.6
+
+commit 1895f6b784dcee9930859d3c1422d1ab6a2cca30
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Jul 12 18:03:32 2006 +0000
+
+    Move debian/ to packages/debian/
+
+commit 53caa840e031e871a631403d64a5680e1f326c03
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Jul 12 18:02:18 2006 +0000
+
+    This is development trunk for version 0.6.6
+
+commit d1dc32f1e8b6d3264c1204d4006663469fd96e41
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Jul 12 18:01:57 2006 +0000
+
+    Compile fix for FreeBSD
+
+commit be8b0b5d035440f8aabdbbf5f5f5f47d95bd77d1
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Jul 7 15:12:36 2006 +0000
+
+    Switch to CDBS
+
+commit b2e7a24b37d6f5020691268a9812b6df59da7094
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Jul 7 15:12:27 2006 +0000
+
+    Update svn:ignore
+
+commit d646eea6de1728db1abf38c898991b4454d8cbf0
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Jun 5 17:17:01 2006 +0000
+
+    Remove debug message
+
+commit e1114a2950e488ec49f796d603d835dc0f60b31d
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Jun 5 16:49:48 2006 +0000
+
+    Switch traceroute to the monotonic clock too.
+
+commit 01c15918690c8c6138a46d79799446f55fc7eda0
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Jun 5 16:49:22 2006 +0000
+
+    Use correct clock frequency for times()
+    Unfortunately, this yields very imprecise results.
+
+commit 55bac8e17fe2ca0f4a10bc55dbe6dc9f0ea06426
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Jun 5 16:06:56 2006 +0000
+
+    Include gettime.h in tarball
+
+commit 3d4c547a56822265ab0f6c75ce1bd945e13fab61
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Jun 5 16:05:48 2006 +0000
+
+    Cheap clock_nanosleep replacement
+
+commit 52ac6f221c2bd5cea59b40a6335d7947ba9ba140
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Jun 5 16:03:37 2006 +0000
+
+    Use AC_USE_SYSTEM_EXTENSIONS
+
+commit e47b63669651aed731fedb3b7f4dd9ac25a5f3b5
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Jun 5 16:01:55 2006 +0000
+
+    - Commoditize gettime() wrapper
+    - Use monotonic clock within tcpspray
+
+commit bbd049b0dedcbd2e6fed3526faf01b6f2bf45511
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Jun 5 15:37:11 2006 +0000
+
+    Use a monotonic time source within (n|r)disc6.
+
+commit 7251976b66d1abbfdd48c7060d8817baefc5949c
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Jun 3 18:28:39 2006 +0000
+
+    Debian packaging metadata.
+
+commit 2b13aa5968a5096a6c4f678e5c294506213201c1
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Jun 3 18:06:19 2006 +0000
+
+    manpages: Encode all non-ASCII charset properly
+
+commit 0bf27b07b7aad9364ba4c418080006e05e934fe5
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Jun 3 08:00:17 2006 +0000
+
+    Cosmetic
+
+commit 764117ad640445f01def4a798338808fc3a43740
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Jun 2 20:15:06 2006 +0000
+
+    Use Autoconf check for C99
+
+commit 4ed9f7f6fd7fa992bc3524bc5b71bc6784e8c431
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun May 7 11:08:19 2006 +0000
+
+    News for 0.6.3
+
+commit 9decdbbfd769f7c64807ea439065b9a2b7286014
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun May 7 08:27:43 2006 +0000
+
+    Update README
+
+commit 468e3156a0e54a3d5dc6c226c7986244c7c14bd8
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun May 7 08:25:08 2006 +0000
+
+    traceroute6 -> rltraceroute6
+
+commit 2fca16eb7d3739ede1667fad579b898637a29dd8
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun May 7 08:24:39 2006 +0000
+
+    Fix make uninstall
+
+commit 2aece88e46ee31f96e58f433b89c3be043fd9aad
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun May 7 08:15:51 2006 +0000
+
+    Rename traceroute6 to rltraceroute6 to avoid conflict with iputils
+
+commit 91ed72db74af56fd6df1f11e61d2a842e19c1b85
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun May 7 07:50:52 2006 +0000
+
+    Make the wrapper scripts relocatable
+
+commit e90db9370f9f555964483912680fb66e340a99cb
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun May 7 07:50:11 2006 +0000
+
+    Version 0.6.3
+
+commit b143e92e6850f28dbfe00034d813f76eb1d500df
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun May 7 06:25:10 2006 +0000
+
+    Document tracert6.
+
+commit 094159151648f564b8d6751fc4069b3f8b6fe864
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun May 7 06:21:33 2006 +0000
+
+    - Handle parameters with white space properly in tcptraceroute6 wrapper
+    - Add Windows-like tracert6 wrapper with ICMPv6 as default mode
+
+commit 67e50038f487ea5e1abddbf877da8e2a62a1df00
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue May 2 11:10:33 2006 +0000
+
+    Upcoming release is 0.6.2
+
+commit 0e2fa44826f52c37ea166540733f7acb33e7ef6d
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue May 2 10:58:35 2006 +0000
+
+    Fix installation of tcptraceroute.8 as a symlink.
+    Bug noticed while having a look at Dries Verachtert’s ndisc6.spec.
+
+commit 541f40cadd360dda19802383b4579abe4b3a277c
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon May 1 17:09:07 2006 +0000
+
+    Make sure svn log does not ask questions
+
+commit f5fed3600cb59c4cafae507b69ef2a6ef746f18d
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Apr 30 21:15:35 2006 +0000
+
+    News for upcoming release 0.6.2
+
+commit 2ec9ec411e7f5c7e17d843457f2ab647a9acadb5
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Apr 30 16:40:03 2006 +0000
+
+    Don't ignore failure when generating ChangeLog
+
+commit 26fe397ad64ba17191a8b62e4a464e726a93a9fa
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Apr 30 08:16:38 2006 +0000
+
+    Update documented BUGS
+
+commit c05178ac3b11955037d4e71f77cbd7a0784c35d6
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Apr 30 08:07:58 2006 +0000
+
+    Support traceroute6 -z to wait between each probes
+
+commit bce64d079c6a8f918b31b3233a8703854e3ff974
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Apr 29 20:44:38 2006 +0000
+
+    - Support traceroute6 -p <port> to specify base UDP port
+      (this was no longer possible since when the last parameter was turned
+       into a packet byte length)
+    - Support tcptraceroute6 <port> to override source TCP port
+    - Document (tcp)traceroute6 -p option
+    - Note that TCP port 0 is actually TCP port 0
+
+commit 81d3da6cc425459aa64d0ab3ce36232631a503d8
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Apr 29 20:19:53 2006 +0000
+
+    Finally parse the last parameter as a packet length for ICMP and UDP
+    probes, instead of as a destination port number
+
+commit 234c209b28f33a918ebe6d114550c5d72cb504f9
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Apr 29 20:05:57 2006 +0000
+
+    Don't print destination port number when using ICMP which has no port
+    numbers
+
+commit b5a7a64ef2645f2de289dad84d21a79eef047e92
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Apr 29 20:01:02 2006 +0000
+
+    Internal support for customized source port
+
+commit 173948f39a34898a75c0eefbf7abdb589977318c
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Apr 29 19:53:48 2006 +0000
+
+    Internal support for various size of UDP and ICMP probes (not yet
+    available to user). ICMPv6 Echo probes now pass through my 6to4
+    relay's firewall.
+
+commit c9c896e23aeb2ba5243cea976f8cd23e523857ac
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Apr 28 20:46:51 2006 +0000
+
+    Solaris compile fix
+
+commit 272f3062298bc18fad9b65beadee762dc37bf8c9
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Apr 28 20:30:10 2006 +0000
+
+    Fix traceroute time out
+    - it was broken by the previous commit on Linux
+    - it never worked properly on BSD, as it used to assume that select()
+      updated the struct timeval upon return.
+
+commit feefc4af91e71448c68cd782db0befa67563c4da
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Apr 28 20:23:34 2006 +0000
+
+    Also switch traceroute to poll()
+    TODO: fix timeout
+
+commit 09d56c4bf7ea611f55baa7ba1fd102c0cee510d8
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Apr 28 20:18:01 2006 +0000
+
+    Set close-on-exec flag
+
+commit e95b7af9943b1b915ae9312fb360468ebe324fb5
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Apr 28 20:15:47 2006 +0000
+
+    ndisc: Use poll() instead of select() to simplify code and get rid of
+    the FD_SETSIZE issues
+
+commit 7e8c544915b804422fb6454422ae9808695692fc
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 26 20:15:21 2006 +0000
+
+    Compile fix
+
+commit d624ae8db062c6c84f087951cc58fa848f94ea64
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 26 20:13:25 2006 +0000
+
+    For SetUID programs, make sure raw sockets are always:
+    - above 2 (so that we can't be tricked into writing crap to sockets
+               through STDOUT/STDERR)
+    - below FD_SETSIZE so that FD_SET does not overflow.
+
+commit 2b8ebbb8389287816771fc723cb06975296fafcf
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 26 17:00:34 2006 +0000
+
+    Make sure the ChangeLog is updated via make dist
+
+commit 8984bec4909e1e43ae18cf566539a5f59356a27e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 26 16:58:23 2006 +0000
+
+    Add missing svn:ignore entry
+
+commit 4240988aff1359d784a67127a4e256b771ccdac4
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 26 14:54:53 2006 +0000
+
+    Remove extra one time debug code
+
+commit 82fe77d538c315668cc1349a4097b1201c36d2a0
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 26 14:22:40 2006 +0000
+
+    Support (tcp)traceroute6 -i
+    Unfortunately, the Linux kernel ignores SO_BINDTODEVICE
+    (much like MSG_DONTROUTE) on raw IPv6 sockets. iputils traceroute6 has
+    the same bug.
+
+commit dc8f26e73d07d7cc5d1243179ca175dad1105927
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 26 11:37:01 2006 +0000
+
+    support traceroute6 -d (SO_DEBUG)
+
+commit 3f8ed65bb46ca42cdf65cde87f46fec15519217c
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 26 08:07:29 2006 +0000
+
+    Support tcptraceroute6 -E to emit ECN-setup SYN probes
+
+commit a6223ded788b4fcbd05b2894df55cfb88ef953d9
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Apr 25 21:46:16 2006 +0000
+
+    - support traceroute6 -r (DONTROUTE, but Linux ignores that)
+    - support tcptraceroute6 -N (as the opposite of -n, maybe we should
+      differenciate private addresses as IPv4/tcptraceroute ?)
+    - ignore traceroute6 -F
+    - ingore traceroute6 -x
+
+commit bdc9d247c43be7e7d35b5a68dc4b52658d15d75b
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Apr 25 20:38:05 2006 +0000
+
+    - Set proper ICMPv6 filter for ping socket
+    - Factorize fcntl()
+    - Set SO_REUSEADDR (probably useless, but not an error)
+
+commit 48d5f0f1b357838ea5a8c22a6f57d63ccd04ac2f
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Apr 25 18:42:45 2006 +0000
+
+    Cosmetic changes
+
+commit fd2b0a6e5d3d3c3a5d82b6bb0e98e57c36e33ad2
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Apr 25 18:36:13 2006 +0000
+
+    Would-be thread-safety fix, clean up
+
+commit d8f6dcd9c49f0ab369a5537f1eb629de01b86a4a
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Apr 25 16:58:05 2006 +0000
+
+    Fix minor boundary check problem
+
+commit 79efe35aa4797fe2cfd7d3dc24abcdb48c2bfad0
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Apr 25 16:46:41 2006 +0000
+
+    traceroute support for sending ICMPv6 Echo request probes
+
+commit 4043057760f2cc1cb6e6af1fe2408d037db5b4ed
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Apr 25 15:51:55 2006 +0000
+
+    - Add one long option for each short one
+    - Add comment about some unimplemented options
+
+commit 92f20ea94d6f6143f9b6ad1b2d32fb4639c09eb8
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Apr 25 15:36:46 2006 +0000
+
+    Version 0.6.1-svn
+
+commit fccacd93c9a9114d1a5c640e05a1a98f78ccd6aa
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Apr 24 10:07:14 2006 +0000
+
+    Added tcpspray6 to the documentation
+
+commit 4e9920a09908eb89eef51a34f9ca440ccc8a9811
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Apr 23 12:55:34 2006 +0000
+
+    Include tcpspray6.1 in tarball
+
+commit b3c0824cfea835d1e177af1463f29081425f349e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Apr 23 12:55:17 2006 +0000
+
+    Fix distclean
+
+commit 87446f4e3f0186d4d9ce732dff6ca40d834bb56f
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Apr 23 12:53:29 2006 +0000
+
+    Man page for tcpspray6
+
+commit 1587ebba60aea7a036330d24d9fa494d327f9cfd
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Apr 23 09:37:30 2006 +0000
+
+    Instead of installing everything into $(prefix)/sbin:
+    - install setuid programs in .../bin unless setuid is disabled,
+    - otherwise install privilege-needing programs in .../sbin,
+    - always install non-privileged programs in .../bin.
+
+commit 6b05e77ff7d299c2b7fae541cdc1a868cf20def7
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Apr 21 16:58:37 2006 +0000
+
+    Fix tcptraceroute6 dependencies
+
+commit 2c2192c395649c613f9d4fe6b9061bfe17e530a5
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Apr 21 16:50:10 2006 +0000
+
+    Check for nanosleep in -lrt (Solaris)
+
+commit 7e6c8b3ac6af4814e6ae4d6033c149413e9f6fb9
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Apr 20 21:51:27 2006 +0000
+
+    Attempt to fix make dist from svn export
+
+commit c275aabd46c279cac3ee2cba67dc048d8c51c3be
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Apr 20 21:46:42 2006 +0000
+
+    Do not force build of stamp-svn - it will be built automatically when
+    needed (which means when calling make dist)
+
+commit ca563390e290f49f188f06b906398b26f42c6704
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Apr 20 21:42:14 2006 +0000
+
+    Build fix
+
+commit e1fb2f07d5526fdcdd9b71d1a7afdb5fe860ad88
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Apr 20 21:29:52 2006 +0000
+
+    Fix automake warnings
+
+commit 59ec01f5f6d689163efcebe6271ac2ce890ea083
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Apr 20 21:21:12 2006 +0000
+
+    OpenBSD compilation fixes
+
+commit b1296680c953b2d33f63183728baa2825a98b8c4
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Apr 20 14:38:52 2006 +0000
+
+    -f tcpspray command line option to read block content from a file
+    This is now a feature-wise full tcpspray rewrite, let alone the lack of
+    manual page.
+
+commit a96671a151fdce6277cca8c6ad1b717eac063154
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Apr 20 14:25:23 2006 +0000
+
+    Support for (useless?) µsec delay tcpspray option
+
+commit 6f51a2897aa34a54f19c2afda9d7e54206ff92ee
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Apr 20 12:10:51 2006 +0000
+
+    Fix error handling in Echo mode
+
+commit bef1b2f96fe88cb58b9ee3d8ee32dd517a36b1af
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Apr 20 12:08:24 2006 +0000
+
+    - Implement Echo protocol support (command line optino -e)
+    - Some clean up
+
+commit a6b4de779b76d5085e7a8500f3a9566b7908c461
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Apr 20 11:18:35 2006 +0000
+
+    Require a hostname to tcpspray. Using localhost by default instead of
+    printing an error is confusing.
+
+commit 1d4af79cf14a8c279f9104a7f3189bf1b326f386
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Apr 20 11:12:18 2006 +0000
+
+    Add option -n to specify number of blocks to send
+
+commit e25177301e156ed3204e35ab6731721e005f842a
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Apr 20 11:01:49 2006 +0000
+
+    tcpspray6 -b option to customize blocks size
+
+commit 0414dc4e9fee53623d640ad5ba4dbfe40873b5e1
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 21:20:33 2006 +0000
+
+    Add genuine though rudimentary command line options to tcpspray6.
+    It still misses most option from the original tcpspray (and it also
+    lacks a manual page).
+
+commit c2c6814f79d49de50c5235ee3506e69915929b4c
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 20:31:40 2006 +0000
+
+    Preliminary complete rewrite dual-stack of Greg Christy's tcpspray
+
+commit a5db77d53113de27e317afc23510173256ee57f4
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 16:37:52 2006 +0000
+
+    More comprehensive version informations.
+    Updated copyright information.
+
+commit f9792a77804ace53188dff2098ad0fefba09b5b9
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 16:26:42 2006 +0000
+
+    Hmm hmm, these files were commited as links from the tcpreen trunk.
+    ndisc6 must not depend on tcpreen... add them as real files.
+
+commit 11301e7ce5c8b86027775cf1751a8f77b36b3553
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 16:25:31 2006 +0000
+
+    M4 macro that's going to be needed
+
+commit 6f303b0337c5c320c2222891efa4bf0dde6c9d36
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 16:15:20 2006 +0000
+
+    Define/Uniformize SVN properties
+
+commit 32ac60f6ed2db8c97a0281ff7f2276081a65c006
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 16:13:14 2006 +0000
+
+    Everything works on BSD now
+
+commit 8a5f8796f902c7d81866749ba84b13128559abfa
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 15:13:44 2006 +0000
+
+    - Enable setuid bit on installed programs by default,
+    - Add a --disable-suid-install option to not annoy would-be
+      paranoid^H^H^H^H^H^H^H^Hsuspicious packagers
+
+commit 1b996fe1f16aabe401bb05b4d7ec380b2603afc3
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 15:00:29 2006 +0000
+
+    Symlink tcptraceroute6.8 to traceroute6.8
+
+commit ee6e5a1651f333533f87e32101b85909316459a4
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 14:24:56 2006 +0000
+
+    Fix ChangeLog build rules
+
+commit 9161d9834b7e11b4311284f0edfb40d3103a407f
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 14:09:56 2006 +0000
+
+    Autobuild ChangeLog from SVN
+
+commit b2f56e1c0182d7a8307e48d8ffae8aa848db85cf
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 13:49:53 2006 +0000
+
+    Fix make distcheck
+
+commit 212dc0aac13f6e0c1f37582c6e390cf93e96b886
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 13:48:42 2006 +0000
+
+    Support some long options
+
+commit 39cb2a9a362a83474283e3da8484d67da7d24f1d
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 13:48:34 2006 +0000
+
+    Terminate long options list properly
+
+commit aa3e389362fcb105d35b486364dd85c533928670
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 13:37:11 2006 +0000
+
+    Document option -U
+
+commit 6b9ed45d27b6f7a8af66ee1ba97d89a141b3f8b6
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 13:35:54 2006 +0000
+
+    Do no longer use argv[0] to determine default probe packets type.
+
+commit d3c258e330b3d52efd666e673939a9fa522c3a73
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 13:31:31 2006 +0000
+
+    Fix check for ioctl(SIOCGIFHWADDR)
+
+commit 32c3e30c18278570371a88b2894e66cf82f8a0a0
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 13:30:20 2006 +0000
+
+    Fix ordering of memcpy's while crafting a Neighbor Solicitation
+
+commit fb4201a731a690f3902a0599d3e243c7016508d0
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 13:25:21 2006 +0000
+
+    Do not send source lladdr option on operating systems where ndisc6
+    doesn't know (yet) of two determine the MAC address of an interface.
+
+commit fd127fc2ab539c3a79186e8ddbc053dd193d10a7
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 10:42:44 2006 +0000
+
+    Solaris compile fix
+
+commit 7a685fe0b8d7d10527f901e4711db80e1626bec5
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 10:36:06 2006 +0000
+
+    Same as previous commit, for traceroute
+
+commit 97c2e9c012342826646f04eb94dba882ebd7eef7
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 10:34:34 2006 +0000
+
+    Print --help usage infos on stdout rather than stderr
+    as other program do
+
+commit b282f4d970792c8f0a5c0b2a287cf9b214110fd7
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 09:42:19 2006 +0000
+
+    Bootstrap SVN script
+
+commit b9aa70f1db6f47445c520370ae5445469120494a
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 09:39:37 2006 +0000
+
+    svn:ignore rewrite
+
+commit 94c8e9146bb409d3a6453e85dfb81892f7ca2177
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 09:36:00 2006 +0000
+
+    Handle non-gettext entirely from config.h
+
+commit fcf5b65a4b1258912f54cf5d74eb15619c8e490d
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 09:32:18 2006 +0000
+
+    Put full path to traceroute6 in the tcptraceroute6 wrapper
+
+commit 268b2303ffe03c792b8c85acfa3d43d0811b6a82
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 09:30:58 2006 +0000
+
+    Rewrite tcptraceroute6 as a trivial shell script around traceroute6
+    instead of a symlink
+
+commit ab1a5af9d86617933b3952836544ffd1ffe0b1e3
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 09:26:39 2006 +0000
+
+    Include man pages in the distribution
+
+commit eae706ad2b1ffdba2b119b78a823d8e52147925d
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 09:22:56 2006 +0000
+
+    Switch to autotools and break everything - MUAHAHA!!
+
+commit 65f5aaf8e46afbdfa3ccd3bbdea7402f9d0c99f2
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 09:16:39 2006 +0000
+
+    Add author file
+
+commit c81bb3c56e9b85b2155d792353609b795576ddcc
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 09:09:16 2006 +0000
+
+    New directory structure for autotools
+
+commit b024164aaaf76ff5a19a1cb50ef96900c2b0826e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 09:02:46 2006 +0000
+
+    News for release 0.5.3
+
+commit fd415484daca19210d79238018a0a06a92515d8a
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Apr 19 08:58:04 2006 +0000
+
+    Solaris compilation fix
+
+commit 64cc3b79d0f3138d86c8616a026a86b32011e17f
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Apr 18 21:29:16 2006 +0000
+
+    - Detect parameter problems errors and consider they are an indication
+      that the traceroute is completed.
+    - Some clean up.
+
+commit cff845c6f1184a3b6890ee1612aff658de5f4a5f
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Apr 18 19:49:37 2006 +0000
+
+    Update BSD status
+
+commit db1c398e12090c9e3424676198ac06545b9dd00d
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Apr 18 19:46:07 2006 +0000
+
+    BSD compile fix
+
+commit 48210d24613ba8e333dede928946630700f14330
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Apr 18 19:44:06 2006 +0000
+
+    Use BSD-ish tcphdr and udphdr structs
+    (partial traceroute6 BSD compile fix)
+
+commit 6b7ac126acca63e9cb0052a7246c19ae3e1c4cdb
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Apr 18 19:40:36 2006 +0000
+
+    Fix extra warning properly
+
+commit 4757ed849e3612c8200d6e7e915cd360c3ff6007
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Apr 18 19:39:50 2006 +0000
+
+    Revert broken earlier commits chunks (from [98] and [107])
+    that prevented UDP traceroute6 from detecting succesful completion
+
+commit 08791da5ca0696cb6f3fde94b38ecf0e2d979840
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Apr 18 19:03:06 2006 +0000
+
+    - Abort on protocol error (such as parameter problem)
+    - Set non-blocking mode and close-on-exec just in case
+
+commit 35cb7a20a3c609c4493fdfd88c8c787e4055f7c1
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Apr 18 17:38:52 2006 +0000
+
+    traceroute6: Reset fd_set properly after every probe
+    rather than every TTL increment
+
+commit 869272678bd6f07df7368096604f6cad26b713b1
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Apr 16 17:51:04 2006 +0000
+
+    Oops - update version number in NEWS
+
+commit b088e2e1659abe27022750f07d411937ba97ab98
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Apr 16 17:50:36 2006 +0000
+
+    NEWS for upcoming release 0.5.2
+
+commit 09da5d20c7945f66b4063381da742dc41fe67938
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Apr 16 17:46:58 2006 +0000
+
+    Uniformize svn:keywords
+
+commit 7684b57f8071ea2c6d67c2f4800f1a50acfbdb1e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Apr 16 17:44:11 2006 +0000
+
+    Encoding and MIME type fixes
+
+commit f6b9e725a1b7c7694f3514056c1750b570aa591e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Apr 16 17:12:32 2006 +0000
+
+    Make sure ChangeLog is built in English language
+
+commit e674a89df9d8468e70f3a4139d6cd64c471af9a5
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Apr 16 16:57:49 2006 +0000
+
+    - Fixes detection of invalid hop limits from the command line
+    - Another bunch of warnings fixed
+
+commit 50c8442ee7c32c2a2d10a5e9e0aa087dea9b7370
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Apr 16 16:49:04 2006 +0000
+
+    A bunch of warning fixed
+
+commit 672707de9e59201553a9e00a2e223c5904a99e3e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Apr 16 16:48:52 2006 +0000
+
+    Update copyright
+
+commit 434ca80c304fd7f4a26036d0926f9bdb36ceeb65
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Apr 16 16:45:07 2006 +0000
+
+    Fix input buffer size check
+
+commit 4da313aa8f4208a10be4e0216d1531ad33014687
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 17 20:38:11 2005 +0000
+
+    Add copyright license to the SVN trunk
+
+commit c65056b75b9a2f95e9d424745f79a78477d89f7c
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Dec 17 20:31:45 2005 +0000
+
+    - Fix handling of DESTDIR with space
+    - Allow installation of binaries alone (install-bin(-strip))
+      (see https://dev.openwrt.org/ticket/4)
+
+commit 032333933dd7c2f2f873505ef14b50c4f71499cb
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Dec 1 14:33:36 2005 +0000
+
+    Prepare intermediary release
+
+commit 66586e7f220a79f44fcd3c7a28e7e18d3f4e3f3c
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Oct 21 16:48:47 2005 +0000
+
+    Makefile beautification
+
+commit 7113727bdef5f230edae3d1435a10d78db454e12
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Oct 21 16:40:46 2005 +0000
+
+    Force rewrite of tcptraceroute6 as a symlink to traceroute6
+    for local compilation
+
+commit c40793a0bced6b8cda94bb5339d0751d24ab491f
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Oct 21 16:39:32 2005 +0000
+
+    Missing s/tcp//
+
+commit f78a80591b8ee7e849ee8db74011828c95144207
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Oct 21 16:39:09 2005 +0000
+
+    Update README as regards (tcp)traceroute6
+
+commit 3e2b5669dd819010016de9e81ea565753c3aa6d3
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Oct 21 16:37:00 2005 +0000
+
+    - Made tcptraceroute6.8 a link to traceroute6.8
+    - some s/tcptraceroute6/traceroute6/ here and there
+
+commit 3f9724a169a0ef93b2dd8fc5b03a54170d4c3d37
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Oct 21 16:31:50 2005 +0000
+
+    - traditional UDP traceroute (+ updated man page)
+    - move tcptraceroute6 to traceroute6
+    - make tcptraceroute6 an alias for "traceroute6 -S"
+
+commit 73a1d72477da1c4011109d3863ee2ab51b6fbf22
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Oct 21 15:32:42 2005 +0000
+
+    PID-dependant, high port number
+
+commit 576dac15a2ea1f256af0f32538f869eab3c380e5
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Oct 21 11:34:10 2005 +0000
+
+    Document new options -S and -A
+
+commit 47fb42532d87674239ff18e1d59153c31b23cee2
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Oct 21 11:27:25 2005 +0000
+
+    TCP/ACK traceroute support
+
+commit dff73e2649902592e018c9ee83e5caf24fd37483
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Oct 18 19:20:04 2005 +0000
+
+    Increment version number
+
+commit 3d5b2d67ae65486541d1529df94e17a4acbcb3eb
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Oct 18 18:49:12 2005 +0000
+
+    - Source address specification (-s) for tcptraceroute6
+    - Some clean up
+
+commit 7fd80b3301b281968b3b9ef94f78699314836849
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Oct 16 12:26:55 2005 +0000
+
+    Update text files for upcoming release 0.5.0
+
+commit 27fbd96c90e3843ec8bf77bf8f1f1debd60641ad
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Oct 16 12:18:59 2005 +0000
+
+    Man page for tcptraceroute6
+
+commit ec8d22a1cd1ab8067ee487e9f4338ff32ef41ec2
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Oct 16 11:37:58 2005 +0000
+
+    Print port number in prolog
+
+commit e86ea4b7a4d7c1fee3173af7665f0ce8270e8121
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Oct 16 10:21:13 2005 +0000
+
+    ignore tcptraceroute6 binary
+
+commit e9e04a9a9de92d7ea1c1070cd19fcd1100425424
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Oct 16 10:20:08 2005 +0000
+
+    Initial command line parsing
+
+commit 6af6928175183f2a6193fc269a28cecc1a009bd4
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Oct 16 09:26:27 2005 +0000
+
+    Dummy man page to work-around error in make dist and make install
+
+commit 2c7bb95a3a2563cd384ab77c08fd064872b8ce39
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Oct 16 09:24:47 2005 +0000
+
+    Build tcptraceroute6 from Makefile
+    (Known regression:
+     make dist is broken because there is no man page for tcptraceroute6)
+    Also, tcptraceroute6 name might change
+
+commit 329c956737b84a868549f79abb855bf4a64ea0b7
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Oct 16 09:14:39 2005 +0000
+
+    Print source address in the prolog
+
+commit 34d9ff5d747acd0beac3b18e5b1ac3b3d5c28506
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Oct 15 21:23:30 2005 +0000
+
+    Boundary check fix
+
+commit 5f88a79720510ec3ef079ab759c86d443d0390b1
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Oct 15 21:18:16 2005 +0000
+
+    Check and parse ICMPv6 errors
+
+commit 9d619b03c07b728f9bcefb645724fa939625a608
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Oct 15 20:26:43 2005 +0000
+
+    Bunch of fixes
+
+commit 7c00dbf02ca80ebe6acd0d1434b74d201bdf49f7
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Oct 15 19:49:00 2005 +0000
+
+    Preliminary tcptraceroute6 that should someday eventually :
+    1/ work properly
+    2/ support ICMP and UDP traceroute6 as well
+    3/ allows usual traceroute command line options
+
+commit 3efae2f438413bcd589d6d61be41a35161db1481
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Oct 2 15:08:13 2005 +0000
+
+    Add the news for 0.4.1
+
+commit 95fbdc0633c9430fd90bd2fa126edf4fe19a21be
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Sep 9 21:31:28 2005 +0000
+
+    Set properties
+
+commit c0941fed1919f8387bae610b2afe92ae48196b2a
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Sep 9 21:31:00 2005 +0000
+
+    SVN tag
+
+commit a352ed965d772962367dc7e5d8b6df969da3b9bf
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Sep 9 21:30:24 2005 +0000
+
+    rdisc6 now supports FreeBSD (at least, it should)
+
+commit c8e607a87a8eb218be6b08814217b59a0e6d22bf
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Sep 9 21:11:25 2005 +0000
+
+    Partial FreeBSD compile fix (doesn't compile)
+
+commit 8f9741b1f8ea116a926c22f5fea2b3ce9502708a
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Sep 9 11:30:52 2005 +0000
+
+    - Flag version as stable (0.4.0)
+    - Add dependency on Makefile
+
+commit 9f8760d612b352343a42debd8d9bfa0684276285
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Sep 9 11:27:52 2005 +0000
+
+    Typo
+
+commit 26a0ae94a23ddeb0a5cb48af86a9c257735799a5
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Sep 5 20:36:12 2005 +0000
+
+    Ignore unknown options as specified per RFC2461
+
+commit fc2f500c4ac9b2da01b5a568056c6695f509f2b4
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Sep 5 20:22:48 2005 +0000
+
+    - Print Source Link-Layer address in Router Advertisement if present.
+    - Check Prefix information option length properly in Router Adverts.
+    - Some spelling fixes.
+
+commit 6be22f835825f4c2cb97ef2b45ad74dfcd227d34
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Mon Sep 5 18:20:36 2005 +0000
+
+    Put verb in the infinitive to be more coherent
+
+commit d5dcd7cf03eef03ca4d2a577cb763ee06f44abe0
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Sep 3 17:27:34 2005 +0000
+
+    Add usage for -1 and -m options
+
+commit 2abefbd4ffd4c0f090115f91152eabd89a9c5316
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Sep 3 07:43:48 2005 +0000
+
+    Further FIXME removed
+
+commit ce3e87388ac6e480e007832622fb8ed21b49bba7
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Sep 3 07:40:03 2005 +0000
+
+    Remove some FIXMEs
+
+commit a821ffec137a7386bb6162c428bcdda8f2b7d356
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Sep 3 07:37:10 2005 +0000
+
+    Fix neighbor discovery
+
+commit 32f10bb236fc24a77b416e013b348dda01746dde
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Sep 3 07:36:43 2005 +0000
+
+    Fix install
+
+commit 14cd395e123681e8b7a9543eea76a6391c3a6118
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Sep 3 06:49:40 2005 +0000
+
+    Too many changes to list them all (see NEWS)
+
+commit ad038671163347cd575b503c4d91117f99734cf2
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Aug 26 20:31:31 2005 +0000
+
+    - Implement ICMPv6 type filtering
+    - Implement some more GNU Makefile targets
+
+commit 3057f4651796f15b7ff877bdcddd6ad8ad0ad5ab
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue May 3 12:04:39 2005 +0000
+
+    - Changed package name to ndisc6 to soften confusion
+    - Make bin/ directory before installing binaries if needed
+
+commit d49c7748603b5cc2d6d150d3b3d5df47697ea4af
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Apr 9 06:46:02 2005 +0000
+
+    Bump version number
+
+commit 8f678a71aa61fb0746d21954a5c52dea6cb2fa96
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Apr 9 06:45:43 2005 +0000
+
+    Fix unitialized bytes in router advertisement packet
+
+commit 7b119f167569acc92a1a2d61b1b2dad7b8ce9b01
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Apr 7 13:48:45 2005 +0000
+
+    - Include ChangeLog in source tarball
+    - Release 0.1.3
+
+commit f17e511356ceaca87e1bbfc0ded8a57a95ba9247
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Apr 7 13:42:24 2005 +0000
+
+    Check that packet came from the expected interface
+
+commit ba9fd5075b74f370fb77b9d30749c0788f6c5c3b
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Apr 2 15:20:13 2005 +0000
+
+    Update README for 0.1.2
+
+commit 01356bfda71a5033c46721f9cef3a2630b3bccfa
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Apr 2 15:17:38 2005 +0000
+
+    Changed executables' name :
+    rdisc -> rdisc6
+    ndisc -> ndisc6
+    (suggestion from M. H. Warfield
+      - conflicts with fairly common iputils package)
+
+commit 74f653b130a113c33b2a8b39d47dc9ca5fd1b9b9
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Fri Apr 1 12:54:06 2005 +0000
+
+    New release
+
+commit 66a465ce4b574bf69b08d5723754dac6712f6c49
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Mar 31 17:01:08 2005 +0000
+
+    - Remove superfluous variable
+    - Fix retries with Router Discovery
+
+commit c616d4f9746c888e0c7830e01d15211298a23b6b
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Mar 12 12:55:43 2005 +0000
+
+    Created svn:ignore
+
+commit 6be03720c274fbd72c84e5280cc54af335410d85
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Feb 15 19:21:19 2005 +0000
+
+    Fixes $Id$
+
+commit d28f37e9c08cf1dc5940bf4aad3adc919354dbd5
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Feb 15 19:20:23 2005 +0000
+
+    Buggy $Id$
+
+commit 20dfd4a5e3d5a71bc0f21874668679e2ba96d39d
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Feb 15 19:19:59 2005 +0000
+
+    Add a README file and a copy of the GPL in the source tarball
+
+commit b8ae0538a3596acdb2ca6d8ce129fa82b5b088a8
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Feb 15 19:06:23 2005 +0000
+
+    Improve version information
+
+commit 3aaa835a4b279eba5e95b9d0ad1f03db615fb91f
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Feb 15 18:59:27 2005 +0000
+
+    - Improved Makefile (among other things: updated uninstall target)
+    - man page for rdisc
+
+commit 0a5575e9e2aabd14a6e52ed1f13d8fadfcaa21fb
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Jan 26 14:53:43 2005 +0000
+
+    - Fix indentation
+    - simply print prefixes when -q is used
+
+commit ce27dea48f4a88f0688805c0cc98732c87fdeb83
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Jan 26 14:27:55 2005 +0000
+
+    Better spacing to make verbose results more readable
+
+commit 1ea314857895f12d136072388515574a945b95de
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Jan 26 11:58:58 2005 +0000
+
+    Fix command line parameter checking
+
+commit 0ca75094a19d5a937d73a02f7b9b6f16772924c0
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Jan 26 11:49:41 2005 +0000
+
+    Install rdisc
+
+commit 479baadc9b0740e756820565fc2014de64195800
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Jan 25 23:21:42 2005 +0000
+
+    - Only show prefixes when -v is not used
+    - Display multiple prefixes in the same advertisement
+
+commit 6ca816d8933f28737d14180bcd3a2515a693fd19
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Jan 25 22:52:52 2005 +0000
+
+    - Fix -v option,
+    - Clean up,
+    - Initial support for router solitication
+
+commit 4e25029f2cd49c21e9ce579b820272a50d6e0d51
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Jan 9 11:42:19 2005 +0000
+
+    - no longer rely on Linux-like semantics for select(),
+    - solves the longer that expected select() bug
+
+commit 4888f02b7ebe940f59c13dbc94fb4d32c70c8341
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Jan 9 11:02:59 2005 +0000
+
+    Update manpage
+
+commit cb90102f2aedb54c79ba816226f534ee318e540f
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Thu Dec 2 09:02:45 2004 +0000
+
+    Typo reported by Laurent Granger
+
+commit 0f15e408c8d37bbe16103fa0d077c019da3b002d
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Dec 1 15:13:43 2004 +0000
+
+    Distribute and install man page
+
+commit d65f778094bc96c54b1cee276d90b70983e90262
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Dec 1 15:13:27 2004 +0000
+
+    Sentence about aim of the program
+
+commit 03d1c9202f09768c37d097cad10858d93282a111
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Dec 1 15:08:11 2004 +0000
+
+    Fixed svn:keywords property
+
+commit 3684e75f2c07ff0200f37fdfccec5ae405c3bdf5
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Wed Dec 1 15:05:48 2004 +0000
+
+    Man page
+
+commit f22e1787c6e46dec88b2619cdada881deabcffdd
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Nov 30 22:58:44 2004 +0000
+
+    dist target
+
+commit cec55c20e4ccbd2ba6d0a8c753c7476c909daab5
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Tue Nov 30 00:01:59 2004 +0000
+
+    - verbose help text,
+    - fairly useless --verbose option
+
+commit 6c13f51d9656d34f1a5f308c94feadec80223984
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sun Nov 28 13:27:06 2004 +0000
+
+    Support for --quiet, --retry and --wait options
+
+commit 43a0bf86d10b0b1aff3edab203bc1899aaae5f36
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Nov 27 15:02:27 2004 +0000
+
+    - Invert error return values.
+    - Version information.
+
+commit 7e70ae4199c9a94a37594078c9493e68dde828fe
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Nov 27 14:50:16 2004 +0000
+
+    Print Neighbor Advertisement source IPv6 address
+
+commit b0d1c8f311f959ab11efaf3bc11d0ddaa3ea7331
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Nov 27 14:44:55 2004 +0000
+
+    Don't bug on unknown ICMPv6 options
+
+commit 658d8482faafb7a2790b2d215e94609a04fec8f7
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Nov 27 12:49:20 2004 +0000
+
+    Retry 3 times
+
+commit 74fc775f54b7ef514fbf6b4727392584d4956b29
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Nov 27 11:43:36 2004 +0000
+
+    Wait one second instead of 3, like the Linux kernel does
+
+commit cc435ede16bc719695d416a21f0c2a831f40566e
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Nov 27 11:41:47 2004 +0000
+
+    Waits for at most 3 seconds
+
+commit 09b65367821b42ee2ed9785e4e641d5feaac0985
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Nov 27 11:18:46 2004 +0000
+
+    Functions cleanup
+
+commit 91596de5b0687b6f51e5bee5a6e17a4a50def674
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Nov 27 11:00:28 2004 +0000
+
+    Minor cleanup
+
+commit efc4192e315c876226eba35f7abe65faac94c8e8
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Nov 27 10:46:58 2004 +0000
+
+    - Support for install, install-strip and uninstall.
+    - Clean-up.
+
+commit 23bb519d1729736cf173c28cbb8336bd74481813
+Author: Rémi Denis-Courmont <remi@remlab.net>
+Date:   Sat Nov 27 10:37:45 2004 +0000
+
+    Initial SVN import

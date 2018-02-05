@@ -1,0 +1,237 @@
+Background
+==========
+
+- Priority scale: High, Medium and Low
+
+- Complexity scale: C1, C2, C4 and C8.  The complexity scale is exponential,
+  with complexity 1 being the lowest complexity.  Complexity is a function
+  of both task 'complexity' and task 'scope'.
+
+  The general rule of thumb is that a complexity 1 task should take 1-2 weeks
+  for a person very familiar with BlueZ codebase.  Higher complexity tasks
+  require more time and have higher uncertainty.
+
+  Higher complexity tasks should be refined into several lower complexity tasks
+  once the task is better understood.
+
+General
+=======
+
+- UUID handling: Use the new functions created for UUID handling in all parts
+  of BlueZ code.  Currently, the new bt_uuid_* functions are being used by
+  GATT-related code only.
+
+  Priority: high
+  Complexity: C4
+
+- Update PBAP client/server implementation to 1.2 and create necessary APIs for
+  new features it introduces.
+
+  Priority: Medium
+  Complexity: C4
+
+- Create GOEP unit tests based on its test specification:
+
+  https://www.bluetooth.org/docman/handlers/DownloadDoc.ashx?doc_id=230559
+
+  Priority: Medium
+  Complexity: C2
+
+- Function in src/adapter.c to convert old storage files to new ini-file format
+  should be removed 6-8 months after first BlueZ 5 release.
+
+  Priority: Low
+  Complexity: C1
+
+- Remove usage of symlinks for drivers, such as profiles/input/suspend.c and
+  profiles/sap/sap.c. Instead, select drivers at runtime by using config
+  options or probing for running D-Bus services (using e.g.
+  g_dbus_add_service_watch()). Idea first mentioned on
+  http://thread.gmane.org/gmane.linux.bluez.kernel/30175/focus=30190.
+
+- Reuse connection handling code of src/profile.c also for built-in profiles
+  so plugins would only need to register their btd_profile and the core takes
+  care of the rest including listen to the right channel and manages the sdp
+  record. Once btd_profile manages the connection it can also notify about
+  their state, this probably remove the need of having callbacks to
+  .connect/.disconnect since their state can be tracked, it also enables any
+  plugin to track any profile state change which can be useful for e.g.
+  a connection policy plugin in case one is needed.
+
+  Priority: Low
+  Complexity: C2
+
+Low Energy
+==========
+
+- Advertising management. Adapter interface needs to be changed to manage
+  connection modes, adapter type and advertising policy. See Volume 3,
+  Part C, section 9.3. If Attribute Server is enabled the LE capable
+  adapter shall to start advertising. Further investigation is necessary
+  to define which connectable mode needs to be supported: Non-connectable,
+  directed connectable and undirected connectable. Basically, two connectable
+  scenarios shall be addressed:
+  1. GATT client is disconnected, but intends to become a Peripheral to
+     receive indications/notifications.
+  2. GATT server intends to accept connections.
+
+  Priority: Medium
+  Complexity: C2
+
+- Static random address setup and storage. Once this address is written
+  in a given remote, the address can not be changed anymore.
+
+  Priority: Low
+  Complexity: C1
+
+- Device Name Characteristic is a GAP characteristic for Low Energy. This
+  characteristic shall be integrated/used in the discovery procedure. The
+  idea is to report the value of this characteristic using DeviceFound signals.
+  Discussion with the community is needed before to start this task. Other GAP
+  characteristics for LE needs to follow a similar approach. It is not clear
+  if all GAP characteristics can be exposed using properties instead of a primary
+  service characteristics.
+  See Volume 3, Part C, section 12.1 for more information.
+
+  Priority: Low
+  Complexity: C2
+
+ATT/GATT (new shared stack)
+===========================
+
+- shared/att currently doesn't handle signed writes. It should be extended to
+  support signing outgoing and verify incoming ATT PDUs.
+
+  Priority: Medium
+  Complexity: C1
+
+- Introduce a handler interface to shared/gatt-client which can be used by the
+  upper layer to determine when the link has been disconnected or an ATT
+  protocol request times out.
+
+  Priority: Medium
+  Complexity: C2
+
+- Support included services in shared/gatt-client. This requires helper
+  functions to be added to discover secondary services and include declarations
+  to shared/gatt-helpers. shared/gatt-client's attribute discovery procedure
+  needs to be extended to discover all secondary services and store include
+  declarations for all discovered services.
+
+  Priority: Low
+  Complexity: C2
+
+- Introduce long-term caching of attributes to shared/gatt-client, such that the
+  services, characteristics, and descriptors obtained from a peripheral are
+  remembered in the case of bonding. This may involve storing data about GATT
+  services to disk.
+
+  Priority: Low
+  Complexity: C4
+
+- Move all daemon plugins and profiles that are GATT based to use
+  shared/gatt-client instead of attrib/*. This is a complicated task that
+  potentially needs a new plugin/profile probing interface and a lot of
+  rewriting that can cause regressions in existing functionality. The biggest
+  challenge here is that an instance of bt_att (shared/att) and GAttrib
+  (attrib/gattrib) cannot coexist on the same file descriptor, since they will
+  cause ATT protocol violations by breaking the sequential request-response
+  structure. A special shared/gatt-client-gattrib implementation may be
+  necessary to move each profile/plugin to the new API before actually switching
+  to the shared/att based implementation.
+
+  Priority: Medium
+  Complexity: C4
+
+- Implement the client portion of doc/gatt-api.txt using shared/gatt-client once
+  plugin/profile code uses it.
+
+  Priority: Medium
+  Complexity: C2
+
+- Introduce shared/gatt-server, which combined with shared/gatt-db, can be used
+  as a GATT server implementation.
+
+  Priority: Medium
+  Complexity: C2
+
+- Implement the server portion of doc/gatt-api.txt using shared/gatt-server once
+  it exists.
+
+  Priority: Medium
+  Complexity: C4
+
+ATT/GATT (old/outdated)
+=======================
+
+- At the moment authentication and authorization is not supported at the
+  same time, read/write requirements in the attribute server needs to
+  be extended. According to Bluetooth Specification a server shall check
+  authentication and authorization requirements before any other check is
+  performed.
+
+  Priority: Medium
+  Complexity: C1
+
+- Implement ATT PDU validation. Malformed PDUs can cause division by zero
+  when decoding PDUs. A proper error PDU should be returned for this case.
+  See decoding function in att.c file.
+
+  Priority: Medium
+  Complexity: C1
+
+- Refactor read_by_group() and read_by_type() in src/attrib-server.c
+  (they've grown simply too big). First step could be to move out the
+  long for-loops to new functions called e.g. get_groups() and get_types().
+
+  Priority: Low
+  Complexity: C1
+
+- Agent for characteristics: Agent interface should be extended to support
+  authorization per characteristic if the remote is not in the trusted list.
+
+  Priority: Low
+  Complexity: C1
+
+- gatttool should have the ability to wait for req responses before
+  quitting (some servers require a small sleep even with cmd's). Maybe a
+  --delay-exit or --timeout command line switch.
+
+  Priority: Low
+  Complexity: C1
+
+- Client needs to export a property in the Device Characteristic hierarchy
+  to manage characteristic value changes reports in the remote device.
+  Currently, Client Characteristic Configuration attribute is not exposed
+  as an object. The user needs to use gatttool to change the value of the
+  this attribute to receive notification/indications. Export this attribute
+  as a property is a proposal that needs further discussion.
+
+  Priority: Low
+  Complexity: C1
+
+- Attribute server should process queued GATT/ATT commands if the
+  client disconnects. The client can simply send a command and quit,
+  without wait for a response(ex: Write Command). For this scenario
+  that the client disconnects the link quickly the queued received
+  command is ignored.
+
+  Priority: Low
+  Complecity: C1
+
+- Implement Server characteristic Configuration support in the attribute
+  server to manage characteristic value broadcasting. There is a single
+  instance of the Server Characteristic Configuration for all clients.
+  See Volume 3, Part G, section 3.3.3.4 for more information.
+
+  Priority: Low
+  Complexity: C1
+
+- Long write is not implemented. Attribute server, client and command line
+  tool shall be changed to support this feature.
+
+  Priority: Low
+  Complexity: C2
+
+Management Interface
+====================

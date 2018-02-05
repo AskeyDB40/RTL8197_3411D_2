@@ -1,0 +1,53 @@
+
+comment "rtl8197F"
+choice
+prompt "Selected Board Configuration"
+default MODEL_RTL8197F_8812BR_GW
+
+#config MODEL_RTL8197F_RAMFS
+#        bool "RTL8197F_RAMFS"
+
+#config MODEL_RTL8197F_ETH_RAMFS
+#        bool "RTL8197F_ETH_RAMFS"
+
+#config MODEL_RTL8197F_SQUASHFS
+#        bool "RTL8197F_SQUASHFS"
+        
+config MODEL_RTL8197F_8812AR_GW
+        bool "RTL8197F/8812AR GW"        
+
+config MODEL_RTL8197F_8812BR_GW
+        bool "RTL8197F/8812BR GW"    
+        
+config MODEL_RTL8197F_8812BR_8367R_GW
+        bool "RTL8197F/8812BR+8367R GW"    
+
+config MODEL_RTL8197F_NAND
+        bool "RTL8197F_NAND"
+
+config MODEL_RTL8197F_NAND_MP
+        bool "RTL8197F_NAND_MP"
+
+config MODEL_RTL8197F_MP
+        bool "RTL8197F_MP"
+
+config MODEL_RTL8197F_8812AR_MP
+        bool "RTL8197F/8812AR MP"
+
+config MODEL_RTL8197F_8812BR_8367R_MP
+        bool "RTL8197F/8812BR+8367R MP"
+
+config MODEL_RTL8197F_Only_AP
+        bool "8197F/Only AP package"
+
+config MODEL_RTL8197F_8812AR_AP
+       bool "8197F/8812AR AP package"
+
+config MODEL_RTL8197F_8812BR_8367R_WAC
+       bool "8197F/8812BR+8367R WAC_HAP"
+
+# refer to RDC4_3.4/Kconfig
+#   this file "Kconfig" will do "source boards/sheipa2/model/m1074k/config.cpu"
+source "boards/rtl8197F/config.cpu"
+
+endchoice
