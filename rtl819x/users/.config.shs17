@@ -1,7 +1,7 @@
 #
 # Automatically generated make config: don't edit
 # RLX Linux builder
-# Tue Feb  6 09:38:40 2018
+# Thu Feb  1 14:35:02 2018
 #
 
 #
@@ -173,12 +173,7 @@ CONFIG_APP_RTK_CMD=y
 # CONFIG_APP_RTK_EVENTD_SUPPORT is not set
 # CONFIG_APP_RTK_VOIP is not set
 # CONFIG_APP_RTL8686_IPC_UTIL is not set
-CONFIG_APP_SAMBA=y
-# CONFIG_APP_SAMBA-3.0.24 is not set
-# CONFIG_APP_SAMBA-3.2.15 is not set
-CONFIG_APP_SAMBA-3.6.24=y
-CONFIG_APP_SAMBA_WEB=y
-# CONFIG_SAMBA_LOG_SUPPORT is not set
+# CONFIG_APP_SAMBA is not set
 CONFIG_APP_SCRIPT=y
 # CONFIG_APP_SIMPLE_CONFIG is not set
 # CONFIG_APP_SNMP is not set
