@@ -1,7 +1,7 @@
 #
 # Automatically generated make config: don't edit
 # RLX Linux builder
-# Fri Feb  2 09:12:27 2018
+# Tue Feb  6 09:36:48 2018
 #
 
 #
@@ -60,7 +60,7 @@ CONFIG_RTL_8197F=y
 #
 # config components
 #
-# CONFIG_MCONF_USERS is not set
+# CONFIG_MCONF_LINUX is not set
 # CONFIG_MCONF_BZBOX is not set
 # CONFIG_MCONF_LOAD is not set
 # CONFIG_MCONF_SAVE is not set
